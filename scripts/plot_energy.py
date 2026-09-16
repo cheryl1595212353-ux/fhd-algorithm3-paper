@@ -20,8 +20,10 @@ def main():
     with (ROOT / "data/energy/curves.csv").open(newline="") as f:
         rows = list(csv.DictReader(f))
     plt.rcParams.update({
-        "font.family": "sans-serif",
-        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+        "text.usetex": True,
+        "text.latex.preamble": r"\usepackage[T1]{fontenc}\usepackage{lmodern}",
+        "font.family": "serif",
+        "font.serif": ["Computer Modern Roman"],
         "font.size": 9,
         "axes.labelsize": 10,
         "xtick.labelsize": 9,
@@ -31,7 +33,7 @@ def main():
         "axes.spines.right": False,
         "legend.frameon": False,
         "pdf.fonttype": 42,
-        "svg.fonttype": "none",
+        "svg.fonttype": "path",
     })
     for scheme in ("first", "second"):
         fig, ax = plt.subplots(figsize=(4.8, 3.45), layout="constrained")
@@ -67,6 +69,8 @@ def main():
         for extension in ("pdf", "svg", "png"):
             path = ROOT / "figures" / f"{scheme}_order_energy.{extension}"
             fig.savefig(path, dpi=400)
+            if extension == "svg":
+                path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n")
             print(path.relative_to(ROOT))
         plt.close(fig)
 
