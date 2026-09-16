@@ -7,14 +7,19 @@
 
 ```text
 main.tex                         论文主文件
+experiments.tex                  可独立编译的数值实验预览
 sections/
   first_order_experiments.tex     一阶实验与共同算例设置
   second_order_experiments.tex    二阶实验
-figures/                         两阶收敛图：PDF、SVG、PNG
+  first_order_energy.tex          一阶零外场能量耗散实验
+  second_order_energy.tex         二阶零外场能量耗散实验
+figures/                         收敛图及两张独立能量图：PDF、SVG、PNG
 data/
   results.csv                    8组主误差及42个观测收敛阶
   results.json                   同一数据的结构化版本
   provenance.json                数据与来源校验信息
+  energy/                        六个能量算例的曲线、汇总和校验信息
+scripts/plot_energy.py            由原始数据重画两张独立能量图
 previews/
   manuscript.pdf                 完整论文编译预览
   numerical_experiments.pdf       仅数值实验的编译预览
@@ -37,10 +42,13 @@ Makefile                         本地编译命令
 make pdf
 ```
 
-输出为 `build/main.pdf`。检查排版后运行 `make preview` 可更新 `previews/manuscript.pdf`。
+输出为 `build/main.pdf`。`make experiments` 生成独立的数值实验预览。
+检查排版后运行 `make preview` 可更新 `previews/` 中两份 PDF。
+安装 Python 的 `matplotlib` 和 `numpy` 后，运行 `make figures` 可重新生成能量图；
+此命令不重跑数值求解，也不改已有收敛图。
 也可以将整个仓库上传到 Overleaf，以 `main.tex` 为主文件并使用 pdfLaTeX 编译。
 
-## 实验口径
+## 收敛实验口径
 
 - 三维单位立方体；同一 `balanced-linear-weak-coupling` 制造解。
 - 一阶、二阶均有 K=4、8、16、32，T=2，dt=1/K，终点数据均已完成计算。
@@ -48,10 +56,24 @@ make pdf
 - 主指标：u完整H1、修正压力L2、omega完整H1、m-H(div)、k-L2、phi-H1、H-H(curl)，另报curl(H)的采样绝对最大值。
 - 二阶压力参考为精确修正压力的端点平均；修正压力为去均值的 p-mu0*m.H/2。
 - 二阶k-L2仍约一阶，未声称所有变量二阶收敛。dt与网格同时变化，结果不是独立的纯时间精度验证。
-- 本轮没有加入能量稳定性实验、纯时间二阶试验或性能加速结论。
+- 此组收敛数据本身不用于验证能量稳定性；尚未加入纯时间二阶试验或性能加速结论。
 
 ![一阶误差收敛](figures/first_order_errors.png)
 
 ![二阶误差收敛](figures/second_order_errors.png)
+
+## 能量耗散实验
+
+- 零外场、零源项、齐次边界；单位立方体K=8，T=0.5。
+- 一阶、二阶各测试dt=1/16、1/32、1/64，使用48 MPI进程、每进程1线程。
+- 非零初值取上述平滑场的空间形状，重新满足零外场约束；不延续制造解时间函数。
+- 每步积分原生有限元场的能量，并核对包含耗散项的离散平衡。
+- 六条曲线均单调衰减；最大归一化平衡缺口为3.71e-11。
+- 两种格式分别使用其生产有限元空间，不能将两图当作同空间的纯时间精度比较。
+- 一阶、二阶分别成图，纵轴为E(t)/E(0)的对数刻度；数据不平滑、不拟合。
+
+![一阶能量耗散](figures/first_order_energy.png)
+
+![二阶能量耗散](figures/second_order_energy.png)
 
 本仓库仅含论文协作材料，不包含SSH密钥、服务器登录资料、计算日志或完整有限元求解器。

@@ -1,0 +1,119 @@
+{
+  "experiment": "unforced revised Algorithm 3 energy decay",
+  "K": 8,
+  "T": 0.5,
+  "time_steps": [
+    0.0625,
+    0.03125,
+    0.015625
+  ],
+  "MPI_ranks": 48,
+  "threads_per_rank": 1,
+  "physical_parameters": {
+    "rho": 1.0,
+    "kappa": 1.0,
+    "eta": 1.0,
+    "etap": 1.0,
+    "mu0": 1.0,
+    "tau": 1.0,
+    "zeta": 1.0,
+    "chi0": 1.0,
+    "sigma": 1.0,
+    "lambdap": 1.0
+  },
+  "assembly_and_energy_quadrature_degree": 12,
+  "source_and_external_field": "all zero",
+  "boundary_traces": "homogeneous",
+  "energy_definition": "0.5*(rho*||u||^2+rho*kappa*||omega||^2+||m||^2+mu0*||grad(phi)||^2)",
+  "first_space_order": 1,
+  "second_space_order": 2,
+  "second_startup": {
+    "method": "inverse-Broyden",
+    "relative_tolerance": 1e-10,
+    "maximum_iterations": 20
+  },
+  "direct_options": {
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "pc_factor_mat_solver_type": "mumps",
+    "mat_mumps_icntl_7": 7,
+    "mat_mumps_icntl_24": 1,
+    "mat_mumps_icntl_25": 0
+  },
+  "schur_options": {
+    "ksp_type": "fgmres",
+    "pc_type": "lu",
+    "pc_factor_mat_solver_type": "mumps",
+    "ksp_rtol": 1e-10,
+    "ksp_atol": 1e-12,
+    "ksp_max_it": 500,
+    "mat_mumps_icntl_7": 7
+  },
+  "sources": [
+    {
+      "case": "first_K8_dt1_16",
+      "raw_result_sha256": "39a3651fd68d556e9439fc6b97423e4519ff32892eb7860d2ff43715c00316fa",
+      "status": "PASS",
+      "steps": 8,
+      "actual_t": 0.5
+    },
+    {
+      "case": "first_K8_dt1_32",
+      "raw_result_sha256": "f0a0b823257de97962b5812d85269bd20b313cd7b5fb8c2603d032d12003463b",
+      "status": "PASS",
+      "steps": 16,
+      "actual_t": 0.5
+    },
+    {
+      "case": "first_K8_dt1_64",
+      "raw_result_sha256": "53a95c017ba170e733ad4803816fc9ccf62fcbabc232069091e2b7fa0219131b",
+      "status": "PASS",
+      "steps": 32,
+      "actual_t": 0.5
+    },
+    {
+      "case": "second_K8_dt1_16",
+      "raw_result_sha256": "c2b5eba44ac5a37ebe7d73b8d0e1b7edbfb41703ea1d84d26c0af2d38d25394a",
+      "status": "PASS",
+      "steps": 8,
+      "actual_t": 0.5
+    },
+    {
+      "case": "second_K8_dt1_32",
+      "raw_result_sha256": "566137858ab6cac1befa5073122d7251251daf6d6027a1319f6c467c405aaae6",
+      "status": "PASS",
+      "steps": 16,
+      "actual_t": 0.5
+    },
+    {
+      "case": "second_K8_dt1_64",
+      "raw_result_sha256": "4ec52f1c94d26892995c4f6a0c4cbd4d9850abf50e30829453dbf71627bf3fb8",
+      "status": "PASS",
+      "steps": 32,
+      "actual_t": 0.5
+    }
+  ],
+  "K4_two_step_gates": {
+    "first": {
+      "status": "PASS",
+      "max_monolithic_difference": 4.621258458192443e-11,
+      "max_full_relative_residual": 9.366761572253947e-12,
+      "max_balance_residual_scaled": 8.98334537452881e-14,
+      "maximum_initial_constraint_residual": 9.86262502383414e-17
+    },
+    "second": {
+      "status": "PASS",
+      "max_monolithic_difference": 1.2060926243444077e-10,
+      "max_full_relative_residual": 2.0703545947832903e-12,
+      "max_balance_residual_scaled": 4.895422395971514e-13,
+      "maximum_initial_constraint_residual": 3.058250175252333e-16
+    }
+  },
+  "source_preservation_verified": true,
+  "raw_solver_results_and_fields_included": false,
+  "data_sha256": {
+    "curves.csv": "d83013f6df745c9a4377dbeca25c298b32a44dd8724d03032052bfe4cf0e0533",
+    "energy_summary.csv": "9b8177ea15a3c4c590d5a74e2b52483dba4cef43bf5fd84b84bbf811c5fa1296",
+    "energy_summary.json": "d10f0cad08e5aeeda7d9abbba76749ce81f6aa196995afa7bf8d97688fc4a149"
+  }
+}

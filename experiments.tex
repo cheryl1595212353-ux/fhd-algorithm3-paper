@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{amsmath,amssymb,bm,booktabs,graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage[capitalize]{cleveref}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\dt}{\Delta t}
+\newcommand{\curl}{\operatorname{curl}}
+\renewcommand{\div}{\operatorname{div}}
+\let\standardfigure\figure
+\let\endstandardfigure\endfigure
+\renewenvironment{figure}[1][]{\standardfigure[H]}{\endstandardfigure}
+\begin{document}
+\setcounter{section}{3}
+\section{First-Order Scheme}
+\setcounter{subsection}{2}
+\input{sections/first_order_experiments.tex}
+\clearpage
+\section{Second-Order Scheme}
+\setcounter{subsection}{2}
+\input{sections/second_order_experiments.tex}
+\begin{thebibliography}{1}
+\bibitem{Barattafenics}
+I.~A. Baratta, J.~P. Dean, J.~S. Dokken, M. Habera, J.~S. Hale,
+C.~N. Richardson, M.~E. Rognes, M.~W. Scroggs, N. Sime, and G.~N. Wells,
+DOLFINx: The next generation FEniCS problem solving environment, 2023.
+\end{thebibliography}
+\end{document}
