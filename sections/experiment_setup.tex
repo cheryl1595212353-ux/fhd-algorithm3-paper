@@ -1,0 +1,140 @@
+\subsection{Experimental setup}
+\label{subsec:experiment-setup}
+We assess both time discretizations by a manufactured-solution test
+on $\Omega=(0,1)^3$ with $T=2$. Each Cartesian partition into
+$K\times K\times K$ cubes is subdivided into tetrahedra, with
+$K=4,8,16,32$ and $\dt=1/K=h/\sqrt{3}$, where $h$ is the maximum
+tetrahedron diameter. Space and time are refined together;
+this experiment does not isolate the temporal convergence order.
+
+\paragraph{Manufactured solution.}
+Define
+\[
+q(s)=64s^3(1-s)^3,\qquad
+B(x,y,z)=q(x)q(y)q(z),\qquad
+S(x,y,z)=\sin^2(\pi x)\sin^2(\pi y)\sin^2(\pi z),
+\]
+and let $a=(1,2,3)^\intercal$, $b=(1,-1,1/2)^\intercal$, and
+$c=(1,2,-1)^\intercal$. The prescribed fields are
+\begin{align*}
+\bs u&=\frac{1+0.1t}{C_u}\,\nabla B\times a,
+&\bs\omega&=\frac{1-0.05t}{C_\omega}\,B b,
+&\bs m&=\frac{1+0.05t}{C_m}\,S c,\\
+\varphi&=\frac{1-0.05t}{C_\varphi}\,B,
+&\bs H&=\nabla\varphi,
+&p&=\frac{1+0.05t}{C_p}\prod_{s\in\{x,y,z\}}\cos(2\pi s),
+\end{align*}
+where the fixed normalization constants used in the computations are
+\begin{gather*}
+C_u=363.275188821,\quad C_\omega=20.6500992827,\quad
+C_m=\frac{\sqrt{81+108\pi^2}}{16},\\
+C_\varphi=13.7667328551,\qquad C_p=0.353553390593.
+\end{gather*}
+The auxiliary fields are $\bs k=\curl\bs m$, $\bs z=\bs u\times\bs m$,
+$\vartheta=-\Delta\varphi$, and $\varpi=\bs u\cdot\bs m$.
+We set $\bs H_e=-\mu_0(\bs m+\bs H)$ and use the zero-mean modified
+pressure $\widetilde p=\mathcal P_0[p-\mu_0\bs m\cdot\bs H/2]$, where
+$\mathcal P_0v=v-|\Omega|^{-1}\int_\Omega v$.
+All physical parameters $\rho,\kappa,\eta,\zeta,\mu_0,\sigma,
+\eta^\prime,\lambda^\prime,\tau,\chi_0$ are set to one.
+
+This is a forced verification problem. The momentum, angular-momentum,
+and magnetization sources $\bs f,\bs g,\bs r$ are obtained by substituting
+the prescribed fields into the corresponding continuous equations.
+Their weak right-hand sides are $(\bs f,\bs v_h)$,
+$(\bs g,\bs s_h)$, and $(\bs r,\bs F_h)$; the magnetic-potential
+right-hand side is
+\[
+\left(-\partial_t\bs H_e
+-\frac{\mu_0+\chi_0}{\tau\mu_0}\bs H_e
++\sigma\nabla\div\bs H_e-\mu_0\bs r,\nabla\psi_h\right).
+\]
+The fields satisfy the homogeneous boundary traces used in the experiment:
+zero velocity and angular velocity, zero normal magnetization,
+zero tangential $\bs z,\bs k,\bs H$, and zero
+$\varphi,\vartheta,\varpi$. In particular, $q,q',q''$ vanish at both
+endpoints and $S,\nabla S$ vanish on the cube boundary. The new
+$\vartheta$ and $\varpi$ couplings are not identically zero for this test.
+
+\paragraph{Discretization and implementation.}
+The first-order runs use the MINI velocity element, continuous piecewise
+linear pressure and angular velocity, lowest-order Raviart--Thomas
+magnetization and first-family Nedelec $\bs z,\bs k,\bs H$, and
+continuous piecewise linear $\varphi,\vartheta,\varpi$.
+
+For the second-order scheme, velocity and angular velocity use continuous
+piecewise quadratic elements, pressure remains continuous piecewise linear, magnetization
+uses RT1, and $\bs z,\bs k,\bs H$ use first-family Nedelec elements
+one degree above the lowest order. The scalar fields
+$\varphi,\vartheta,\varpi$ are continuous piecewise quadratic.
+The corresponding RT and Nedelec Basix degree is two.
+
+The initial velocity is obtained by a discrete Stokes projection.
+After interpolating the initial magnetization into its RT space,
+the initial potential is determined from the compatible magnetic Poisson
+problem. The initial $\bs k,\bs z,\vartheta,\varpi$ satisfy their discrete
+mass-projection relations. Pressure is normalized by its finite-element
+integral mean.
+
+For the second-order convergence test, the first time step is solved
+by a Broyden quasi-Newton iteration with
+relative tolerance $10^{-9}$ and a maximum of 12 iterations.
+The accepted state is checked by reassembling the nonlinear midpoint
+equations. Subsequent time steps use the prescribed extrapolated
+coefficients and require one five-block linear solve per step.
+The $\bs z_h$ and $\varpi_h$ slots represent the current midpoint-stage
+projections; they are not averaged again with the preceding stage.
+
+Computations use FEniCSx/DOLFINx~0.10.0~\cite{Barattafenics}
+with PETSc and MUMPS. The five-block Algorithm~3 is evaluated through
+matrix-free Schur-complement actions. The $K_1,K_3,K_5$ subproblems use
+MUMPS LU; the $S_2,S_4$ systems use FGMRES with LU preconditioners.
+The MUMPS ordering control is $\mathrm{ICNTL}(7)=7$.
+The Schur tolerances are $10^{-10}$ relative and $10^{-12}$ absolute.
+All first-order cases and the second-order cases up to $K=16$ use
+48 MPI processes with one thread each; the second-order $K=32$ case
+uses 32 MPI processes with four threads each on a 1-TB-class node.
+Source terms are evaluated at quadrature points, with assembly
+quadrature degree 12. In the error calculations, the analytic values
+and derivatives are independently represented in a degree-6 DG space
+and integrated with degree-12 quadrature; the numerical solution is
+evaluated in its original finite-element space.
+
+As implementation checks for the manufactured-solution runs,
+the two schemes were compared with a
+monolithic solve of the same matrix at the first two time levels on
+$K=4$, modulo the same pressure
+nullspace; the normalized solution differences were below $1.1\times10^{-12}$.
+An independent transcription of the nine weak equations on $K=2$,
+using random finite-element fields and both unit and non-unit parameters,
+also agreed with the production matrices and right-hand sides to
+scaled differences below $1.1\times10^{-16}$.
+These checks concern algebraic and implementation consistency, rather
+than replacing the convergence test.
+
+\paragraph{Error measures.}
+For a field $v$ and its specified norm $X$, we report
+\[
+E_X(v)=\frac{\|v-v_h\|_X}{\|v\|_X},\qquad
+\mathrm{rate}(K\to2K)=\log_2\frac{E_X(v;K)}{E_X(v;2K)}.
+\]
+The norms are full $H^1$ for $\bs u,\bs\omega,\varphi$, $L^2$ for
+$\widetilde p,\bs k$, $H(\div)$ for $\bs m$, and $H(\curl)$ for
+$\bs H$. Thus the graph norms combine the squared $L^2$ and derivative
+terms before taking the square root. Pressure errors use zero-mean
+numerical and exact fields. First-order errors are evaluated at $T$.
+
+For the second-order scheme, the primary fields are compared at $T$.
+Its pressure slot represents the averaged modified pressure, so its reference is
+\[
+\widetilde p_{\mathrm{ref}}^{N-1/2}
+=\frac{\widetilde p(T)+\widetilde p(T-\dt)}{2},
+\]
+with the same zero-mean convention as above. This reference is not
+identified with either the endpoint pressure or the analytic pressure
+evaluated directly at the midpoint.
+
+We also report $C_H$, the maximum of $|\curl\bs H_h|$ over the
+degree-6 DG interpolation points, as a sampled estimate of
+$\|\curl\bs H_h\|_{L^\infty}$. It is an absolute diagnostic, not a
+relative error or a rigorous continuous supremum.

@@ -9,10 +9,13 @@
 main.tex                         论文主文件
 experiments.tex                  可独立编译的数值实验预览
 sections/
-  first_order_experiments.tex     一阶实验与共同算例设置
-  second_order_experiments.tex    二阶实验
-  first_order_energy.tex          一阶零外场能量耗散实验
-  second_order_energy.tex         二阶零外场能量耗散实验
+  numerical_experiments.tex       文末第6节数值实验总入口
+  experiment_setup.tex            统一算例、离散设置及误差指标
+  first_order_experiments.tex     一阶收敛结果
+  second_order_experiments.tex    二阶收敛结果
+  energy_setup.tex                统一零外场算例、能量与平衡指标
+  first_order_energy.tex          一阶能量耗散结果
+  second_order_energy.tex         二阶能量耗散结果
 figures/                         收敛图及两张独立能量图：PDF、SVG、PNG
 data/
   results.csv                    8组主误差及42个观测收敛阶
@@ -31,7 +34,9 @@ Makefile                         本地编译命令
 
 ## 协作方式
 
-- 修改实验文字、表格和图注：编辑 `sections/` 中对应文件。`main.tex` 通过 `\input` 引用它们，不应再复制一份有效正文。
+- 数值实验统一位于一阶、二阶理论章节之后、参考文献之前的第6节：6.1实验设置、6.2收敛性验证、6.3能量耗散。
+- 两种格式分别成图，但同类结果连续排列，不再穿插于理论章节之间。
+- 修改实验文字、表格和图注：编辑 `sections/` 中对应文件。`main.tex` 和 `experiments.tex` 共用 `numerical_experiments.tex` 入口，不应再复制一份有效正文。
 - 修改理论推导：编辑 `main.tex`。**本次上传只整合了数值实验，之前讨论的理论公式修订没有在本轮同步。** 协作者需要在后续修订中保持理论稿与实验对象一致。
 - 图片引用采用相对路径 `figures/`。PDF用于论文排版，SVG用于矢量编辑，PNG用于快速查看。
 - 生成的 `.aux`、`.log` 等中间文件放在 `build/`，不提交。修改 TeX 后应重新编译；`previews/` 是已编译快照，不会自行更新。

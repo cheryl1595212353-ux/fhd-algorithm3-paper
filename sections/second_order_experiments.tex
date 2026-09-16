@@ -1,33 +1,5 @@
-\subsection{Numerical results}
+\subsubsection{Second-order scheme}
 \label{subsec:numerical-second-order}
-We apply the second-order discretization to the same manufactured
-solution, forcing, parameters, and meshes specified in
-\Cref{subsec:revised-numerical-first}, retaining $T=2$ and $\dt=1/K$.
-Velocity and angular velocity now use continuous piecewise quadratic
-elements, pressure remains continuous piecewise linear, magnetization
-uses RT1, and $\bs z,\bs k,\bs H$ use first-family Nedelec elements
-one degree above the lowest order. The scalar fields
-$\varphi,\vartheta,\varpi$ are continuous piecewise quadratic.
-The corresponding RT and Nedelec Basix degree is two.
-
-The first time step is solved by a Broyden quasi-Newton iteration with
-relative tolerance $10^{-9}$ and a maximum of 12 iterations.
-The accepted state is checked by reassembling the nonlinear midpoint
-equations. Subsequent time steps use the prescribed extrapolated
-coefficients and require one five-block linear solve per step.
-The $\bs z_h$ and $\varpi_h$ slots represent the current midpoint-stage
-projections; they are not averaged again with the preceding stage.
-
-The primary fields are compared at $T$. The pressure slot represents
-the averaged modified pressure, so its reference is
-\[
-\widetilde p_{\mathrm{ref}}^{N-1/2}
-=\frac{\widetilde p(T)+\widetilde p(T-\dt)}{2},
-\]
-with the same zero-mean convention as above. This reference is not
-identified with either the endpoint pressure or the analytic pressure
-evaluated directly at the midpoint.
-
 \Cref{tab:second-order-errors,fig:second-order-convergence} show that
 the finest-grid rates for $\bs u,\widetilde p,\bs\omega,\bs m,
 \varphi,\bs H$ are 2.166, 2.051, 1.981, 2.007, 1.968, and 1.968,
@@ -95,4 +67,4 @@ approximately first-order $L^2$ decay for $\bs k$.}
 \label{fig:second-order-convergence}
 \end{figure}
 
-\input{sections/second_order_energy.tex}
+\FloatBarrier

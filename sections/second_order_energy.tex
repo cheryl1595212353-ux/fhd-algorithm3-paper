@@ -1,28 +1,5 @@
-\FloatBarrier
-\paragraph{Unforced energy dissipation.}
-We repeat the zero-field, zero-source relaxation test with $K=8$,
-$T=0.5$, and $\dt=1/16,1/32,1/64$, using the same continuous initial
-shapes and constraint-compatible initialization as in the first-order
-energy test. The second-order finite-element spaces specified above
-are retained. Consequently, the two schemes do not share an identical
-discrete initial state; each scheme does use the same initial state
-for all three time steps.
-For this energy test, the initial Broyden solve uses relative tolerance
-$10^{-10}$ with at most 20 iterations, and the accepted midpoint
-equations are independently reassembled to check their residual.
-Subsequent time steps use the prescribed extrapolation.
-
-The energy is evaluated by \eqref{eq:energy-test-observable}.
-For the second-order discretization, the balance defect is
-\begin{equation}\label{eq:energy-test-second-balance}
-R_h^n=E_h^n-E_h^{n-1}+\dt D_h^{n-1/2},
-\end{equation}
-where $D_h^{n-1/2}$ is evaluated at the midpoint averages of the
-primary fields and the endpoint auxiliaries
-$\bs k_h,\vartheta_h$.
-There is no first-order numerical-dissipation term $N_h^n$.
-The stage fields $\bs z_h,\varpi_h$ are not averaged a second time.
-
+\subsubsection{Second-order scheme}
+\label{subsec:second-order-energy}
 \Cref{fig:second-order-energy} shows monotone energy decay for all
 three time steps, with initial energy approximately
 $4.295033\times10^{-2}$.
