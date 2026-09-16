@@ -9,6 +9,7 @@ experiments:
 	latexmk -norc -pdf -interaction=nonstopmode -halt-on-error -outdir=build experiments.tex
 
 figures:
+	$(PYTHON) scripts/plot_convergence.py
 	$(PYTHON) scripts/plot_energy.py
 
 preview: pdf experiments

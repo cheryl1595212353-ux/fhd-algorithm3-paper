@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import LogLocator, NullFormatter
 import numpy as np
 
+from figure_style import configure_tex, save_figure
 
 ROOT = Path(__file__).resolve().parents[1]
 COLORS = ("#35659B", "#478274", "#B5674C")
@@ -19,22 +20,7 @@ LINES = ("-", "--", "-.")
 def main():
     with (ROOT / "data/energy/curves.csv").open(newline="") as f:
         rows = list(csv.DictReader(f))
-    plt.rcParams.update({
-        "text.usetex": True,
-        "text.latex.preamble": r"\usepackage[T1]{fontenc}\usepackage{lmodern}",
-        "font.family": "serif",
-        "font.serif": ["Computer Modern Roman"],
-        "font.size": 9,
-        "axes.labelsize": 10,
-        "xtick.labelsize": 9,
-        "ytick.labelsize": 9,
-        "axes.linewidth": 0.7,
-        "axes.spines.top": False,
-        "axes.spines.right": False,
-        "legend.frameon": False,
-        "pdf.fonttype": 42,
-        "svg.fonttype": "path",
-    })
+    configure_tex()
     for scheme in ("first", "second"):
         fig, ax = plt.subplots(figsize=(4.8, 3.45), layout="constrained")
         for index, denominator in enumerate((16, 32, 64)):
@@ -66,12 +52,7 @@ def main():
         ax.grid(axis="y", which="major", color="0.90", linewidth=0.55)
         ax.legend(loc="upper right", fontsize=9, handlelength=2.4,
                   labelspacing=0.6, borderaxespad=0.4)
-        for extension in ("pdf", "svg", "png"):
-            path = ROOT / "figures" / f"{scheme}_order_energy.{extension}"
-            fig.savefig(path, dpi=400)
-            if extension == "svg":
-                path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n")
-            print(path.relative_to(ROOT))
+        save_figure(fig, ROOT / "figures" / f"{scheme}_order_energy")
         plt.close(fig)
 
 

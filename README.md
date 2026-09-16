@@ -19,7 +19,10 @@ data/
   results.json                   同一数据的结构化版本
   provenance.json                数据与来源校验信息
   energy/                        六个能量算例的曲线、汇总和校验信息
-scripts/plot_energy.py            由原始数据重画两张独立能量图
+scripts/
+  figure_style.py                 所有插图共用的LaTeX字体与导出设置
+  plot_convergence.py             由原始数据重画两张收敛图
+  plot_energy.py                  由原始数据重画两张独立能量图
 previews/
   manuscript.pdf                 完整论文编译预览
   numerical_experiments.pdf       仅数值实验的编译预览
@@ -45,8 +48,10 @@ make pdf
 输出为 `build/main.pdf`。`make experiments` 生成独立的数值实验预览。
 检查排版后运行 `make preview` 可更新 `previews/` 中两份 PDF。
 安装 Python 的 `matplotlib` 和 `numpy`，并将 TeX Live/MacTeX 的 `latex`、`dvipng` 加入 PATH 后，
-运行 `make figures` 可重新生成能量图；TeX 环境需包含 `lmodern` 字体包。
-此命令不重跑数值求解，也不改已有收敛图。
+运行 `make figures` 可重新生成论文中全部四张图；TeX 环境需包含 `lmodern` 字体包和 `amsmath`。
+此命令只从归档数据重绘，不重跑数值求解，也不改变误差、能量或参考线数据。
+所有图的普通文字、数学符号、刻度和图例均使用真正的LaTeX渲染及Latin Modern字体。
+PDF嵌入字体；SVG使用TeX字形的矢量路径，修改文本应编辑绘图脚本并重绘。
 也可以将整个仓库上传到 Overleaf，以 `main.tex` 为主文件并使用 pdfLaTeX 编译。
 
 ## 收敛实验口径
@@ -72,8 +77,7 @@ make pdf
 - 六条曲线均单调衰减；最大归一化平衡缺口为3.71e-11。
 - 两种格式分别使用其生产有限元空间，不能将两图当作同空间的纯时间精度比较。
 - 一阶、二阶分别成图，纵轴为E(t)/E(0)的对数刻度；数据不平滑、不拟合。
-- 两张能量图的正文、数学符号、刻度及图例均由 LaTeX 渲染，使用与正文一致的 Latin Modern 字体。
-  PDF嵌入字体；SVG将TeX字形转为矢量路径以保持显示一致，改字请修改绘图脚本并重绘。
+- 两张能量图与收敛图共用LaTeX字体设置，使用与正文一致的Latin Modern字体。
 
 ![一阶能量耗散](figures/first_order_energy.png)
 
