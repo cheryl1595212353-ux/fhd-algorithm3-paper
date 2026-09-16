@@ -1,0 +1,51 @@
+{
+  "snapshot_date": "2026-09-16",
+  "description": "Accepted revised five-block Algorithm 3 experimental data. Theory source retained as supplied; pending formula changes were not applied in this integration.",
+  "primary_data_sha256": {
+    "results.csv": "cdd27b5c94137328f28afaab6ab6c607c026feb76abd5277a79ec73da2413327",
+    "results.json": "69eb12a0e7fc10b52d2a498f380cb9542ca95d1e6906f1347d10847732f3df8c"
+  },
+  "raw_result_sources": [
+    {
+      "case": "first_K4",
+      "sha256": "2f5aeba50f6db5c396ef5b16272b9b6c6698c5ab9abeb7aeefdb66ba64cb4f51",
+      "source_result_filename": "raw_first_K4.json"
+    },
+    {
+      "case": "first_K8",
+      "sha256": "820a731fbcc30ec9b823e6ca8ed8f88c18a1c69e97ad6bf76c89fc0260f706f3",
+      "source_result_filename": "raw_first_K8.json"
+    },
+    {
+      "case": "first_K16",
+      "sha256": "2cfb1750eb1458a5f781fd0b381ff4720e6f45faadbfe60bf0714860fc6597e1",
+      "source_result_filename": "raw_first_K16.json"
+    },
+    {
+      "case": "first_K32",
+      "sha256": "9dd767b2610c478d2a2ce8a302e009239eea16ea347dba5c804c367ee911044a",
+      "source_result_filename": "raw_first_K32.json"
+    },
+    {
+      "case": "second_K4",
+      "sha256": "d1d9840986496aa3c31fd873a1e1546bbadbdb34c1d77d9bc7736e5349f43111",
+      "source_result_filename": "raw_second_K4.json"
+    },
+    {
+      "case": "second_K8",
+      "sha256": "c9c9bdad1733e0ef5743f4d0ebfaedefcbc834b76a1591901ce0b3535cca0e3d",
+      "source_result_filename": "raw_second_K8.json"
+    },
+    {
+      "case": "second_K16",
+      "sha256": "e6f9a58f83827dec13a175d7b4c19d3d218d5b52c3fc8354c77e9bcf3dbb7cbf",
+      "source_result_filename": "raw_second_K16.json"
+    },
+    {
+      "case": "second_K32",
+      "sha256": "3fd85ecd462731719f5c08a836acf88abbcb0e13b2e0a00583e7ee96fdabf801",
+      "source_result_filename": "raw_second_K32.json"
+    }
+  ],
+  "raw_results_included": false
+}
