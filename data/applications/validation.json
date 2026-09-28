@@ -1,0 +1,128 @@
+{
+  "channel_spatial_K8_K12_native_L2": {
+    "u": {
+      "absolute_L2": 3.534947866400749e-05,
+      "relative_L2": 0.0013523882974927186,
+      "coarse_L2_squared": 0.000683380220222299,
+      "fine_L2_squared": 0.0006832241645108257
+    },
+    "m": {
+      "absolute_L2": 0.00011839564652467113,
+      "relative_L2": 0.03297181345038241,
+      "coarse_L2_squared": 1.2907487816700422e-05,
+      "fine_L2_squared": 1.289394456872793e-05
+    },
+    "omega": {
+      "absolute_L2": 4.5134360666518866e-05,
+      "relative_L2": 0.007189272571427637,
+      "coarse_L2_squared": 3.930645464098387e-05,
+      "fine_L2_squared": 3.941347168355606e-05
+    },
+    "H": {
+      "absolute_L2": 0.00019819646777517616,
+      "relative_L2": 0.03146105907643112,
+      "coarse_L2_squared": 3.959785186194859e-05,
+      "fine_L2_squared": 3.968671424346877e-05
+    }
+  },
+  "channel_control_native_L2": {
+    "u": {
+      "absolute_L2": 1.8946906065661435e-06,
+      "relative_L2": 7.248642697235595e-05,
+      "coarse_L2_squared": 0.0006832247481789514,
+      "fine_L2_squared": 0.0006832241645108257
+    },
+    "m": {
+      "absolute_L2": 0.003590813914522437,
+      "relative_L2": 1.0,
+      "coarse_L2_squared": 0.0,
+      "fine_L2_squared": 1.2893944568727947e-05
+    },
+    "omega": {
+      "absolute_L2": 9.921369389895974e-06,
+      "relative_L2": 0.0015803354201202264,
+      "coarse_L2_squared": 3.941510989023046e-05,
+      "fine_L2_squared": 3.941347168355603e-05
+    },
+    "H": {
+      "absolute_L2": 0.006299739220274821,
+      "relative_L2": 1.0,
+      "coarse_L2_squared": 0.0,
+      "fine_L2_squared": 3.968671424346882e-05
+    }
+  },
+  "step_K4_audit": {
+    "status": "pass",
+    "case": "step_channel/runs/production/magnetic_K4",
+    "K": 4,
+    "dt": 0.005,
+    "T": 2.0,
+    "steps": 400,
+    "frames": 401,
+    "first_step_accepted": true,
+    "max_true_relative_residual": 2.030667709335273e-10,
+    "max_flux_balance_relative": 1.1167537482994219e-14,
+    "max_wall_velocity_L2_squared": 0.0,
+    "max_outlet_backflow": 0.0,
+    "final_native_L2": {
+      "u": 0.014583304406462522,
+      "m": 0.0048755481165068575,
+      "omega": 0.002943294850880435,
+      "H": 0.007964644394950987
+    },
+    "max_saved_sample_magnitudes": {
+      "u": 0.2499613500795727,
+      "m": 0.05851441970787617,
+      "omega": 0.032099585877013656,
+      "H": 0.13595326419284737
+    },
+    "final_physical": {
+      "volume": 0.03599999999999912,
+      "area_inlet": 0.020000000000000004,
+      "area_outlet": 0.04000000000000018,
+      "area_walls": 0.7800000000000068,
+      "u_L2_squared": 0.0002126727674115492,
+      "omega_L2_squared": 8.662984579219282e-06,
+      "m_L2_squared": 2.377096943637356e-05,
+      "H_L2_squared": 6.343556033802417e-05,
+      "ha_L2_squared": 0.000151084464122248,
+      "div_u_L2_squared": 0.0017867428278178577,
+      "grad_u_L2_squared": 0.17429082260812637,
+      "curl_H_L2_squared": 5.94028470190681e-34,
+      "m_normal_L2_squared": 4.881487366336543e-35,
+      "outlet_backflow": 0.0,
+      "inlet_discrete_BC_L2_squared": 6.598251534011759e-36,
+      "wall_velocity_L2_squared": 0.0,
+      "omega_boundary_L2_squared": 0.0,
+      "reverse_axial_flow_integral": 3.3318567412616515e-07,
+      "flux_inlet": -0.002213541666666667,
+      "flux_outlet": 0.0022135416666666796,
+      "flux_walls": 0.0,
+      "p_inlet_integral": 0.04615321524545449,
+      "p_outlet_integral": 3.2835272397817015e-06,
+      "magnetic_constraint_H1_dual": 0.00015229569971237787,
+      "magnetic_constraint_relative": 0.006059871967569701,
+      "flux_balance_absolute": 1.2576745200831851e-17,
+      "flux_balance_relative": 5.681729596611094e-15,
+      "mean_inlet_pressure_stage": 2.307660762272724,
+      "mean_outlet_pressure_stage": 8.208818099454217e-05,
+      "pressure_drop_stage": 2.3075786740917295,
+      "total_energy": 0.00014998296351586958
+    },
+    "pressure_stage_time": 1.9975,
+    "checkpoint_manifest_sha256": "1a5e91b826b29260d78853d36dbe08eefd745fee58394d2b767d6757244f3693",
+    "source_sha256": {
+      "diagnostics.py": "d1c10d2654dfc48fc4f7229f0beb2b8a3a5444c1619943e9573f4ed2afc170c5",
+      "linear.py": "88697bf0b35d9cf660144ad601d3192aba218651fb2c1def5f12b99eb914ef55",
+      "guard.py": "6f9f3c563ba6bcecf26e9ac0ef0fca8b9b4f281602ccd8ca505a980d76ef7291",
+      "model.py": "85e5ce72f7d842dbe5e3af137fafa73759808e893a2c613ca539a1948d705ff1",
+      "mumps_observer.py": "1e098c9cdfe1fd34a295850684d490d3d08b0a5b9965f6ecee08c37c3d30a448",
+      "engine.py": "eb8d8b6ae95dddfa36c63443734928cce78b6bb3779e2723fe8c5ba185361e66",
+      "geometry.py": "f88a3d06006f203d6df69b0de436a756e049a7656baf78677379402634393bc8",
+      "hardware.py": "37da195afaced6b5725aac3bd9651967361a2f88432a51b5f01f03cf5cb38033",
+      "run.py": "7a0413e50ba1ecfbd8d88a2daa6c341bb88c35303636f29abdf9d6bc4a5f1b87",
+      "spaces.py": "64878e416aa271358479146f1a32c98b496af50e01921a22d39209790995de8e",
+      "sampling.py": "5c3493611d556a9a575b4f9c70aef06fa09d12ec4c5bef66e710168539dbbb6d"
+    }
+  }
+}

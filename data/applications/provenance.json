@@ -1,0 +1,81 @@
+{
+  "base_commit": "5df6adf544ae10e5ed0ff84b9b66362532d99694",
+  "data_unchanged": true,
+  "temporal_interpolation": false,
+  "cases": {
+    "channel": {
+      "snapshot": "channel_t2.0000.npz",
+      "snapshot_sha256": "ca00f823103a32c1cea16578b0e3f2e55cc9d6d9b16a9e2edbcdcb8850eb807a",
+      "source_path": "channel/runs/production/magnetic_K12/samples/t2.0000.npz",
+      "K": 12,
+      "dt": 0.005,
+      "final_time": 2.0,
+      "parameters": {
+        "rho": 1.0,
+        "kappa": 0.01,
+        "eta": 0.02,
+        "etap": 0.001,
+        "mu0": 1.0,
+        "tau": 0.1,
+        "zeta": 0.01,
+        "chi0": 1.0,
+        "sigma": 0.005,
+        "lambdap": 0.001
+      },
+      "solver_source_sha256": {
+        "engine.py": "eb8d8b6ae95dddfa36c63443734928cce78b6bb3779e2723fe8c5ba185361e66",
+        "linear.py": "88697bf0b35d9cf660144ad601d3192aba218651fb2c1def5f12b99eb914ef55",
+        "model.py": "a0909eee85a245fa0964d74360db01df04215a1eb11e408e141d76f25556807e",
+        "spaces.py": "a3ee1c92f724fa031f6125acee3ac7c6f3780b31e581628c5175161dce186429"
+      },
+      "color_limits": {
+        "u": 0.25,
+        "m": 0.04,
+        "omega": 0.05
+      },
+      "section": {
+        "axis": "z",
+        "value": 0.1
+      },
+      "snapshot_time": 2.0
+    },
+    "step": {
+      "snapshot": "step_t0.7150.npz",
+      "snapshot_sha256": "517f8e5c5a2fde97e306022ea0189dd957f9ae64900da3fdcafbbea0ee2e652e",
+      "source_path": "step_channel/runs/production/magnetic_K4/samples/t0.7150.npz",
+      "K": 4,
+      "dt": 0.005,
+      "final_time": 2.0,
+      "parameters": {
+        "rho": 1.0,
+        "kappa": 0.01,
+        "eta": 0.02,
+        "etap": 0.001,
+        "mu0": 1.0,
+        "tau": 0.1,
+        "zeta": 0.01,
+        "chi0": 1.0,
+        "sigma": 0.005,
+        "lambdap": 0.001
+      },
+      "solver_source_sha256": {
+        "linear.py": "88697bf0b35d9cf660144ad601d3192aba218651fb2c1def5f12b99eb914ef55",
+        "model.py": "85e5ce72f7d842dbe5e3af137fafa73759808e893a2c613ca539a1948d705ff1",
+        "engine.py": "eb8d8b6ae95dddfa36c63443734928cce78b6bb3779e2723fe8c5ba185361e66",
+        "geometry.py": "f88a3d06006f203d6df69b0de436a756e049a7656baf78677379402634393bc8",
+        "spaces.py": "64878e416aa271358479146f1a32c98b496af50e01921a22d39209790995de8e"
+      },
+      "color_limits": {
+        "u": 0.25,
+        "m": 0.04,
+        "omega": 0.04
+      },
+      "section": {
+        "axis": "y",
+        "value": 0.1
+      },
+      "snapshot_time": 0.715,
+      "scope": "K4 qualitative visualization; full fine-mesh acceptance incomplete"
+    }
+  }
+}

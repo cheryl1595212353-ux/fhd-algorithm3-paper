@@ -1,4 +1,4 @@
-.PHONY: pdf experiments figures preview
+.PHONY: pdf experiments figures application-figures preview
 
 PYTHON ?= python3
 
@@ -11,6 +11,9 @@ experiments:
 figures:
 	$(PYTHON) scripts/plot_convergence.py
 	$(PYTHON) scripts/plot_energy.py
+
+application-figures:
+	$(PYTHON) scripts/plot_applications.py $(if $(TEX_ENGINE),--engine $(TEX_ENGINE),)
 
 preview: pdf experiments
 	cp build/main.pdf previews/manuscript.pdf

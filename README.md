@@ -1,6 +1,6 @@
 # FHD Algorithm 3 论文与数值实验
 
-用于协作修订 Rosensweig 铁磁流体模型论文，包含论文 TeX、一阶/二阶数值实验、收敛图和对应数据。
+用于协作修订 Rosensweig 铁磁流体模型论文，包含论文 TeX、一阶/二阶数值实验、通道与台阶流应用、插图和对应数据。
 仓库目前为公开；公开访问不等于授予开源许可证，本仓库尚未设置许可证。
 
 ## 目录
@@ -16,31 +16,37 @@ sections/
   energy_setup.tex                统一零外场算例、能量与平衡指标
   first_order_energy.tex          一阶能量耗散结果
   second_order_energy.tex         二阶能量耗散结果
+  channel_flow.tex                直通道流：条件、开放边界、验证与结果
+  step_flow.tex                   后向台阶流：条件与三场可视化
 figures/                         收敛图及两张独立能量图：PDF、SVG、PNG
+  applications/                  六张应用插图：PDF、PNG及校验信息
 data/
   results.csv                    8组主误差及42个观测收敛阶
   results.json                   同一数据的结构化版本
   provenance.json                数据与来源校验信息
   energy/                        六个能量算例的曲线、汇总和校验信息
+  applications/                  两个原始采样快照、参数、来源和验证摘要
 scripts/
-  figure_style.py                 所有插图共用的LaTeX字体与导出设置
+  figure_style.py                 收敛与能量图的LaTeX字体及导出设置
   plot_convergence.py             由原始数据重画两张收敛图
   plot_energy.py                  由原始数据重画两张独立能量图
+  plot_applications.py            由归档快照重画六张应用插图
 previews/
   manuscript.pdf                 完整论文编译预览
   numerical_experiments.pdf       仅数值实验的编译预览
 Makefile                         本地编译命令
+REVISION_CN.md                   本轮修订范围、编译检查和结果使用边界
 ```
 
 ## 协作方式
 
-- 数值实验统一位于一阶、二阶理论章节之后、参考文献之前的第6节：6.1实验设置、6.2收敛性验证、6.3能量耗散。
+- 数值实验统一位于一阶、二阶理论章节之后、参考文献之前的第6节：6.1实验设置、6.2收敛性验证、6.3能量耗散、6.4直通道流、6.5后向台阶流。
 - 两种格式分别成图，但同类结果连续排列，不再穿插于理论章节之间。
 - 修改实验文字、表格和图注：编辑 `sections/` 中对应文件。`main.tex` 和 `experiments.tex` 共用 `numerical_experiments.tex` 入口，不应再复制一份有效正文。
-- 修改理论推导：编辑 `main.tex`。**本次上传只整合了数值实验，之前讨论的理论公式修订没有在本轮同步。** 协作者需要在后续修订中保持理论稿与实验对象一致。
+- 修改理论推导：编辑 `main.tex`。本轮新增应用章节，并同步摘要和文章结构说明；此前理论公式的整体修订不在本轮范围内。应用章节明确列出开放边界扩展，没有将齐次边界下的理论结论直接推广到开放台阶区域。
 - 图片引用采用相对路径 `figures/`。PDF用于论文排版，SVG用于矢量编辑，PNG用于快速查看。
 - 生成的 `.aux`、`.log` 等中间文件放在 `build/`，不提交。修改 TeX 后应重新编译；`previews/` 是已编译快照，不会自行更新。
-- 正文原有的 `eq:H-dis-f-1` 重复标签警告仍保留，属于待处理的理论稿排版问题，不是本次数值实验片段产生的新标签。
+- 原有第二处 `eq:H-dis-f-1` 已更名为 `eq:H-dis-f-2`，消除重复标签；对应数学公式保持原样。
 
 ## 编译
 
@@ -53,11 +59,33 @@ make pdf
 输出为 `build/main.pdf`。`make experiments` 生成独立的数值实验预览。
 检查排版后运行 `make preview` 可更新 `previews/` 中两份 PDF。
 安装 Python 的 `matplotlib` 和 `numpy`，并将 TeX Live/MacTeX 的 `latex`、`dvipng` 加入 PATH 后，
-运行 `make figures` 可重新生成论文中全部四张图；TeX 环境需包含 `lmodern` 字体包和 `amsmath`。
+运行 `make figures` 可重新生成四张收敛和能量图；TeX 环境需包含 `lmodern` 字体包和 `amsmath`。
 此命令只从归档数据重绘，不重跑数值求解，也不改变误差、能量或参考线数据。
 所有图的普通文字、数学符号、刻度和图例均使用真正的LaTeX渲染及Latin Modern字体。
 PDF嵌入字体；SVG使用TeX字形的矢量路径，修改文本应编辑绘图脚本并重绘。
 也可以将整个仓库上传到 Overleaf，以 `main.tex` 为主文件并使用 pdfLaTeX 编译。
+
+六张通道与台阶流图需要额外的 Python 包 `scipy`，用以下命令重绘：
+
+```bash
+make application-figures PYTHON=python3 TEX_ENGINE=/path/to/pdflatex
+```
+
+该脚本也支持 `TEX_ENGINE=/path/to/tectonic`；它先校验归档 NPZ 的 SHA-256，
+再绘制矢量与模值图，最后使用 LaTeX/TikZ 排印色条。
+图号、标题和条件由论文图注排版，图片内没有重复标题或技术小字。
+若 PATH 中有 `pdftoppm`，会同时导出 PNG。该步骤只重绘已有数据，不运行有限元求解器。
+
+本轮 PDF 使用 [Tectonic](https://tectonic-typesetting.github.io/) 0.17.0 编译。
+安装该程序后，也可直接执行：
+
+```bash
+mkdir -p build
+tectonic --keep-logs --outdir build main.tex
+tectonic --keep-logs --outdir build experiments.tex
+cp build/main.pdf previews/manuscript.pdf
+cp build/experiments.pdf previews/numerical_experiments.pdf
+```
 
 ## 收敛实验口径
 
@@ -89,3 +117,13 @@ PDF嵌入字体；SVG使用TeX字形的矢量路径，修改文本应编辑绘�
 ![二阶能量耗散](figures/second_order_energy.png)
 
 本仓库仅含论文协作材料，不包含SSH密钥、服务器登录资料、计算日志或完整有限元求解器。
+
+## 通道与后向台阶流应用
+
+- 两例采用二阶格式和五块 Algorithm 3；初值为零，入口平滑启动，外置偶极子的幅值随时间变化。
+- 第6.4节给出材料参数、入口函数、磁源位置和波形、物理压力与修正压力关系、开放边界及辅助变量条件。
+- 直通道展示 K12、t=2 的速度、磁化、颗粒角速度；同时报告原生体积 L2 相邻网格差异及无磁场对照。
+- 台阶流展示已指定的真实保存时刻 t=0.715，K4、dt=0.005；三种场使用同一时间层。当前图片用于定性展示，不能替代台阶流的最终网格无关性验证。
+- 每图左侧为稀疏矢量，右侧为模值截面。直通道截面为 z=0.1；台阶流截面为 y=0.1。箭长与模值线性关联，没有时间插值或数据重造。
+- 两例均有给定入口速度，本文没有据此声称从静止流体实现纯磁驱动泵送或获得净流量增益。
+- 快照、源码哈希、验证摘要及重绘说明位于 `data/applications/`。
