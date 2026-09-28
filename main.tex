@@ -183,7 +183,7 @@ School of Mathematics\\
 
 
 \begin{abstract}
-We develop a unified structure-preserving framework for the numerical approximation of the Rosensweig model for ferrofluid flows and construct first- and second-order semi-implicit finite element schemes that are unconditionally energy stable. By introducing a scalar magnetic potential and suitable auxiliary variables, the strongly coupled system is reformulated as an abstract saddle-point problem in which the dissipative terms are represented by a symmetric coercive bilinear form and the nonlinear couplings by a skew-symmetric trilinear form. This formulation exposes the cancellation mechanism of the coupled system and provides a common framework for designing energy-stable schemes of different temporal orders. The first-order method is based on a modified implicit Euler discretization and is linear at every time level, while the second-order method combines a modified Crank-Nicolson discretization with extrapolation and requires a nonlinear solve only at the initial step. For the spatial discretization, compatible $H^1$-, $H(\curl)$-, and $H(\div)$-conforming finite element spaces are employed within the framework of finite element exterior calculus. In particular, the discrete magnetic field is recovered as the gradient of a discrete scalar potential and therefore satisfies the curl-free constraint pointwise. We establish well-posedness and unconditional energy estimates for the time semi-discrete and fully discrete schemes, together with first- and second-order temporal error estimates. An exact Schur complement decoupling strategy is developed for the resulting linear algebraic systems. Numerical experiments for both schemes confirm the expected convergence behavior and the preservation of the discrete curl-free property up to machine precision.
+We develop a unified structure-preserving framework for the numerical approximation of the Rosensweig model for ferrofluid flows and construct first- and second-order semi-implicit finite element schemes that are unconditionally energy stable. By introducing a scalar magnetic potential and suitable auxiliary variables, the strongly coupled system is reformulated as an abstract saddle-point problem in which the dissipative terms are represented by a symmetric coercive bilinear form and the nonlinear couplings by a skew-symmetric trilinear form. This formulation exposes the cancellation mechanism of the coupled system and provides a common framework for designing energy-stable schemes of different temporal orders. The first-order method is based on a modified implicit Euler discretization and is linear at every time level, while the second-order method combines a modified Crank-Nicolson discretization with extrapolation and requires a nonlinear solve only at the initial step. For the spatial discretization, compatible $H^1$-, $H(\curl)$-, and $H(\div)$-conforming finite element spaces are employed within the framework of finite element exterior calculus. In particular, the discrete magnetic field is recovered as the gradient of a discrete scalar potential and therefore satisfies the curl-free constraint pointwise. We establish well-posedness and unconditional energy estimates for the time semi-discrete and fully discrete schemes, together with first- and second-order temporal error estimates. An exact Schur complement decoupling strategy is developed for the resulting linear algebraic systems. Numerical experiments for both schemes confirm the expected convergence behavior and the preservation of the discrete curl-free property up to machine precision. Additional straight-channel and backward-facing-step examples illustrate magnetically forced transport under prescribed inflow and open-boundary conditions.
 %
 %We develop a unified structure-preserving framework for the numerical
 %approximation of the Rosensweig model for ferrofluid flows and construct
@@ -484,7 +484,8 @@ discretization. Its well-posedness, unconditional energy stability,
 temporal error estimates, compatible fully discrete finite element
 formulation, and algebraic solution strategy are discussed.
 Section~6 collects the convergence and unforced energy-dissipation
-experiments for both time discretizations.
+experiments for both time discretizations and presents straight-channel
+and backward-facing-step flow applications.
 
 
 \section{Preliminaries}
@@ -5769,7 +5770,7 @@ it holds
 \right.
 \end{equation}
 After solving \eqref{eq:FHD-weak-fdis-2}, we can obtain $\bs H_h \in \bs U_h^2$ by solving
-\begin{equation}\label{eq:H-dis-f-1}
+\begin{equation}\label{eq:H-dis-f-2}
 (\bs H_h,\bs \varepsilon_h) = (\nabla\varphi_h,\bs \varepsilon_h) \qquad\forall~\bs\varepsilon_h \in \bs U_h^2.
 \end{equation}
 Consequently, \(\bs H_h = \nabla\varphi_h$ and therefore $\curl\bs H_h = 0$ pointwise in $\Omega$.

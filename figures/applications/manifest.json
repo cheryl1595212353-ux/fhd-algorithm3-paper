@@ -1,0 +1,92 @@
+{
+  "channel_u": {
+    "pdf_sha256": "ad622390a599a7cdaab4783ab114480273a16fde3cec83937fde0bbd8db92f8e",
+    "snapshot_time": 2.0,
+    "snapshot_sha256": "ca00f823103a32c1cea16578b0e3f2e55cc9d6d9b16a9e2edbcdcb8850eb807a",
+    "color_limit": 0.25,
+    "arrow_points": 300,
+    "camera": [
+      -0.7238683027665548,
+      0.20728955942860433,
+      0.6580620934241407
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  },
+  "channel_m": {
+    "pdf_sha256": "42bd2fcd6ec8c92116f61ff493dce1aa79c95aa709091c4bb236a84dc9f78bb4",
+    "snapshot_time": 2.0,
+    "snapshot_sha256": "ca00f823103a32c1cea16578b0e3f2e55cc9d6d9b16a9e2edbcdcb8850eb807a",
+    "color_limit": 0.04,
+    "arrow_points": 300,
+    "camera": [
+      -0.7238683027665548,
+      0.20728955942860433,
+      0.6580620934241407
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  },
+  "channel_omega": {
+    "pdf_sha256": "524c674982624a3b1cb2b1e9d3e21aeb54d5b222a25535da7547ce6b1d2ccb29",
+    "snapshot_time": 2.0,
+    "snapshot_sha256": "ca00f823103a32c1cea16578b0e3f2e55cc9d6d9b16a9e2edbcdcb8850eb807a",
+    "color_limit": 0.05,
+    "arrow_points": 300,
+    "camera": [
+      -0.7238683027665548,
+      0.20728955942860433,
+      0.6580620934241407
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  },
+  "step_u": {
+    "pdf_sha256": "bcfbef2e0bb04b1c53a2bd9ed51d974151f102077913fb26d4806db84b3484ca",
+    "snapshot_time": 0.715,
+    "snapshot_sha256": "517f8e5c5a2fde97e306022ea0189dd957f9ae64900da3fdcafbbea0ee2e652e",
+    "color_limit": 0.25,
+    "arrow_points": 264,
+    "camera": [
+      -0.6529286250990104,
+      -0.7254762501100116,
+      0.21764287503300347
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  },
+  "step_m": {
+    "pdf_sha256": "7decf319513cca87faf13b08082f880cb563ccb92d40bf7816c2cb32c7b952a5",
+    "snapshot_time": 0.715,
+    "snapshot_sha256": "517f8e5c5a2fde97e306022ea0189dd957f9ae64900da3fdcafbbea0ee2e652e",
+    "color_limit": 0.04,
+    "arrow_points": 200,
+    "camera": [
+      -0.6529286250990104,
+      -0.7254762501100116,
+      0.21764287503300347
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  },
+  "step_omega": {
+    "pdf_sha256": "3687d50cf16524880d2424c8a6a4d3c0d357c4ab918fb154ca8c4c116013429b",
+    "snapshot_time": 0.715,
+    "snapshot_sha256": "517f8e5c5a2fde97e306022ea0189dd957f9ae64900da3fdcafbbea0ee2e652e",
+    "color_limit": 0.04,
+    "arrow_points": 264,
+    "camera": [
+      -0.6529286250990104,
+      -0.7254762501100116,
+      0.21764287503300347
+    ],
+    "labels": "LaTeX Latin Modern",
+    "temporal_interpolation": false,
+    "embedded_caption": false
+  }
+}

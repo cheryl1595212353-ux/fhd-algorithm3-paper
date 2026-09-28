@@ -1,0 +1,44 @@
+{
+  "snapshot_hashes": "pass",
+  "six_figure_hashes": "pass",
+  "figure_count": 6,
+  "visual_review": "added manuscript pages, all six application figures, adjacent pages and baseline overfull pages inspected",
+  "pdfs": {
+    "main": {
+      "pages": 37,
+      "sha256": "03b04187f1f41fb76bdcefe1db0db5d07a4c665f8b323034914ba11be0f4af44",
+      "unresolved_reference_markers": false,
+      "all_fonts_embedded": true,
+      "unique_fonts": 83,
+      "application_pages": [
+        31,
+        33,
+        34,
+        35
+      ]
+    },
+    "experiments": {
+      "pages": 10,
+      "sha256": "0de54d680d0531baa680a33e7f5a7780f3f23d3a230b3e28e1faee49196ba9e8",
+      "unresolved_reference_markers": false,
+      "all_fonts_embedded": true,
+      "unique_fonts": 72,
+      "application_pages": [
+        6,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "main_overfull_warnings": 4,
+  "experiments_overfull_warnings": 0,
+  "source_sha256": {
+    "main.tex": "a5eed9151eab29b8a0d268c6de046a42999c6945ec34e87cb41c199d735a8ccd",
+    "experiments.tex": "6802ad8c0a3b49084e565a73bca0b7d3fd5d631f1361a7a4b064efcf7e01f42d",
+    "sections/numerical_experiments.tex": "6a853d75036396252e923a01569bceed5e01daae368d3c3a9ed163a4cb388211",
+    "sections/channel_flow.tex": "d8c817a44ed7eca74edfe3ff54d2a77382187e9373e579bdbcca3fe9e8e91b35",
+    "sections/step_flow.tex": "f539f1b51d22fbe9e608072ec861593277447590055079835127e41a59dc2dc9",
+    "scripts/plot_applications.py": "9f565bd006ea292b7c1c1cd88dc37f14fdcc85ca699125645730761462236103"
+  }
+}
