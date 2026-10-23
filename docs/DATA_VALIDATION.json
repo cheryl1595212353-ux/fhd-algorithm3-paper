@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "cases": 17,
+  "error_records": 119,
+  "absolute_and_relative_rates": 182,
+  "csv_rows": 119,
+  "curl_diagnostics": 17,
+  "tables": 8,
+  "printed_error_cells": 238,
+  "printed_rate_cells": 182,
+  "approved_manuscript_byte_identical": true,
+  "preserved_energy_application_assets": 32,
+  "figure_provenance_checked": [
+    "absolute",
+    "relative"
+  ],
+  "scope": "Existing data arithmetic, CSV, TeX tables, hashes and plot provenance. No FEM/MPI, field reintegration, job submission or remote data changes."
+}

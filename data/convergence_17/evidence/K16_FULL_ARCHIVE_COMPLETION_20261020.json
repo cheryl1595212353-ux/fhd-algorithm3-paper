@@ -1,0 +1,22 @@
+{
+  "status": "K16_original_T2_numeric_archive_native_and_comparison_complete",
+  "job_id": "46959367",
+  "observed_epoch": 1792540547.8070579,
+  "collector_exit_code": 0,
+  "original_process_observation_sha256": "805e096b60954445e70d1e92da2e95cb1e6c52770db785682e41dd3121391a48",
+  "comparison_sha256": "eea917178f2b5621684134d125a86bcc2a8890a29bb346a06c301fd220624977",
+  "native_proof_sha256": "29e48858ca4ade354ec2508c9e83b9cbb6c5d43600b1fdd5eb53750f2a1910f6",
+  "collection_proof_sha256": "0b649b298ea90c703ccc3a7bc30811847add149825e54dbcb9841b877bfe1c8e",
+  "manifest_sha256": "2045e30cbcea080c73ff28bdfa3130f83f48e9114f0fb060d2380b1cf6a09dd9",
+  "original_admission_sha256": "861037004a38f446a13f85bedac97c86d913c6dce8d49e1a69e1d0e32219447d",
+  "archived_files": 2408,
+  "archived_bytes": 6798752221,
+  "native_checkpoint_files": 2080,
+  "native_arrays": 55584,
+  "accepted_cases": 16,
+  "target_cases": 17,
+  "remaining_job": "46959652",
+  "human_resume_authority_sha256": "6751ae5a870ec02aabc6c79b4d905e1100dd4933c46ece9c45f8feca9c3884ae",
+  "no_raw_results_modified": true,
+  "scope": "Order3 K16 complete acceptance and archive; overall 17-case goal remains unfinished."
+}

@@ -1,0 +1,1768 @@
+{
+  "status": "partial_accepted_production_results",
+  "verified_cases": 17,
+  "target_cases": 17,
+  "created_epoch": 1792700876.2042115,
+  "series": [
+    {
+      "order": 1,
+      "rows": [
+        {
+          "order": 1,
+          "K": 2,
+          "T": 2.0,
+          "dt": 0.25,
+          "case": "high_order_1/experiments/common_mms_time_half_20261019/runs/K2_validate_job_46876092",
+          "result_sha256": "b3a8e65170aab1b4609d577a96dc7e4a7e5ecae530a7051e437ba409586ed1ec",
+          "errors": {
+            "u_H1": {
+              "absolute": 2.500774855283026,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.9199836562571142
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 9.793811582415822,
+              "reference_norm": 2.7182818284590455,
+              "relative": 3.6029419318775315,
+              "stages": [
+                {
+                  "time": 2.0,
+                  "absolute": 9.793811582415822,
+                  "reference_norm": 2.7182818284590455
+                }
+              ]
+            },
+            "omega_H1": {
+              "absolute": 1.3043174109426035,
+              "reference_norm": 2.7182818284590446,
+              "relative": 0.4798315602477476
+            },
+            "m_Hdiv": {
+              "absolute": 0.7396297553112917,
+              "reference_norm": 2.718281828459046,
+              "relative": 0.2720945810576886
+            },
+            "H_Hcurl": {
+              "absolute": 1.60236732806188,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.5894779971987814
+            },
+            "k_L2": {
+              "absolute": 0.19636828022653705,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.5045299739412784
+            },
+            "phi_H1": {
+              "absolute": 1.6325466992871729,
+              "reference_norm": 2.884673248051085,
+              "relative": 0.5659381700822228
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.17284797792204848,
+              "relative": 0.08582582801929117,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.7191493248763434,
+              "relative": 0.39390773954383734,
+              "reference_norm": 1.8256796012922982
+            },
+            "u_L2": {
+              "absolute": 0.17557642451062633,
+              "relative": 0.3710467984948471,
+              "reference_norm": 0.4731921289251189
+            },
+            "grad_u_L2": {
+              "absolute": 2.494603735259751,
+              "relative": 0.931942391762924,
+              "reference_norm": 2.676778905336405
+            }
+          },
+          "pressure_stage_times": [
+            2.0
+          ],
+          "tableau": {
+            "order": 1,
+            "A": [
+              [
+                1.0
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              1.0
+            ],
+            "G": [
+              [
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 1,
+          "K": 4,
+          "T": 2.0,
+          "dt": 0.125,
+          "case": "high_order_1/experiments/common_mms_time_half_20261019/runs/K4_production_job_46876099",
+          "result_sha256": "de111637565063a0995709cb215ecd609a1005ed22a3d24cd9763108f0c869ac",
+          "errors": {
+            "u_H1": {
+              "absolute": 1.3564703344038154,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.4990175485861151,
+              "absolute_rate": 0.8825176808954276,
+              "relative_rate": 0.8825176808954278
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 5.218795042608784,
+              "reference_norm": 2.718281828459045,
+              "relative": 1.919887403863213,
+              "stages": [
+                {
+                  "time": 2.0,
+                  "absolute": 5.218795042608784,
+                  "reference_norm": 2.718281828459045
+                }
+              ],
+              "absolute_rate": 0.9081536969179029,
+              "relative_rate": 0.9081536969179028
+            },
+            "omega_H1": {
+              "absolute": 0.704992919430843,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.25935240123004205,
+              "absolute_rate": 0.8876143249512857,
+              "relative_rate": 0.8876143249512868
+            },
+            "m_Hdiv": {
+              "absolute": 0.39023686898273147,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.1435601212858606,
+              "absolute_rate": 0.9224531775353774,
+              "relative_rate": 0.9224531775353771
+            },
+            "H_Hcurl": {
+              "absolute": 0.8792159666718562,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.3234454784882518,
+              "absolute_rate": 0.865915419149956,
+              "relative_rate": 0.865915419149956
+            },
+            "k_L2": {
+              "absolute": 0.10371809525807331,
+              "reference_norm": 0.38921033510170044,
+              "relative": 0.2664834047404518,
+              "absolute_rate": 0.9208942899443081,
+              "relative_rate": 0.9208942899443089
+            },
+            "phi_H1": {
+              "absolute": 0.8829627641033309,
+              "reference_norm": 2.884673248051087,
+              "relative": 0.3060876183116646,
+              "absolute_rate": 0.8866997573066027,
+              "relative_rate": 0.8866997573066038
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.08001666141333448,
+              "relative": 0.039731423553220985,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.3819452157177905,
+              "relative": 0.20920714425873654,
+              "reference_norm": 1.8256796012922984
+            },
+            "u_L2": {
+              "absolute": 0.047559343462800586,
+              "relative": 0.10050746949412313,
+              "reference_norm": 0.473192128925119
+            },
+            "grad_u_L2": {
+              "absolute": 1.355636336547153,
+              "relative": 0.5064431484589809,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            2.0
+          ],
+          "tableau": {
+            "order": 1,
+            "A": [
+              [
+                1.0
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              1.0
+            ],
+            "G": [
+              [
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 1,
+          "K": 8,
+          "T": 2.0,
+          "dt": 0.0625,
+          "case": "high_order_1/experiments/common_mms_time_half_20261019/runs/K8_production_job_46876115",
+          "result_sha256": "a8c5317f9f74693d608d7058ee745bd1bd0dfc3bbfdb58260c8b8bee02657609",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.6441724946876904,
+              "reference_norm": 2.718281828459042,
+              "relative": 0.23697781736372178,
+              "absolute_rate": 1.0743385306792392,
+              "relative_rate": 1.0743385306792372
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 1.7393636597247535,
+              "reference_norm": 2.7182818284590433,
+              "relative": 0.6398761311334575,
+              "stages": [
+                {
+                  "time": 2.0,
+                  "absolute": 1.7393636597247535,
+                  "reference_norm": 2.7182818284590433
+                }
+              ],
+              "absolute_rate": 1.5851571466768328,
+              "relative_rate": 1.5851571466768317
+            },
+            "omega_H1": {
+              "absolute": 0.3594378274690465,
+              "reference_norm": 2.7182818284590478,
+              "relative": 0.13222978710519,
+              "absolute_rate": 0.9718665209368755,
+              "relative_rate": 0.971866520936876
+            },
+            "m_Hdiv": {
+              "absolute": 0.19751739120773099,
+              "reference_norm": 2.7182818284590433,
+              "relative": 0.07266258749914128,
+              "absolute_rate": 0.9823704012774778,
+              "relative_rate": 0.9823704012774765
+            },
+            "H_Hcurl": {
+              "absolute": 0.44882736396610984,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.16511435983830394,
+              "absolute_rate": 0.9700569496399526,
+              "relative_rate": 0.9700569496399528
+            },
+            "k_L2": {
+              "absolute": 0.05040668763398812,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.1295101467971474,
+              "absolute_rate": 1.0409805580183968,
+              "relative_rate": 1.0409805580183955
+            },
+            "phi_H1": {
+              "absolute": 0.44928731235473673,
+              "reference_norm": 2.884673248051086,
+              "relative": 0.1557498107136674,
+              "absolute_rate": 0.9747142770274507,
+              "relative_rate": 0.9747142770274501
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.03893314915815333,
+              "relative": 0.01933184179570805,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.19364227257016137,
+              "relative": 0.10606585757604599,
+              "reference_norm": 1.8256796012922987
+            },
+            "u_L2": {
+              "absolute": 0.011688988383452186,
+              "relative": 0.02470241508455424,
+              "reference_norm": 0.4731921289251187
+            },
+            "grad_u_L2": {
+              "absolute": 0.644066433268133,
+              "relative": 0.240612488384501,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            2.0
+          ],
+          "tableau": {
+            "order": 1,
+            "A": [
+              [
+                1.0
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              1.0
+            ],
+            "G": [
+              [
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 1,
+          "K": 16,
+          "T": 2.0,
+          "dt": 0.03125,
+          "case": "high_order_1/experiments/common_mms_refinement_20261019/runs/K16_production_job_46899976",
+          "result_sha256": "0a60516d2738c12f396bc6b30186c7fec28caea83f820c0868f5411a692e6551",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.3103821973164745,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.11418322929834897,
+              "absolute_rate": 1.0534012500566885,
+              "relative_rate": 1.0534012500566907
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.5119672381413799,
+              "reference_norm": 2.7182818284590486,
+              "relative": 0.1883422214655373,
+              "stages": [
+                {
+                  "time": 2.0,
+                  "absolute": 0.5119672381413799,
+                  "reference_norm": 2.7182818284590486
+                }
+              ],
+              "absolute_rate": 1.7644362003209986,
+              "relative_rate": 1.7644362003210015
+            },
+            "omega_H1": {
+              "absolute": 0.18059034117369174,
+              "reference_norm": 2.7182818284590526,
+              "relative": 0.06643547379193765,
+              "absolute_rate": 0.9930215142732874,
+              "relative_rate": 0.99302151427329
+            },
+            "m_Hdiv": {
+              "absolute": 0.09908509147224225,
+              "reference_norm": 2.7182818284590486,
+              "relative": 0.036451368079229676,
+              "absolute_rate": 0.9952397784651754,
+              "relative_rate": 0.9952397784651783
+            },
+            "H_Hcurl": {
+              "absolute": 0.2255167104100635,
+              "reference_norm": 2.7182818284590318,
+              "relative": 0.08296296140047656,
+              "absolute_rate": 0.992926297682694,
+              "relative_rate": 0.992926297682686
+            },
+            "k_L2": {
+              "absolute": 0.024692253249542575,
+              "reference_norm": 0.38921033510170056,
+              "relative": 0.06344192592699394,
+              "absolute_rate": 1.0295566607222297,
+              "relative_rate": 1.0295566607222313
+            },
+            "phi_H1": {
+              "absolute": 0.22557367213662494,
+              "reference_norm": 2.884673248051082,
+              "relative": 0.07819730442226865,
+              "absolute_rate": 0.9940396282575643,
+              "relative_rate": 0.9940396282575624
+            }
+          },
+          "norm_quadrature": {
+            "u_H1": 3.5769545876793367e-16,
+            "p_L2": 4.770794832580381e-15,
+            "omega_H1": 5.071888060916885e-15,
+            "m_Hdiv": 3.361423019737056e-15,
+            "k_L2": 7.025375361436255e-16,
+            "phi_H1": 7.382663593511387e-16,
+            "H_Hcurl": 4.553792470238351e-15,
+            "p_stage_weighted_L2": 4.770794832580381e-15
+          },
+          "admission_sha256": "dafffaf10856388e406f16f2cc08bbed42dee6ad3f65afa663bf458138ce02b6",
+          "norm_identities": {
+            "u_H1_absolute": 4.440892098500626e-16,
+            "u_H1_reference_norm": 4.440892098500626e-16,
+            "m_Hdiv_absolute": 3.3306690738754696e-16,
+            "m_Hdiv_reference_norm": 9.992007221626409e-16,
+            "pressure_absolute": 0.0,
+            "pressure_reference_norm": 0.0,
+            "pressure_clock_absolute": 0.0
+          }
+        },
+        {
+          "order": 1,
+          "K": 32,
+          "T": 2.0,
+          "dt": 0.015625,
+          "case": "high_order_1/experiments/common_mms_refinement_20261019/runs/K32_production_job_46901934",
+          "result_sha256": "02a0f748557a53c9d9aea0dfe588bcfc79eea5af689769c2368ebd233143fa18",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.15263028251328634,
+              "reference_norm": 2.718281828459034,
+              "relative": 0.05614954303682738,
+              "absolute_rate": 1.0240045832561664,
+              "relative_rate": 1.0240045832561602
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.15140692874404416,
+              "reference_norm": 2.7182818284590313,
+              "relative": 0.05569949633584363,
+              "stages": [
+                {
+                  "time": 2.0,
+                  "absolute": 0.15140692874404416,
+                  "reference_norm": 2.7182818284590313
+                }
+              ],
+              "absolute_rate": 1.7576202640758176,
+              "relative_rate": 1.7576202640758085
+            },
+            "omega_H1": {
+              "absolute": 0.09040660475184174,
+              "reference_norm": 2.7182818284590216,
+              "relative": 0.033258731234315296,
+              "absolute_rate": 0.9982206534794374,
+              "relative_rate": 0.9982206534794208
+            },
+            "m_Hdiv": {
+              "absolute": 0.04959288600482469,
+              "reference_norm": 2.7182818284590686,
+              "relative": 0.018244203189533795,
+              "absolute_rate": 0.9985348192672888,
+              "relative_rate": 0.9985348192672993
+            },
+            "H_Hcurl": {
+              "absolute": 0.11289367654264568,
+              "reference_norm": 2.7182818284590673,
+              "relative": 0.04153126263829772,
+              "absolute_rate": 0.99826965931046,
+              "relative_rate": 0.9982696593104788
+            },
+            "k_L2": {
+              "absolute": 0.012249021024533483,
+              "reference_norm": 0.3892103351016958,
+              "relative": 0.0314714690742551,
+              "absolute_rate": 1.0113920434905317,
+              "relative_rate": 1.011392043490514
+            },
+            "phi_H1": {
+              "absolute": 0.1129007538570912,
+              "reference_norm": 2.8846732480511434,
+              "relative": 0.03913814291908653,
+              "absolute_rate": 0.9985435739470471,
+              "relative_rate": 0.9985435739470776
+            }
+          },
+          "norm_quadrature": {
+            "u_H1": 4.364362063715027e-15,
+            "p_L2": 2.9330837996245373e-15,
+            "omega_H1": 1.1666314383655829e-14,
+            "m_Hdiv": 9.794198571671188e-15,
+            "k_L2": 3.5405349384704723e-15,
+            "phi_H1": 3.4417667317851884e-15,
+            "H_Hcurl": 1.6472344804402423e-14,
+            "p_stage_weighted_L2": 2.9330837996245373e-15
+          },
+          "admission_sha256": "c22a37d3efe14dbffcbc616668ab8fd2f0121968262f5ed91853f6753bd9157d",
+          "norm_identities": {
+            "u_H1_absolute": 4.440892098500626e-16,
+            "u_H1_reference_norm": 1.1102230246251565e-14,
+            "m_Hdiv_absolute": 6.8833827526759706e-15,
+            "m_Hdiv_reference_norm": 1.1102230246251565e-14,
+            "pressure_absolute": 0.0,
+            "pressure_reference_norm": 0.0,
+            "pressure_clock_absolute": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "rows": [
+        {
+          "order": 2,
+          "K": 2,
+          "T": 2.0,
+          "dt": 0.25,
+          "case": "high_order_2/experiments/common_mms_time_half_20261019/runs/K2_validate_job_46876122",
+          "result_sha256": "37a895fd60ed7deb3489093bebee40664da95238526211d6698d97d6ef418786",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.6603222432742266,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.24291897784879568
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.8893049315914396,
+              "reference_norm": 2.553589458062927,
+              "relative": 0.34825681504263356,
+              "stages": [
+                {
+                  "time": 1.875,
+                  "absolute": 0.8893049315914396,
+                  "reference_norm": 2.553589458062927
+                }
+              ]
+            },
+            "omega_H1": {
+              "absolute": 0.30406073151493235,
+              "reference_norm": 2.7182818284590446,
+              "relative": 0.11185769199189328
+            },
+            "m_Hdiv": {
+              "absolute": 0.15156322393037955,
+              "reference_norm": 2.718281828459046,
+              "relative": 0.05575699412165018
+            },
+            "H_Hcurl": {
+              "absolute": 0.37682634090884615,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.13862666371222568
+            },
+            "k_L2": {
+              "absolute": 0.061888767378989046,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.1590111099254792
+            },
+            "phi_H1": {
+              "absolute": 0.37796900032458175,
+              "reference_norm": 2.884673248051085,
+              "relative": 0.1310266251402794
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.030548412880714935,
+              "relative": 0.01516849003200342,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.1484527039788759,
+              "relative": 0.08131366745500929,
+              "reference_norm": 1.8256796012922982
+            },
+            "u_L2": {
+              "absolute": 0.032851415009421465,
+              "relative": 0.06942510874820593,
+              "reference_norm": 0.4731921289251189
+            },
+            "grad_u_L2": {
+              "absolute": 0.659504548501817,
+              "relative": 0.24637991101432918,
+              "reference_norm": 2.676778905336405
+            }
+          },
+          "pressure_stage_times": [
+            1.875
+          ],
+          "tableau": {
+            "order": 2,
+            "A": [
+              [
+                0.5
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              0.5
+            ],
+            "G": [
+              [
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 2,
+          "K": 4,
+          "T": 2.0,
+          "dt": 0.125,
+          "case": "high_order_2/experiments/common_mms_time_half_20261019/runs/K4_production_job_46876127",
+          "result_sha256": "a948b1917e00d9d1621127c700b856fe3202c79fdf4855a81a12e37aac295ea7",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.17285595140840088,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.0635901508072805,
+              "absolute_rate": 1.9335999683875724,
+              "relative_rate": 1.9335999683875724
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.16852403063110713,
+              "reference_norm": 2.634649088815632,
+              "relative": 0.06396450720762387,
+              "stages": [
+                {
+                  "time": 1.9375,
+                  "absolute": 0.16852403063110713,
+                  "reference_norm": 2.634649088815632
+                }
+              ],
+              "absolute_rate": 2.3997238593350736,
+              "relative_rate": 2.444808079362854
+            },
+            "omega_H1": {
+              "absolute": 0.08071813752374032,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.029694543324633203,
+              "absolute_rate": 1.913394717435232,
+              "relative_rate": 1.913394717435233
+            },
+            "m_Hdiv": {
+              "absolute": 0.039276669666959245,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.014449079288156306,
+              "absolute_rate": 1.948175221648562,
+              "relative_rate": 1.9481752216485613
+            },
+            "H_Hcurl": {
+              "absolute": 0.10055650303687061,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.03699267014335838,
+              "absolute_rate": 1.9058934312865836,
+              "relative_rate": 1.905893431286584
+            },
+            "k_L2": {
+              "absolute": 0.018154428431138403,
+              "reference_norm": 0.38921033510170044,
+              "relative": 0.046644260940282234,
+              "absolute_rate": 1.7693560790313545,
+              "relative_rate": 1.7693560790313552
+            },
+            "phi_H1": {
+              "absolute": 0.1006309204963651,
+              "reference_norm": 2.884673248051087,
+              "relative": 0.0348846860088408,
+              "absolute_rate": 1.909194249661941,
+              "relative_rate": 1.909194249661942
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.008139626267794135,
+              "relative": 0.004041644991161289,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.038423993342026154,
+              "relative": 0.021046405576766,
+              "reference_norm": 1.8256796012922984
+            },
+            "u_L2": {
+              "absolute": 0.004269780718853655,
+              "relative": 0.009023355330429288,
+              "reference_norm": 0.473192128925119
+            },
+            "grad_u_L2": {
+              "absolute": 0.17280320862158885,
+              "relative": 0.06455639958798606,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            1.9375
+          ],
+          "tableau": {
+            "order": 2,
+            "A": [
+              [
+                0.5
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              0.5
+            ],
+            "G": [
+              [
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 2,
+          "K": 8,
+          "T": 2.0,
+          "dt": 0.0625,
+          "case": "high_order_2/experiments/common_mms_time_half_20261019/runs/K8_production_job_46876144",
+          "result_sha256": "df9575ea31b4e4850c1e1e305e63fa258040c091f64deb32dac237e6ef349113",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.04338042397357267,
+              "reference_norm": 2.718281828459042,
+              "relative": 0.01595876612917817,
+              "absolute_rate": 1.994454218056627,
+              "relative_rate": 1.9944542180566254
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.03427773677890795,
+              "reference_norm": 2.676138774894479,
+              "relative": 0.012808654431704323,
+              "stages": [
+                {
+                  "time": 1.96875,
+                  "absolute": 0.03427773677890795,
+                  "reference_norm": 2.676138774894479
+                }
+              ],
+              "absolute_rate": 2.2976105643645037,
+              "relative_rate": 2.3201526743783947
+            },
+            "omega_H1": {
+              "absolute": 0.020443982335791103,
+              "reference_norm": 2.7182818284590478,
+              "relative": 0.007520920797009662,
+              "absolute_rate": 1.9812166364141102,
+              "relative_rate": 1.9812166364141106
+            },
+            "m_Hdiv": {
+              "absolute": 0.009875732147346621,
+              "reference_norm": 2.7182818284590433,
+              "relative": 0.003633078823524726,
+              "absolute_rate": 1.991712993463044,
+              "relative_rate": 1.9917129934630429
+            },
+            "H_Hcurl": {
+              "absolute": 0.02557684970383226,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.009409197175971776,
+              "absolute_rate": 1.9750959006593332,
+              "relative_rate": 1.9750959006593332
+            },
+            "k_L2": {
+              "absolute": 0.004816892609451406,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.01237606552301022,
+              "absolute_rate": 1.9141468443220089,
+              "relative_rate": 1.9141468443220078
+            },
+            "phi_H1": {
+              "absolute": 0.02558155212293443,
+              "reference_norm": 2.884673248051086,
+              "relative": 0.008868093514652857,
+              "absolute_rate": 1.9758979595305364,
+              "relative_rate": 1.975897959530536
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.002068412514992096,
+              "relative": 0.0010270482705023087,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.009656694833842466,
+              "relative": 0.005289369956813354,
+              "reference_norm": 1.8256796012922987
+            },
+            "u_L2": {
+              "absolute": 0.0005266785261839527,
+              "relative": 0.0011130331507845054,
+              "reference_norm": 0.4731921289251187
+            },
+            "grad_u_L2": {
+              "absolute": 0.0433772266731862,
+              "relative": 0.01620500915735316,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            1.96875
+          ],
+          "tableau": {
+            "order": 2,
+            "A": [
+              [
+                0.5
+              ]
+            ],
+            "b": [
+              1.0
+            ],
+            "c": [
+              0.5
+            ],
+            "G": [
+              [
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 2,
+          "K": 16,
+          "T": 2.0,
+          "dt": 0.03125,
+          "case": "high_order_2/experiments/common_mms_refinement_20261019/runs/K16_production_job_46901936",
+          "result_sha256": "f5fac27b98a8da465d11090fa405bf35fc330d943a0b69e816a82017d615b902",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.010849135281024188,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.003991173824376557,
+              "absolute_rate": 1.9994640943394242,
+              "relative_rate": 1.9994640943394255
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.008106041617074507,
+              "reference_norm": 2.697127991443918,
+              "relative": 0.0030054345373260937,
+              "stages": [
+                {
+                  "time": 1.984375,
+                  "absolute": 0.008106041617074507,
+                  "reference_norm": 2.697127991443918
+                }
+              ],
+              "absolute_rate": 2.08020236981436,
+              "relative_rate": 2.091473424821303
+            },
+            "omega_H1": {
+              "absolute": 0.005124992363732899,
+              "reference_norm": 2.7182818284590526,
+              "relative": 0.001885379326777963,
+              "absolute_rate": 1.9960544898111718,
+              "relative_rate": 1.9960544898111743
+            },
+            "m_Hdiv": {
+              "absolute": 0.002471529912906353,
+              "reference_norm": 2.7182818284590486,
+              "relative": 0.0009092250431984915,
+              "absolute_rate": 1.9984833402817874,
+              "relative_rate": 1.9984833402817905
+            },
+            "H_Hcurl": {
+              "absolute": 0.006423571713170838,
+              "reference_norm": 2.7182818284590318,
+              "relative": 0.002363099972165984,
+              "absolute_rate": 1.9933909680986888,
+              "relative_rate": 1.9933909680986808
+            },
+            "k_L2": {
+              "absolute": 0.001237801210462227,
+              "reference_norm": 0.38921033510170056,
+              "relative": 0.0031802886481387756,
+              "absolute_rate": 1.9603231221286082,
+              "relative_rate": 1.9603231221286097
+            },
+            "phi_H1": {
+              "absolute": 0.006423869615762955,
+              "reference_norm": 2.884673248051082,
+              "relative": 0.002226896796752628,
+              "absolute_rate": 1.9935892841499543,
+              "relative_rate": 1.9935892841499523
+            }
+          },
+          "norm_quadrature": {
+            "u_H1": 3.5176920079742042e-15,
+            "p_L2": 8.132143307562883e-15,
+            "omega_H1": 5.07724700699832e-15,
+            "m_Hdiv": 4.562235939353766e-13,
+            "k_L2": 2.9780932150439246e-15,
+            "phi_H1": 4.6447461688179594e-14,
+            "H_Hcurl": 2.7005590556729437e-16,
+            "p_stage_weighted_L2": 8.132143307562883e-15
+          },
+          "admission_sha256": "880d08dcb3481c3b42966925c3590b23fe8887f6aac99bd8ce5a9849014de004",
+          "norm_identities": {
+            "u_H1_absolute": 9.992007221626409e-16,
+            "u_H1_reference_norm": 4.440892098500626e-16,
+            "m_Hdiv_absolute": 4.551914400963142e-15,
+            "m_Hdiv_reference_norm": 9.992007221626409e-16,
+            "pressure_absolute": 0.0,
+            "pressure_reference_norm": 0.0,
+            "pressure_clock_absolute": 0.0
+          }
+        },
+        {
+          "order": 2,
+          "K": 32,
+          "T": 2.0,
+          "dt": 0.015625,
+          "case": "high_order_2/experiments/common_mms_refinement_20261019/runs/K32_production_job_47092087",
+          "result_sha256": "b05ae6f83b17d69b436281576a3ed1d209807ed39cc43a52847eb76285c4e0f2",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.002712413270432429,
+              "reference_norm": 2.718281828459034,
+              "relative": 0.0009978410781526904,
+              "absolute_rate": 1.999931145601525,
+              "relative_rate": 1.999931145601519
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.0020061299412909577,
+              "reference_norm": 2.707684251933793,
+              "relative": 0.0007409024666957403,
+              "stages": [
+                {
+                  "time": 1.9921875,
+                  "absolute": 0.0020061299412909577,
+                  "reference_norm": 2.707684251933793
+                }
+              ],
+              "absolute_rate": 2.0145825269229167,
+              "relative_rate": 2.0202180544263912
+            },
+            "omega_H1": {
+              "absolute": 0.001281992449745056,
+              "reference_norm": 2.7182818284590216,
+              "relative": 0.0004716186659982237,
+              "absolute_rate": 1.999162089722275,
+              "relative_rate": 1.9991620897222584
+            },
+            "m_Hdiv": {
+              "absolute": 0.0006180036529414787,
+              "reference_norm": 2.7182818284590686,
+              "relative": 0.00022735083848601922,
+              "absolute_rate": 1.9997170966541253,
+              "relative_rate": 1.999717096654136
+            },
+            "H_Hcurl": {
+              "absolute": 0.0016078051912874136,
+              "reference_norm": 2.7182818284590673,
+              "relative": 0.0005914784752833527,
+              "absolute_rate": 1.9982830915896377,
+              "relative_rate": 1.998283091589657
+            },
+            "k_L2": {
+              "absolute": 0.00031329873162663313,
+              "reference_norm": 0.3892103351016958,
+              "relative": 0.0008049599493414586,
+              "absolute_rate": 1.982168803730748,
+              "relative_rate": 1.9821688037307301
+            },
+            "phi_H1": {
+              "absolute": 0.0016078246421516807,
+              "reference_norm": 2.8846732480511434,
+              "relative": 0.0005573680288531503,
+              "absolute_rate": 1.9983325438506758,
+              "relative_rate": 1.9983325438507065
+            }
+          },
+          "norm_quadrature": {
+            "u_H1": 1.2151446980018903e-14,
+            "p_L2": 4.5397349700177604e-15,
+            "omega_H1": 4.110182208426749e-14,
+            "m_Hdiv": 3.359077069815594e-12,
+            "k_L2": 6.402113435583647e-15,
+            "phi_H1": 3.414800132755171e-13,
+            "H_Hcurl": 4.046020668526468e-15,
+            "p_stage_weighted_L2": 4.5397349700177604e-15
+          },
+          "admission_sha256": "9f0ce1c6e0582655a40dee5777fd250c9e980f53a8134266f2e43443ed0ea338",
+          "norm_identities": {
+            "u_H1_absolute": 1.2878587085651816e-14,
+            "u_H1_reference_norm": 1.1102230246251565e-14,
+            "m_Hdiv_absolute": 8.881784197001252e-15,
+            "m_Hdiv_reference_norm": 1.1102230246251565e-14,
+            "pressure_absolute": 0.0,
+            "pressure_reference_norm": 0.0,
+            "pressure_clock_absolute": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "rows": [
+        {
+          "order": 3,
+          "K": 2,
+          "dt": 0.25,
+          "T": 2.0,
+          "case": "high_order_3/experiments/common_mms_time_half_20261019/runs/K2_validate_job_46867182",
+          "original_time_case": "high_order_3/experiments/common_mms_time_half_20261019/runs/K2_validate_job_46867182",
+          "recovery_case": null,
+          "errors": {
+            "u_H1": {
+              "absolute": 0.13514997505072554,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.04971889729599529
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.2245641699761116,
+              "reference_norm": 2.556913723956705,
+              "relative": 0.08782626017924804,
+              "stages": [
+                {
+                  "time": 1.8028312163512967,
+                  "absolute": 0.21625480135044353,
+                  "reference_norm": 2.463087411049799
+                },
+                {
+                  "time": 1.9471687836487033,
+                  "absolute": 0.23257685561336514,
+                  "reference_norm": 2.6474168521493344
+                }
+              ]
+            },
+            "omega_H1": {
+              "absolute": 0.03421223068785003,
+              "reference_norm": 2.7182818284590446,
+              "relative": 0.012585976306674743
+            },
+            "m_Hdiv": {
+              "absolute": 0.016508873789169775,
+              "reference_norm": 2.718281828459046,
+              "relative": 0.006073275263929647
+            },
+            "H_Hcurl": {
+              "absolute": 0.04122971238125448,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.01516756355047519
+            },
+            "k_L2": {
+              "absolute": 0.010325091709107509,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.026528308161214615
+            },
+            "phi_H1": {
+              "absolute": 0.04129072011975954,
+              "reference_norm": 2.884673248051085,
+              "relative": 0.014313829182440672
+            }
+          },
+          "result_sha256": "f4776cdafbe49772c1e76c51011d9300f9741ab9a1c6b35abe2672be67ec9c45"
+        },
+        {
+          "order": 3,
+          "K": 4,
+          "dt": 0.125,
+          "T": 2.0,
+          "case": "high_order_3/experiments/common_mms_time_half_20261019/runs/K4_production_job_46867183",
+          "original_time_case": "high_order_3/experiments/common_mms_time_half_20261019/runs/K4_production_job_46867183",
+          "recovery_case": null,
+          "errors": {
+            "u_H1": {
+              "absolute": 0.016876788034626167,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.006208623350947158,
+              "absolute_rate": 3.00144898185189,
+              "relative_rate": 3.00144898185189
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.01668648068692312,
+              "reference_norm": 2.635506675472166,
+              "relative": 0.0063314127952013785,
+              "stages": [
+                {
+                  "time": 1.9014156081756484,
+                  "absolute": 0.016378848442930298,
+                  "reference_norm": 2.58754048303846
+                },
+                {
+                  "time": 1.9735843918243516,
+                  "absolute": 0.01698854317219803,
+                  "reference_norm": 2.682615351024778
+                }
+              ],
+              "absolute_rate": 3.7503761429987414,
+              "relative_rate": 3.794053007659484
+            },
+            "omega_H1": {
+              "absolute": 0.004242073839038541,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.0015605717533134925,
+              "absolute_rate": 3.011670534754808,
+              "relative_rate": 3.011670534754809
+            },
+            "m_Hdiv": {
+              "absolute": 0.0020774105134686934,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.0007642366187785418,
+              "absolute_rate": 2.9903834671789244,
+              "relative_rate": 2.9903834671789244
+            },
+            "H_Hcurl": {
+              "absolute": 0.0051029323513974365,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.0018772639017677621,
+              "absolute_rate": 3.01428597558256,
+              "relative_rate": 3.0142859755825606
+            },
+            "k_L2": {
+              "absolute": 0.0014522734781593138,
+              "reference_norm": 0.38921033510170044,
+              "relative": 0.0037313332848158713,
+              "absolute_rate": 2.829769537479252,
+              "relative_rate": 2.8297695374792524
+            },
+            "phi_H1": {
+              "absolute": 0.0051048092021105445,
+              "reference_norm": 2.884673248051087,
+              "relative": 0.0017696316924488426,
+              "absolute_rate": 3.0158886347697282,
+              "relative_rate": 3.0158886347697296
+            }
+          },
+          "result_sha256": "2e7af15c74f906ae50edd2a9030d731272327317c3d785e97686e2dde67e0e19"
+        },
+        {
+          "order": 3,
+          "K": 8,
+          "dt": 0.0625,
+          "T": 2.0,
+          "case": "high_order_3/experiments/common_mms_half_endpoint_recovery_20261019/runs/job_46869038",
+          "original_time_case": "high_order_3/experiments/common_mms_time_half_20261019/runs/K8_production_job_46867186",
+          "recovery_case": "high_order_3/experiments/common_mms_half_endpoint_recovery_20261019/runs/job_46869038",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.0021486629710600453,
+              "reference_norm": 2.718281828459042,
+              "relative": 0.0007904489330593414,
+              "absolute_rate": 2.973529247161803,
+              "relative_rate": 2.9735292471618013
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.001651502134955625,
+              "reference_norm": 2.67635655667192,
+              "relative": 0.0006170710441546274,
+              "stages": [
+                {
+                  "time": 1.9507078040878243,
+                  "absolute": 0.0016362961676305496,
+                  "reference_norm": 2.652105630521832
+                },
+                {
+                  "time": 1.9867921959121757,
+                  "absolute": 0.0016665693670902362,
+                  "reference_norm": 2.7003897054751094
+                }
+              ],
+              "absolute_rate": 3.336828971027033,
+              "relative_rate": 3.3590189560830535
+            },
+            "omega_H1": {
+              "absolute": 0.0005231227322981809,
+              "reference_norm": 2.7182818284590478,
+              "relative": 0.00019244609842193264,
+              "absolute_rate": 3.019548364344168,
+              "relative_rate": 3.019548364344169
+            },
+            "m_Hdiv": {
+              "absolute": 0.00025949300660955873,
+              "reference_norm": 2.7182818284590433,
+              "relative": 9.546214225942192e-05,
+              "absolute_rate": 3.001018769516631,
+              "relative_rate": 3.0010187695166297
+            },
+            "H_Hcurl": {
+              "absolute": 0.0006279971025091635,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.00023102722312835593,
+              "absolute_rate": 3.0224967084640957,
+              "relative_rate": 3.0224967084640957
+            },
+            "k_L2": {
+              "absolute": 0.00018686000522785754,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.0004801003169122713,
+              "absolute_rate": 2.958283434826856,
+              "relative_rate": 2.958283434826855
+            },
+            "phi_H1": {
+              "absolute": 0.0006280532040681932,
+              "reference_norm": 2.884673248051086,
+              "relative": 0.0002177207434126247,
+              "absolute_rate": 3.0228983558227402,
+              "relative_rate": 3.0228983558227402
+            }
+          },
+          "result_sha256": "65b18574d35901c644829e13bb4d04129e1758a0c3b02ecb43c1870a9270f239"
+        },
+        {
+          "order": 3,
+          "K": 16,
+          "T": 2.0,
+          "dt": 0.03125,
+          "case": "high_order_3/experiments/common_mms_refinement_single_20261019/runs/K16_production_job_46959367",
+          "result_sha256": "9622b87b7fd6cb8f434ba576c3c9834023f7eb51598fe42873a096db68e8187d",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.0002733808263115978,
+              "reference_norm": 2.7182818284590455,
+              "relative": 0.00010057118561049771,
+              "absolute_rate": 2.9744552387729875,
+              "relative_rate": 2.9744552387729892
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.00019745677263690136,
+              "reference_norm": 2.6971828644673237,
+              "relative": 7.320852258042867e-05,
+              "stages": [
+                {
+                  "time": 1.9753539020439121,
+                  "absolute": 0.00019654525866063808,
+                  "reference_norm": 2.6849898589382812
+                },
+                {
+                  "time": 1.9933960979560879,
+                  "absolute": 0.0001983640981084652,
+                  "reference_norm": 2.7093209972520613
+                }
+              ],
+              "absolute_rate": 3.0641700774012084,
+              "relative_rate": 3.0753530832619878
+            },
+            "omega_H1": {
+              "absolute": 6.476477842376878e-05,
+              "reference_norm": 2.7182818284590526,
+              "relative": 2.382563049412828e-05,
+              "absolute_rate": 3.0138681252236745,
+              "relative_rate": 3.013868125223678
+            },
+            "m_Hdiv": {
+              "absolute": 3.240711332406506e-05,
+              "reference_norm": 2.7182818284590486,
+              "relative": 1.1921910739636641e-05,
+              "absolute_rate": 3.001313235293484,
+              "relative_rate": 3.001313235293486
+            },
+            "H_Hcurl": {
+              "absolute": 7.764170204065658e-05,
+              "reference_norm": 2.7182818284590318,
+              "relative": 2.8562785958316518e-05,
+              "absolute_rate": 3.015854252852768,
+              "relative_rate": 3.0158542528527597
+            },
+            "k_L2": {
+              "absolute": 2.3515251500130564e-05,
+              "reference_norm": 0.38921033510170056,
+              "relative": 6.0417849628751605e-05,
+              "absolute_rate": 2.990289146125608,
+              "relative_rate": 2.990289146125609
+            },
+            "phi_H1": {
+              "absolute": 7.764339181495823e-05,
+              "reference_norm": 2.884673248051082,
+              "relative": 2.6915835915702064e-05,
+              "absolute_rate": 3.0159517308593347,
+              "relative_rate": 3.015951730859333
+            }
+          },
+          "norm_quadrature": {
+            "u_H1": 8.705159760886718e-14,
+            "p_L2": 1.1423350102676687e-13,
+            "omega_H1": 2.3895343520710476e-11,
+            "m_Hdiv": 1.3642810113670865e-11,
+            "k_L2": 1.2996224487229266e-13,
+            "phi_H1": 2.655893024261007e-11,
+            "H_Hcurl": 2.6531929022418403e-14,
+            "p_stage_weighted_L2": 9.787409905707346e-14
+          },
+          "admission_sha256": "861037004a38f446a13f85bedac97c86d913c6dce8d49e1a69e1d0e32219447d",
+          "norm_identities": {
+            "u_H1_absolute": 2.220446049250313e-16,
+            "u_H1_reference_norm": 4.440892098500626e-16,
+            "m_Hdiv_absolute": 1.5543122344752192e-15,
+            "m_Hdiv_reference_norm": 9.992007221626409e-16,
+            "pressure_absolute": 0.0,
+            "pressure_reference_norm": 0.0,
+            "pressure_clock_absolute": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "rows": [
+        {
+          "order": 4,
+          "K": 2,
+          "T": 2.0,
+          "dt": 0.25,
+          "case": "high_order_4/experiments/common_mms_time_half_20261019/runs/K2_validate_job_46876157",
+          "result_sha256": "b205f75ba34395bbbac3975b8aafa36650472337851a4c7933474fe4ad7e5645",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.015102119410053384,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.0055557592490748315
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.01626491217501347,
+              "reference_norm": 2.556914877525183,
+              "relative": 0.00636114730215663,
+              "stages": [
+                {
+                  "time": 1.7781754163448147,
+                  "absolute": 0.015471258712973888,
+                  "reference_norm": 2.4329091154522313
+                },
+                {
+                  "time": 1.875,
+                  "absolute": 0.01624306288871229,
+                  "reference_norm": 2.553589458062927
+                },
+                {
+                  "time": 1.9718245836551853,
+                  "absolute": 0.01705495035597625,
+                  "reference_norm": 2.6802559449977723
+                }
+              ]
+            },
+            "omega_H1": {
+              "absolute": 0.0019038540415149121,
+              "reference_norm": 2.7182818284590446,
+              "relative": 0.000700388760864498
+            },
+            "m_Hdiv": {
+              "absolute": 0.0009766728692120212,
+              "reference_norm": 2.718281828459046,
+              "relative": 0.00035929786933302745
+            },
+            "H_Hcurl": {
+              "absolute": 0.0022772404412213336,
+              "reference_norm": 2.7182818284590464,
+              "relative": 0.0008377499409295126
+            },
+            "k_L2": {
+              "absolute": 0.0016976901315477484,
+              "reference_norm": 0.38921033510170017,
+              "relative": 0.00436188348159908
+            },
+            "phi_H1": {
+              "absolute": 0.0022789474716746368,
+              "reference_norm": 2.884673248051085,
+              "relative": 0.0007900192762609481
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 0.00034812422050707907,
+              "relative": 0.00017285738507201318,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 0.000912523654789935,
+              "relative": 0.0004998268338781951,
+              "reference_norm": 1.8256796012922982
+            },
+            "u_L2": {
+              "absolute": 0.000511203226656995,
+              "relative": 0.0010803290997638112,
+              "reference_norm": 0.4731921289251189
+            },
+            "grad_u_L2": {
+              "absolute": 0.015093464875122834,
+              "relative": 0.005638666998246521,
+              "reference_norm": 2.676778905336405
+            }
+          },
+          "pressure_stage_times": [
+            1.7781754163448147,
+            1.875,
+            1.9718245836551853
+          ],
+          "tableau": {
+            "order": 4,
+            "A": [
+              [
+                0.1388888888888889,
+                -0.03597666752493894,
+                0.009789444015308318
+              ],
+              [
+                0.3002631949808646,
+                0.2222222222222222,
+                -0.022485417203086805
+              ],
+              [
+                0.26798833376246944,
+                0.48042111196938336,
+                0.1388888888888889
+              ]
+            ],
+            "b": [
+              0.2777777777777778,
+              0.4444444444444444,
+              0.2777777777777778
+            ],
+            "c": [
+              0.1127016653792583,
+              0.5,
+              0.8872983346207417
+            ],
+            "G": [
+              [
+                0.0,
+                1.3877787807814457e-17,
+                -1.3877787807814457e-17
+              ],
+              [
+                1.3877787807814457e-17,
+                0.0,
+                2.7755575615628914e-17
+              ],
+              [
+                -1.3877787807814457e-17,
+                2.7755575615628914e-17,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 4,
+          "K": 4,
+          "T": 2.0,
+          "dt": 0.125,
+          "case": "high_order_4/experiments/common_mms_time_half_20261019/runs/K4_production_job_46876164",
+          "result_sha256": "1c38945ba2c0ad6263fb077afb044510208081130a4ea92b2003004aba279480",
+          "errors": {
+            "u_H1": {
+              "absolute": 0.0009162804119153486,
+              "reference_norm": 2.718281828459045,
+              "relative": 0.0003370807258917574,
+              "absolute_rate": 4.042818041327871,
+              "relative_rate": 4.042818041327871
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 0.0006762232836360425,
+              "reference_norm": 2.6355067499043083,
+              "relative": 0.00025658188265334367,
+              "stages": [
+                {
+                  "time": 1.8890877081724073,
+                  "absolute": 0.0006597329096559917,
+                  "reference_norm": 2.5716400678995046
+                },
+                {
+                  "time": 1.9375,
+                  "absolute": 0.000675964863297334,
+                  "reference_norm": 2.634649088815632
+                },
+                {
+                  "time": 1.9859122918275927,
+                  "absolute": 0.0006927246489407945,
+                  "reference_norm": 2.6992019248116246
+                }
+              ],
+              "absolute_rate": 4.588119530330092,
+              "relative_rate": 4.631795784854288
+            },
+            "omega_H1": {
+              "absolute": 0.00011306627020293101,
+              "reference_norm": 2.7182818284590464,
+              "relative": 4.159475629759354e-05,
+              "absolute_rate": 4.073682363506186,
+              "relative_rate": 4.073682363506187
+            },
+            "m_Hdiv": {
+              "absolute": 5.9328297434811486e-05,
+              "reference_norm": 2.7182818284590455,
+              "relative": 2.182566090597156e-05,
+              "absolute_rate": 4.0410831339764774,
+              "relative_rate": 4.0410831339764774
+            },
+            "H_Hcurl": {
+              "absolute": 0.0001369247566535049,
+              "reference_norm": 2.7182818284590464,
+              "relative": 5.0371802960227086e-05,
+              "absolute_rate": 4.055831404222135,
+              "relative_rate": 4.055831404222135
+            },
+            "k_L2": {
+              "absolute": 0.00011892327149765475,
+              "reference_norm": 0.38921033510170044,
+              "relative": 0.0003055501377335732,
+              "absolute_rate": 3.835470195511873,
+              "relative_rate": 3.835470195511874
+            },
+            "phi_H1": {
+              "absolute": 0.0001369515316397934,
+              "reference_norm": 2.884673248051087,
+              "relative": 4.747557864042979e-05,
+              "absolute_rate": 4.0566303656886324,
+              "relative_rate": 4.056630365688633
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 2.1723635140879555e-05,
+              "relative": 1.078664035280641e-05,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 5.520806601194613e-05,
+              "relative": 3.0239734273673964e-05,
+              "reference_norm": 1.8256796012922984
+            },
+            "u_L2": {
+              "absolute": 1.5793131404692347e-05,
+              "relative": 3.337572719260415e-05,
+              "reference_norm": 0.473192128925119
+            },
+            "grad_u_L2": {
+              "absolute": 0.0009161442955453003,
+              "relative": 0.0003422562445179475,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            1.8890877081724073,
+            1.9375,
+            1.9859122918275927
+          ],
+          "tableau": {
+            "order": 4,
+            "A": [
+              [
+                0.1388888888888889,
+                -0.03597666752493894,
+                0.009789444015308318
+              ],
+              [
+                0.3002631949808646,
+                0.2222222222222222,
+                -0.022485417203086805
+              ],
+              [
+                0.26798833376246944,
+                0.48042111196938336,
+                0.1388888888888889
+              ]
+            ],
+            "b": [
+              0.2777777777777778,
+              0.4444444444444444,
+              0.2777777777777778
+            ],
+            "c": [
+              0.1127016653792583,
+              0.5,
+              0.8872983346207417
+            ],
+            "G": [
+              [
+                0.0,
+                1.3877787807814457e-17,
+                -1.3877787807814457e-17
+              ],
+              [
+                1.3877787807814457e-17,
+                0.0,
+                2.7755575615628914e-17
+              ],
+              [
+                -1.3877787807814457e-17,
+                2.7755575615628914e-17,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "order": 4,
+          "K": 8,
+          "T": 2.0,
+          "dt": 0.0625,
+          "case": "high_order_4/experiments/common_mms_time_half_20261019/runs/K8_production_job_46876181",
+          "result_sha256": "357c91ce1793ae85760a92839ea11044a14e9da712f5efc82f926e6c10bbc6f8",
+          "errors": {
+            "u_H1": {
+              "absolute": 5.6471766425022394e-05,
+              "reference_norm": 2.718281828459042,
+              "relative": 2.0774801874401482e-05,
+              "absolute_rate": 4.020187513648338,
+              "relative_rate": 4.020187513648336
+            },
+            "p_stage_weighted_L2": {
+              "absolute": 2.9785335587854513e-05,
+              "reference_norm": 2.676356561397907,
+              "relative": 1.1129061059150176e-05,
+              "stages": [
+                {
+                  "time": 1.9445438540862037,
+                  "absolute": 2.9418870391438165e-05,
+                  "reference_norm": 2.643944489944598
+                },
+                {
+                  "time": 1.96875,
+                  "absolute": 2.9779552326289055e-05,
+                  "reference_norm": 2.676138774894479
+                },
+                {
+                  "time": 1.9929561459137963,
+                  "absolute": 3.0156486267088e-05,
+                  "reference_norm": 2.7087250771455396
+                }
+              ],
+              "absolute_rate": 4.504825572822674,
+              "relative_rate": 4.527015519681566
+            },
+            "omega_H1": {
+              "absolute": 6.912191025040676e-06,
+              "reference_norm": 2.7182818284590478,
+              "relative": 2.5428529715622207e-06,
+              "absolute_rate": 4.031881711877453,
+              "relative_rate": 4.031881711877454
+            },
+            "m_Hdiv": {
+              "absolute": 3.6383150292306222e-06,
+              "reference_norm": 2.7182818284590433,
+              "relative": 1.338461299759022e-06,
+              "absolute_rate": 4.02737801033057,
+              "relative_rate": 4.027378010330569
+            },
+            "H_Hcurl": {
+              "absolute": 8.374760609627978e-06,
+              "reference_norm": 2.7182818284590464,
+              "relative": 3.080902253014547e-06,
+              "absolute_rate": 4.031191554164084,
+              "relative_rate": 4.031191554164084
+            },
+            "k_L2": {
+              "absolute": 7.76994790280344e-06,
+              "reference_norm": 0.38921033510170017,
+              "relative": 1.9963364798042074e-05,
+              "absolute_rate": 3.935982320778521,
+              "relative_rate": 3.9359823207785203
+            },
+            "phi_H1": {
+              "absolute": 8.375175944243748e-06,
+              "reference_norm": 2.884673248051086,
+              "relative": 2.9033360883774623e-06,
+              "absolute_rate": 4.031402092070904,
+              "relative_rate": 4.031402092070904
+            }
+          },
+          "components": {
+            "m_L2": {
+              "absolute": 1.351650675502907e-06,
+              "relative": 6.711477901707837e-07,
+              "reference_norm": 2.0139389495105973
+            },
+            "div_m_L2": {
+              "absolute": 3.377924910849557e-06,
+              "relative": 1.8502287632827298e-06,
+              "reference_norm": 1.8256796012922987
+            },
+            "u_L2": {
+              "absolute": 4.927769436471836e-07,
+              "relative": 1.0413887161786755e-06,
+              "reference_norm": 0.4731921289251187
+            },
+            "grad_u_L2": {
+              "absolute": 5.646961637948402e-05,
+              "relative": 2.109610781335233e-05,
+              "reference_norm": 2.6767789053364046
+            }
+          },
+          "pressure_stage_times": [
+            1.9445438540862037,
+            1.96875,
+            1.9929561459137963
+          ],
+          "tableau": {
+            "order": 4,
+            "A": [
+              [
+                0.1388888888888889,
+                -0.03597666752493894,
+                0.009789444015308318
+              ],
+              [
+                0.3002631949808646,
+                0.2222222222222222,
+                -0.022485417203086805
+              ],
+              [
+                0.26798833376246944,
+                0.48042111196938336,
+                0.1388888888888889
+              ]
+            ],
+            "b": [
+              0.2777777777777778,
+              0.4444444444444444,
+              0.2777777777777778
+            ],
+            "c": [
+              0.1127016653792583,
+              0.5,
+              0.8872983346207417
+            ],
+            "G": [
+              [
+                0.0,
+                1.3877787807814457e-17,
+                -1.3877787807814457e-17
+              ],
+              [
+                1.3877787807814457e-17,
+                0.0,
+                2.7755575615628914e-17
+              ],
+              [
+                -1.3877787807814457e-17,
+                2.7755575615628914e-17,
+                0.0
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "base_table": "common_reference/comparison_1to4_half_20261019/report/CONVERGENCE_1_TO_4_HALF_20261019.json",
+  "base_table_sha256": "27453502ff643586a84fb1c27f7e7394a150f41a80708926b83b6843d3da1efe",
+  "additional_admission_proofs": [
+    {
+      "admission": "high_order_1/experiments/common_mms_refinement_20261019/report/K16_PRODUCTION_ADMISSION.json",
+      "sha256": "dafffaf10856388e406f16f2cc08bbed42dee6ad3f65afa663bf458138ce02b6",
+      "job_id": "46899976"
+    },
+    {
+      "admission": "high_order_1/experiments/common_mms_refinement_20261019/report/K32_PRODUCTION_ADMISSION.json",
+      "sha256": "c22a37d3efe14dbffcbc616668ab8fd2f0121968262f5ed91853f6753bd9157d",
+      "job_id": "46901934"
+    },
+    {
+      "admission": "high_order_2/experiments/common_mms_refinement_20261019/report/K16_PRODUCTION_ADMISSION.json",
+      "sha256": "880d08dcb3481c3b42966925c3590b23fe8887f6aac99bd8ce5a9849014de004",
+      "job_id": "46901936"
+    },
+    {
+      "admission": "high_order_2/experiments/common_mms_refinement_20261019/report/K32_PRODUCTION_ADMISSION.json",
+      "sha256": "9f0ce1c6e0582655a40dee5777fd250c9e980f53a8134266f2e43443ed0ea338",
+      "job_id": "47092087"
+    },
+    {
+      "admission": "high_order_3/experiments/common_mms_refinement_single_20261019/report/K16_PRODUCTION_ADMISSION.json",
+      "sha256": "861037004a38f446a13f85bedac97c86d913c6dce8d49e1a69e1d0e32219447d",
+      "job_id": "46959367"
+    }
+  ],
+  "norm_auditor_sha256": "54813d4f7ada22727417d6fd77b45f6f20317eb85f72ed4c1c59c873f0d105a4",
+  "preserved_history": "Third-order K8 original time job46867186 had monitor failure; independently accepted endpoint46869038. Original failure remains.",
+  "scope": "Same continuous MMS, T=2, dt=.5/K joint h/dt study. Pressure is actual stage-weighted L2. Resource pilots and layout controls are excluded."
+}
