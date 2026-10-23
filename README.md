@@ -1,129 +1,97 @@
-# FHD Algorithm 3 论文与数值实验
+# FHD Algorithm 3: latest manuscript and 17-case data
 
-用于协作修订 Rosensweig 铁磁流体模型论文，包含论文 TeX、一阶/二阶数值实验、通道与台阶流应用、插图和对应数据。
-仓库目前为公开；公开访问不等于授予开源许可证，本仓库尚未设置许可证。
+本仓库保存 Rosensweig 铁磁流体论文、可检查的数值表、插图及重绘工具。当前主稿采用已经批准并编译的 2026-10-22 版本，包含一至四阶高阶方法和统一的17组收敛结果。
 
-## 目录
+- [完整论文 PDF](previews/manuscript.pdf)
+- [数值实验及绝对误差附录 PDF](previews/numerical_experiments.pdf)
+- [全部17组绝对/相对误差与观测阶 CSV](data/convergence_17/ERRORS_AND_RATES_17_CASES.csv)
+- [全精度 JSON](data/convergence_17/CONVERGENCE_17_CASES.json)
+- [实验范围与解释](docs/NUMERICAL_SCOPE.md)
+- [迁移与核验记录](docs/MIGRATION.md)
+
+仓库为公开论文协作材料；公开访问不等于授予开源许可证，许可证状态沿用原仓库。
+
+## 当前版本的内容
+
+| 方法 | 网格 K | 终止时间 | 时间步 |
+|---|---|---|---|
+| 一阶 | 2, 4, 8, 16, 32 | 2 | 1/(2K) |
+| 二阶 | 2, 4, 8, 16, 32 | 2 | 1/(2K) |
+| 三阶 | 2, 4, 8, 16 | 2 | 1/(2K) |
+| 四阶 | 2, 4, 8 | 2 | 1/(2K) |
+
+所有组使用同一连续参考问题 `fhd-continuous-polynomial-v1`。七项指标是速度H1、实际RK阶段压力L2、角速度H1、磁化H(div)、磁场H(curl)、辅助旋度k-L2和磁势H1。数据共有119条算例/范数记录，主文四张相对误差表，附录四张绝对误差表。
+
+这是联合空间/时间细化实验。压力是最后时间步实际阶段时刻上的去均值加权误差，其余六项是T=2端点范数。非齐次边界lifting、相容初值投影和辅助量端点恢复均有明确记录；不能将本表解释为原齐次算例逐式复现或独立时间阶证明。
+
+![相对误差](figures/convergence_17/relative_errors.png)
+
+[绝对误差图](figures/convergence_17/absolute_errors.png)
+
+## 目录与唯一正文入口
 
 ```text
-main.tex                         论文主文件
-experiments.tex                  可独立编译的数值实验预览
-sections/
-  numerical_experiments.tex       文末第6节数值实验总入口
-  experiment_setup.tex            统一算例、离散设置及误差指标
-  first_order_experiments.tex     一阶收敛结果
-  second_order_experiments.tex    二阶收敛结果
-  energy_setup.tex                统一零外场算例、能量与平衡指标
-  first_order_energy.tex          一阶能量耗散结果
-  second_order_energy.tex         二阶能量耗散结果
-  channel_flow.tex                直通道流：条件、开放边界、验证与结果
-  step_flow.tex                   后向台阶流：条件与三场可视化
-figures/                         收敛图及两张独立能量图：PDF、SVG、PNG
-  applications/                  六张应用插图：PDF、PNG及校验信息
-data/
-  results.csv                    8组主误差及42个观测收敛阶
-  results.json                   同一数据的结构化版本
-  provenance.json                数据与来源校验信息
-  energy/                        六个能量算例的曲线、汇总和校验信息
-  applications/                  两个原始采样快照、参数、来源和验证摘要
-scripts/
-  figure_style.py                 收敛与能量图的LaTeX字体及导出设置
-  plot_convergence.py             由原始数据重画两张收敛图
-  plot_energy.py                  由原始数据重画两张独立能量图
-  plot_applications.py            由归档快照重画六张应用插图
-previews/
-  manuscript.pdf                 完整论文编译预览
-  numerical_experiments.pdf       仅数值实验的编译预览
-Makefile                         本地编译命令
-REVISION_CN.md                   本轮修订范围、编译检查和结果使用边界
+main.tex                       最新完整正文，保持批准稿原字节
+figures/convergence_17/         一至四阶绝对/相对误差图及来源哈希
+figures/applications/          保留的通道、台阶流图
+figures/*_energy.*              保留的能量图
+data/convergence_17/            冻结JSON、CSV、curl诊断、RK表与验收来源
+data/energy/                    原能量曲线和来源
+data/applications/              原通道、台阶流采样快照和来源
+scripts/                       检查、生成表格、重绘和编译工具
+previews/                      完整论文与数值章节摘录
+docs/                          适用范围、归档说明、迁移与验证
+legacy/2026-09-28/              旧收敛材料、旧实验章节和重绘脚本
 ```
 
-## 协作方式
+`main.tex` 是唯一有效的论文正文。原稿中的旧 `sections/` 输入已经注释，旧章节移入legacy，不参与当前编译。`make experiments` 从完整PDF中提取数值章节和附录，保留原页码及交叉引用，不再维护第二份实验正文。
 
-- 数值实验统一位于一阶、二阶理论章节之后、参考文献之前的第6节：6.1实验设置、6.2收敛性验证、6.3能量耗散、6.4直通道流、6.5后向台阶流。
-- 两种格式分别成图，但同类结果连续排列，不再穿插于理论章节之间。
-- 修改实验文字、表格和图注：编辑 `sections/` 中对应文件。`main.tex` 和 `experiments.tex` 共用 `numerical_experiments.tex` 入口，不应再复制一份有效正文。
-- 修改理论推导：编辑 `main.tex`。本轮新增应用章节，并同步摘要和文章结构说明；此前理论公式的整体修订不在本轮范围内。应用章节明确列出开放边界扩展，没有将齐次边界下的理论结论直接推广到开放台阶区域。
-- 图片引用采用相对路径 `figures/`。PDF用于论文排版，SVG用于矢量编辑，PNG用于快速查看。
-- 生成的 `.aux`、`.log` 等中间文件放在 `build/`，不提交。修改 TeX 后应重新编译；`previews/` 是已编译快照，不会自行更新。
-- 原有第二处 `eq:H-dis-f-1` 已更名为 `eq:H-dis-f-2`，消除重复标签；对应数学公式保持原样。
+## 检查、重绘与编译
 
-## 编译
-
-需要 TeX Live 或 MacTeX，以及 `latexmk`。从仓库根目录执行：
+只核对数据、表格和哈希需要Python 3.9以上的标准库：
 
 ```bash
-make pdf
+make check
+make tables
 ```
 
-输出为 `build/main.pdf`。`make experiments` 生成独立的数值实验预览。
-检查排版后运行 `make preview` 可更新 `previews/` 中两份 PDF。
-安装 Python 的 `matplotlib` 和 `numpy`，并将 TeX Live/MacTeX 的 `latex`、`dvipng` 加入 PATH 后，
-运行 `make figures` 可重新生成四张收敛和能量图；TeX 环境需包含 `lmodern` 字体包和 `amsmath`。
-此命令只从归档数据重绘，不重跑数值求解，也不改变误差、能量或参考线数据。
-所有图的普通文字、数学符号、刻度和图例均使用真正的LaTeX渲染及Latin Modern字体。
-PDF嵌入字体；SVG使用TeX字形的矢量路径，修改文本应编辑绘图脚本并重绘。
-也可以将整个仓库上传到 Overleaf，以 `main.tex` 为主文件并使用 pdfLaTeX 编译。
+`make tables` 从冻结数据生成八个TeX表片段到 `build/tables/`，同时逐字比较主稿对应表格，不覆盖论文。检查覆盖238个误差单元、182个Rate及17个curl诊断，也复核JSON/CSV、阶段压力权重和时刻。
 
-六张通道与台阶流图需要额外的 Python 包 `scipy`，用以下命令重绘：
+重绘图和导出PDF摘录需安装 `requirements.txt` 中的Python依赖，推荐独立环境：
 
 ```bash
-make application-figures PYTHON=python3 TEX_ENGINE=/path/to/pdflatex
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+make figures PYTHON=.venv/bin/python
+make check PYTHON=.venv/bin/python
 ```
 
-该脚本也支持 `TEX_ENGINE=/path/to/tectonic`；它先校验归档 NPZ 的 SHA-256，
-再绘制矢量与模值图，最后使用 LaTeX/TikZ 排印色条。
-图号、标题和条件由论文图注排版，图片内没有重复标题或技术小字。
-若 PATH 中有 `pdftoppm`，会同时导出 PNG。该步骤只重绘已有数据，不运行有限元求解器。
+`make figures` 仅从现有JSON重绘两组PNG/PDF，使用Matplotlib的DejaVu字体与数学排版，不需要TeX、不执行FEM/MPI、不重新积分有限元场。每幅图旁的 `.source.json` 记录输入、脚本、环境及输出哈希。
 
-本轮 PDF 使用 [Tectonic](https://tectonic-typesetting.github.io/) 0.17.0 编译。
-安装该程序后，也可直接执行：
+编译主稿需要Tectonic或具备所需宏包的TeX Live/MacTeX与latexmk。自动优先选择PATH中的Tectonic：
 
 ```bash
-mkdir -p build
-tectonic --keep-logs --outdir build main.tex
-tectonic --keep-logs --outdir build experiments.tex
-cp build/main.pdf previews/manuscript.pdf
-cp build/experiments.pdf previews/numerical_experiments.pdf
+make preview PYTHON=.venv/bin/python
+# 或指定编译器：
+make preview PYTHON=.venv/bin/python TEX_ENGINE=/path/to/tectonic
+make preview PYTHON=.venv/bin/python TEX_ENGINE=latexmk
 ```
 
-## 收敛实验口径
+本次实际使用Tectonic 0.17.0完成32页编译。`make pdf` 输出 `build/main.pdf`；`make preview` 同步两份已提交PDF及来源记录。也可在Overleaf中以 `main.tex` 为主文件编译；本次未对Overleaf作独立运行验收。
 
-- 三维单位立方体；同一 `balanced-linear-weak-coupling` 制造解。
-- 一阶、二阶均有 K=4、8、16、32，T=2，dt=1/K，终点数据均已完成计算。
-- 横轴为从左到右增加的 K=4、8、16、32，参考线为 K^{-1} 和 K^{-2}。
-- 主指标：u完整H1、修正压力L2、omega完整H1、m-H(div)、k-L2、phi-H1、H-H(curl)，另报curl(H)的采样绝对最大值。
-- 二阶压力参考为精确修正压力的端点平均；修正压力为去均值的 p-mu0*m.H/2。
-- 二阶k-L2仍约一阶，未声称所有变量二阶收敛。dt与网格同时变化，结果不是独立的纯时间精度验证。
-- 此组收敛数据本身不用于验证能量稳定性；尚未加入纯时间二阶试验或性能加速结论。
+能量和通道图的数据、图件及原脚本保持原样。它们是独立目标，不由 `make figures` 重绘：
 
-![一阶误差收敛](figures/first_order_errors.png)
+```bash
+make energy-figures PYTHON=.venv/bin/python
+make application-figures PYTHON=.venv/bin/python TEX_ENGINE=/path/to/tectonic
+```
 
-![二阶误差收敛](figures/second_order_errors.png)
+能量重绘仍需原脚本所要求的LaTeX、dvipng和字体环境；通道重绘额外需要SciPy。详情保留在 [能量数据说明](data/energy/README.md) 和 [应用数据说明](data/applications/README.md)。此次迁移未重新生成或重新验证这些旧实验的科学结论。
 
-## 能量耗散实验
+## 历史与原生数据
 
-- 零外场、零源项、齐次边界；单位立方体K=8，T=0.5。
-- 一阶、二阶各测试dt=1/16、1/32、1/64，使用48 MPI进程、每进程1线程。
-- 非零初值取上述平滑场的空间形状，重新满足零外场约束；不延续制造解时间函数。
-- 每步积分原生有限元场的能量，并核对包含耗散项的离散平衡。
-- 六条曲线均单调衰减；最大归一化平衡缺口为3.71e-11。
-- 两种格式分别使用其生产有限元空间，不能将两图当作同空间的纯时间精度比较。
-- 一阶、二阶分别成图，纵轴为E(t)/E(0)的对数刻度；数据不平滑、不拟合。
-- 两张能量图与收敛图共用LaTeX字体设置，使用与正文一致的Latin Modern字体。
+旧版完整提交为 [`92a574e`](https://github.com/cheryl1595212353-ux/fhd-algorithm3-paper/tree/92a574ed028bdeb5f3fdac866a413cf50b10ee1b)，由存档分支 `archive/pre-17cases-20261023` 保留；Git历史不改写。legacy中的旧收敛数据属于不同参考问题和步长，不进入当前17组主表。
 
-![一阶能量耗散](figures/first_order_energy.png)
+完整原生解、逐步检查点、失败现场、矩阵诊断及计算环境继续保存在外部科研归档。本仓库能复现表格与图形，不能单凭此仓库重新执行全部有限元计算。归档定位及验收字段的解释见 [原生数据说明](docs/RAW_DATA_ARCHIVE.md)。
 
-![二阶能量耗散](figures/second_order_energy.png)
-
-本仓库仅含论文协作材料，不包含SSH密钥、服务器登录资料、计算日志或完整有限元求解器。
-
-## 通道与后向台阶流应用
-
-- 两例采用二阶格式和五块 Algorithm 3；初值为零，入口平滑启动，外置偶极子的幅值随时间变化。
-- 第6.4节给出材料参数、入口函数、磁源位置和波形、物理压力与修正压力关系、开放边界及辅助变量条件。
-- 直通道展示 K12、t=2 的速度、磁化、颗粒角速度；同时报告原生体积 L2 相邻网格差异及无磁场对照。
-- 台阶流展示已指定的真实保存时刻 t=0.715，K4、dt=0.005；三种场使用同一时间层。当前图片用于定性展示，不能替代台阶流的最终网格无关性验证。
-- 每图左侧为稀疏矢量，右侧为模值截面。直通道截面为 z=0.1；台阶流截面为 y=0.1。箭长与模值线性关联，没有时间插值或数据重造。
-- 两例均有给定入口速度，本文没有据此声称从静止流体实现纯磁驱动泵送或获得净流量增益。
-- 快照、源码哈希、验证摘要及重绘说明位于 `data/applications/`。
+原稿的三处重复参考文献键和两处轻微Overfull提示已记录在迁移说明中；本次整理保留批准稿内容，没有扩展为理论或参考文献修订。

@@ -1,0 +1,15 @@
+# External native data and traceability
+
+This is a paper collaboration repository. Full solver sources, native finite-element vectors, per-rank checkpoints, failed runs, diagnostic matrices, runtime environments and compilation caches remain in the external FHD research archive. They were not deleted, compressed, moved or recomputed during this migration.
+
+The source-relative paths and SHA256 values in `data/convergence_17/FINAL_17_DATA_AUDIT.json`, the frozen JSON/CSV and the completion records identify the archived inputs. These names intentionally do not depend on a collaborator's absolute home directory. Obtaining the raw archive requires access from the project maintainer; no public raw-data download is claimed here.
+
+The final second-order K32 run is 47092087: 128 steps from t=0, COMPLETED/0:0, 4,603 archived files and 4,128 checked NPZ checkpoint files. Third-order K16 is 46959367. Their existing completion records are included in `data/convergence_17/evidence/`.
+
+Preserved failures include the K32 59-step monitor interruption, the later 110-step disk-full run, the strict coefficient restart failure and the original third-order K8 monitor failure. The accepted K32 is a full rerun, not a relabelled partial run. The third-order K8 value retains its independently accepted endpoint-recovery provenance.
+
+Reproduction levels:
+
+1. `make check`: scalar data arithmetic, source hashes, published table cells and figure provenance.
+2. `make tables`, `make figures`, `make preview`: table fragments, plots and paper PDFs from existing data.
+3. Repeating finite-element solves or reintegrating native fields: requires the separate solver/data/environment archive and an appropriate compute allocation; not implemented or executed by this paper repository.

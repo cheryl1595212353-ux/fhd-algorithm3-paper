@@ -1,0 +1,22 @@
+{
+  "full_pages": 32,
+  "excerpt_pages": 12,
+  "source_pages_one_based": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "method": "Extract unchanged pages from the compiled full manuscript; no second TeX source",
+  "note": "Bounds use the numerical-section bookmark and declaration heading; original numbering and cross-references are retained.",
+  "main_tex_sha256": "e0de8edd59bba5b4d100eec9533228034259904b043eb38073287205f3f55550",
+  "manuscript_sha256": "627e264cb5d8358f998d6784dc55f08e2835c1cbbe24b4fdc8bdcf459738e32a"
+}

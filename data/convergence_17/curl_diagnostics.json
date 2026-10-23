@@ -1,0 +1,91 @@
+{
+  "source_table_audit_sha256": "faaa078ebf6a615a24b7e40ceca14905fd4d08f3fedbaccae1f2567b10e07aa2",
+  "scope": "Absolute sampled curl diagnostic; no rate assigned. Values copied from the existing checked paper tables.",
+  "rows": [
+    {
+      "order": 1,
+      "K": 2,
+      "value": 2.262677015149172e-14
+    },
+    {
+      "order": 1,
+      "K": 4,
+      "value": 2.4675380464863873e-13
+    },
+    {
+      "order": 1,
+      "K": 8,
+      "value": 1.90681129950588e-12
+    },
+    {
+      "order": 1,
+      "K": 16,
+      "value": 6.670705987914361e-12
+    },
+    {
+      "order": 1,
+      "K": 32,
+      "value": 2.578091887535618e-11
+    },
+    {
+      "order": 2,
+      "K": 2,
+      "value": 5.391030835577971e-13
+    },
+    {
+      "order": 2,
+      "K": 4,
+      "value": 2.4633605653457893e-12
+    },
+    {
+      "order": 2,
+      "K": 8,
+      "value": 1.1638056665827964e-11
+    },
+    {
+      "order": 2,
+      "K": 16,
+      "value": 4.758452871907008e-11
+    },
+    {
+      "order": 2,
+      "K": 32,
+      "value": 2.3508304941497664e-10
+    },
+    {
+      "order": 3,
+      "K": 2,
+      "value": 1.8789592870673226e-12
+    },
+    {
+      "order": 3,
+      "K": 4,
+      "value": 9.602490861915509e-12
+    },
+    {
+      "order": 3,
+      "K": 8,
+      "value": 4.3286384908924494e-11
+    },
+    {
+      "order": 3,
+      "K": 16,
+      "value": 2.0974021281687832e-10
+    },
+    {
+      "order": 4,
+      "K": 2,
+      "value": 1.356606230314408e-11
+    },
+    {
+      "order": 4,
+      "K": 4,
+      "value": 3.126682737203284e-11
+    },
+    {
+      "order": 4,
+      "K": 8,
+      "value": 1.5758682804443245e-10
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "input": "data/convergence_17/CONVERGENCE_17_CASES.json",
+  "input_sha256": "c811cefdb3d5762c6a058f190c26a95eded105111c2e844d0140eb7ff0d48e29",
+  "script_sha256": "127f077194dc03082f176e37f2a7c16588b7649711b0e7328b6af0f155a24af3",
+  "orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "K": {
+    "1": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "2": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "3": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "4": [
+      2,
+      4,
+      8
+    ]
+  },
+  "norms": [
+    "u_H1",
+    "p_stage_weighted_L2",
+    "omega_H1",
+    "m_Hdiv",
+    "H_Hcurl",
+    "k_L2",
+    "phi_H1"
+  ],
+  "error_kind": "absolute",
+  "python": "3.12.14",
+  "matplotlib": "3.10.9",
+  "numpy": "2.5.4",
+  "annotations": "Measured finest adjacent-grid rates; not enforced targets",
+  "outputs_sha256": {
+    ".png": "ec3fb6097a476f45099199943c85ee031ca4905257aec4f1378698a5778021b0",
+    ".pdf": "e5a900666b83cfc3ffd03834cbc99548268bf122df206b9575216eebc2c2c57c"
+  },
+  "numerical_recomputation": false
+}

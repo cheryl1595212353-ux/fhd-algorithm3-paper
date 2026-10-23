@@ -1,0 +1,4 @@
+# Redraw/excerpt tools; the data checker itself uses the standard library.
+matplotlib==3.10.9
+numpy>=2.0,<3
+pypdf>=5,<7

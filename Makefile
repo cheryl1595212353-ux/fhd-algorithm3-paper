@@ -1,20 +1,27 @@
-.PHONY: pdf experiments figures application-figures preview
+.PHONY: check tables figures pdf preview experiments energy-figures application-figures
 
 PYTHON ?= python3
+TEX_ENGINE ?= auto
 
-pdf:
-	latexmk -norc -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+check:
+	$(PYTHON) scripts/validate.py
 
-experiments:
-	latexmk -norc -pdf -interaction=nonstopmode -halt-on-error -outdir=build experiments.tex
+tables:
+	$(PYTHON) scripts/generate_tables.py
 
 figures:
 	$(PYTHON) scripts/plot_convergence.py
+
+pdf: check
+	$(PYTHON) scripts/build_pdf.py --engine "$(TEX_ENGINE)"
+
+preview: pdf
+	$(PYTHON) scripts/export_previews.py
+
+experiments: preview
+
+energy-figures:
 	$(PYTHON) scripts/plot_energy.py
 
 application-figures:
-	$(PYTHON) scripts/plot_applications.py $(if $(TEX_ENGINE),--engine $(TEX_ENGINE),)
-
-preview: pdf experiments
-	cp build/main.pdf previews/manuscript.pdf
-	cp build/experiments.pdf previews/numerical_experiments.pdf
+	$(PYTHON) scripts/plot_applications.py $(if $(filter-out auto,$(TEX_ENGINE)),--engine "$(TEX_ENGINE)",)
