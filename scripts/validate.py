@@ -14,7 +14,11 @@ def main():
     tables, _ = rendered_tables()
     check_manuscript(tables)
     provenance = json.loads((DATA / "provenance.json").read_text())
-    if sha256(ROOT / "main.tex") != provenance["approved_manuscript_sha256"]:
+    high_order_energy = None
+    if (ROOT / "data/energy_high_order/provenance.json").exists():
+        from validate_high_order_energy import validate
+        high_order_energy = validate()
+    elif sha256(ROOT / "main.tex") != provenance["approved_manuscript_sha256"]:
         raise ValueError("main.tex differs from the approved manuscript snapshot")
     for rel, digest in provenance["preserved_energy_and_application_files_sha256"].items():
         if sha256(ROOT / rel) != digest:
@@ -37,7 +41,8 @@ def main():
             plot_proofs.append(kind)
     result = {"status": "passed", **counts, "tables": len(tables),
               "printed_error_cells": 238, "printed_rate_cells": 182,
-              "approved_manuscript_byte_identical": True,
+              "approved_manuscript_byte_identical": sha256(ROOT / "main.tex") == provenance["approved_manuscript_sha256"],
+              "supplemental_high_order_energy": high_order_energy,
               "preserved_energy_application_assets": len(provenance["preserved_energy_and_application_files_sha256"]),
               "figure_provenance_checked": plot_proofs,
               "scope": "Existing data arithmetic, CSV, TeX tables, hashes and plot provenance. No FEM/MPI, field reintegration, job submission or remote data changes."}

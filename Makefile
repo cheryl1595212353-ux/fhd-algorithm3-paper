@@ -1,4 +1,4 @@
-.PHONY: check tables figures pdf preview experiments energy-figures application-figures
+.PHONY: check tables figures pdf preview experiments energy-figures legacy-energy-figures application-figures
 
 PYTHON ?= python3
 TEX_ENGINE ?= auto
@@ -21,6 +21,9 @@ preview: pdf
 experiments: preview
 
 energy-figures:
+	$(PYTHON) scripts/plot_energy_high_order.py
+
+legacy-energy-figures:
 	$(PYTHON) scripts/plot_energy.py
 
 application-figures:

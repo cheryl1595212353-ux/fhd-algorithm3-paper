@@ -13,3 +13,9 @@ Reproduction levels:
 1. `make check`: scalar data arithmetic, source hashes, published table cells and figure provenance.
 2. `make tables`, `make figures`, `make preview`: table fragments, plots and paper PDFs from existing data.
 3. Repeating finite-element solves or reintegrating native fields: requires the separate solver/data/environment archive and an appropriate compute allocation; not implemented or executed by this paper repository.
+
+## Supplemental energy archive
+
+The six new order-3/order-4 energy cases are separate from the frozen 17 convergence cases. `data/energy_high_order/raw_checkpoint_manifest.json` lists every accepted formal-run checkpoint from t=0 through T=0.5, plus the validation checkpoints, with file sizes and SHA256 hashes. Full fields remain under the archive-relative `energy_decay_34_20261023` and `energy_decay_4_border_20261023` experiment roots. Public metadata replaces the absolute archive root with `<FHD_ARCHIVE>`.
+
+The complete scalar records, source hashes, Slurm accounting and interruption/recovery evidence are included; complete solver source is not distributed here. Four original formal runs failed when the old monitor timed out, and their failed status and raw files remain preserved. Accepted replacements use validated native checkpoint restoration and verify the copied prefix and original files. The failed initial fourth-order recovery trial remains documented separately from the successful qualified replay and final production results. See [energy provenance](ENERGY_HIGH_ORDER.md) for the exact jobs and acceptance boundaries.

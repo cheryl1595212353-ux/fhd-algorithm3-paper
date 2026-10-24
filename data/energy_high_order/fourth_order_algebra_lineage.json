@@ -1,0 +1,31 @@
+{
+  "original_energy_source": "../energy_decay_34_20261023/src",
+  "reason": "Original fourth-order small-grid gate failed full residual in step2; failed run retained.",
+  "new_adapter": "Explicit pressure-constraint border in K1 plus fixed two full-system defect corrections, using the already validated common_mms_K8 implementation. No physical, spatial, time, initial, boundary or matrix changes.",
+  "imported_modules": {
+    "operators.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/operators.py",
+      "sha256": "5208a5d6c46f44e3131e5893031716ecea3ec034960b356ee8089789ce902a61"
+    },
+    "control_spec.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/control_spec.py",
+      "sha256": "32830de57821d4659bd68a3eb9a10965aa6d4b378fce7a4857ca62d98a4ef608"
+    },
+    "k1_solver.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/k1_solver.py",
+      "sha256": "3514b87fc1bc9d66b6f39f82887570aa5549fed6f1f9f839f1f09a8eba45d41c"
+    },
+    "solver_tools.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/solver_tools.py",
+      "sha256": "61bdda3a24108767b4bfbca293ce1a7e677b44dc5bcf5d5878f99714391550e6"
+    },
+    "solver_contract.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/solver_contract.py",
+      "sha256": "34865ea12cef649c4adf2ea275fa9189eb4bef2ce04c900eb077ef8e155b4c09"
+    },
+    "refinement_protocol.py": {
+      "source": "high_order_4/experiments/common_mms_K8_20261018/src/refinement_protocol.py",
+      "sha256": "8b5c8999cd1c7b8fd76e9e96d1f68798a82f84903499c41632d09e94ec300bcd"
+    }
+  }
+}
