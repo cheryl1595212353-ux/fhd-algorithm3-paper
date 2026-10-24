@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "equations_AST_identical_to_order3_4_energy_baseline": true,
+  "equations_AST_sha256": "a9c5868c474bc9197997657cbb72e3db304a67991f7d03cc38619d8663ab16bd",
+  "scope": "Same nine residual expressions; latest solver/transfer/recovery retained, separate zero-input initial data adapter."
+}

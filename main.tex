@@ -4904,25 +4904,29 @@ steps, respectively. The plotted quantity is $E_h^n/E_h^0$, where
  +\rho\kappa\|\bs\omega_h^n\|_0^2+\|\bs m_h^n\|_0^2
  +\mu_0\|\nabla\varphi_h^n\|_0^2\right).
 \]
-The first- and second-order curves are retained from the original energy
-experiment. The six supplemental third- and fourth-order runs use exactly
-the continuous initial fields above. Their initial velocity is the
-constrained $L^2$ projection onto the discrete divergence-free subspace;
-$\bs\omega_0$ and $\bs m_0$ are projected in $L^2$, and the initial magnetic
-potential satisfies the discrete zero-field Maxwell--Poisson constraint.
-The third-order method uses two Gauss stages and three linear corrections
-on its first two steps; the fourth-order method uses three Gauss stages
-and four corrections on its first three steps. Thereafter, the prescribed
-history extrapolation is used.
+All four orders use the continuous initial fields above. Their initial
+velocity is the constrained $L^2$ projection onto the discrete
+divergence-free subspace; $\bs\omega_0$ and $\bs m_0$ are projected in
+$L^2$, and the initial magnetic potential satisfies the discrete
+zero-field Maxwell--Poisson constraint.
+
+The first-order method uses backward Euler. Orders two, three, and four
+use one, two, and three Gauss stages, respectively. For order $p\ge2$,
+the first $p-1$ steps use $p$ linear corrections per step, followed by the
+prescribed $p$-history extrapolation.
 
 \Cref{fig:energy-comparison} shows nonincreasing normalized energy at all
-stored time levels. For the six supplemental runs, we also check the
-zero-load Gauss energy identity \eqref{eq:ho:FE-energy} at every step,
-including startup. With
+stored time levels. We check the zero-load balance
+\eqref{eq:ho:FE-energy}, including the additional backward-Euler dissipation
+$N_h^n=\frac12\|\bs x_h^{n+1}-\bs x_h^n\|_{\DD}^2$;
+for the Gauss schemes, $N_h^n=0$. With
 $D_h^n=\dt\sum_i b_i\|\bs x_{h,n,i}\|_{\Aform_h}^2$,
-the maximum scaled residual
-$|E_h^{n+1}-E_h^n+D_h^n|/(E_h^{n+1}+E_h^n+D_h^n)$ is
-$5.87\times10^{-12}$.
+the scaled balance residual over all twelve trajectories, including
+startup, satisfies
+\[
+ \frac{|E_h^{n+1}-E_h^n+D_h^n+N_h^n|}
+ {E_h^{n+1}+E_h^n+D_h^n+N_h^n}\le 5.88\times10^{-12}.
+\]
 These curves illustrate dissipation for the tested steps. Each temporal
 order uses its corresponding spatial finite-element spaces, so this
 comparison does not isolate temporal accuracy.
@@ -4932,7 +4936,7 @@ comparison does not isolate temporal accuracy.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/energy_high_order/first_order_energy.pdf}
+        {figures/energy_all_orders/first_order_energy.pdf}
         \caption{First-order scheme.}
         \label{fig:first-order-energy}
     \end{subfigure}
@@ -4940,7 +4944,7 @@ comparison does not isolate temporal accuracy.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/energy_high_order/second_order_energy.pdf}
+        {figures/energy_all_orders/second_order_energy.pdf}
         \caption{Second-order scheme.}
         \label{fig:second-order-energy}
     \end{subfigure}
@@ -4948,7 +4952,7 @@ comparison does not isolate temporal accuracy.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/energy_high_order/third_order_energy.pdf}
+        {figures/energy_all_orders/third_order_energy.pdf}
         \caption{Third-order scheme.}
         \label{fig:third-order-energy}
     \end{subfigure}
@@ -4956,7 +4960,7 @@ comparison does not isolate temporal accuracy.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/energy_high_order/fourth_order_energy.pdf}
+        {figures/energy_all_orders/fourth_order_energy.pdf}
         \caption{Fourth-order scheme.}
         \label{fig:fourth-order-energy}
     \end{subfigure}

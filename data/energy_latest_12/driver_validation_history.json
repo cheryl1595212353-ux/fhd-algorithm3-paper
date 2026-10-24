@@ -1,0 +1,49 @@
+{
+  "failed_initial_gate_attempts": [
+    {
+      "order": 1,
+      "K": 2,
+      "dt_denominator": 16,
+      "T": 0.1875,
+      "label": "gate_order1",
+      "job_id": "47330204",
+      "case_directory": "<FHD_ARCHIVE>/energy_decay_12_20261024/runs/gate_order1_job_47330204",
+      "accounting": {
+        "state": "FAILED",
+        "exit_code": "1:0",
+        "elapsed": "00:01:29",
+        "node": "j10r4n11"
+      },
+      "failure": "Traceback (most recent call last):\n  File \"<FHD_ARCHIVE>/energy_decay_12_20261024/adapter/run_energy.py\", line 98, in <module>\n    assert initial_style_constraints['u']<1e-8\nKeyError: 'u'\n",
+      "original_source_manifest_sha256": "996d7f5b5533b12a72578527ab1d61e1da64385907b1b345322a919d71237a0b",
+      "original_source_snapshot": "energy_decay_12_20261024/revision_snapshots/v1"
+    },
+    {
+      "order": 2,
+      "K": 2,
+      "dt_denominator": 16,
+      "T": 0.1875,
+      "label": "gate_order2",
+      "job_id": "47330209",
+      "case_directory": "<FHD_ARCHIVE>/energy_decay_12_20261024/runs/gate_order2_job_47330209",
+      "accounting": {
+        "state": "FAILED",
+        "exit_code": "1:0",
+        "elapsed": "00:02:00",
+        "node": "j10r1n05"
+      },
+      "failure": "Traceback (most recent call last):\n  File \"<FHD_ARCHIVE>/energy_decay_12_20261024/adapter/run_energy.py\", line 98, in <module>\n    assert initial_style_constraints['u']<1e-8\nKeyError: 'u'\n",
+      "original_source_manifest_sha256": "996d7f5b5533b12a72578527ab1d61e1da64385907b1b345322a919d71237a0b",
+      "original_source_snapshot": "energy_decay_12_20261024/revision_snapshots/v1"
+    }
+  ],
+  "repair": {
+    "failed_jobs": [
+      "47330204",
+      "47330209"
+    ],
+    "cause": "Diagnostic KeyError: constraints uses pressure-test key p for weak divergence of velocity, while driver asked for u. This is after stage/energy checks, before first step record. No mathematical or solver tolerance change.",
+    "source_v1": "revision_snapshots/v1",
+    "fix": "Select existing p pressure-test weak divergence diagnostic"
+  }
+}
