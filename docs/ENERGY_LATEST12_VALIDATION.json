@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "date": "2026-10-24",
+  "base_commit": "f3f187421621170cd9431b9e95a17b67711da492",
+  "scalar_validation": {
+    "status": "passed",
+    "cases": 17,
+    "error_records": 119,
+    "absolute_and_relative_rates": 182,
+    "csv_rows": 119,
+    "curl_diagnostics": 17,
+    "tables": 8,
+    "printed_error_cells": 238,
+    "printed_rate_cells": 182,
+    "approved_manuscript_byte_identical": false,
+    "supplemental_high_order_energy": {
+      "latest_order1_2": {
+        "status": "PASS",
+        "cases": 6,
+        "steps": 112,
+        "rows": 118,
+        "latest_core_verified": true,
+        "old_data_preserved": true,
+        "maximum_true_relative_residual": 1.1801596529509137e-14,
+        "maximum_energy_relative_gap": 6.343413048379704e-14,
+        "initial_shapes_match_orders3and4": true,
+        "zero_input_energy_nonincreasing": true
+      },
+      "cases": 6,
+      "strictly_recovered_cases": 4,
+      "curve_rows": 118,
+      "steps": 112,
+      "small_grid_gates": 2,
+      "maximum_true_relative_residual": 3.3545742386710707e-14,
+      "maximum_energy_relative_gap": 5.871714717811182e-12,
+      "monotonic_unforced_energy": true,
+      "original_manuscript_outside_energy_section_unchanged": true,
+      "raw_checkpoints": "Preserved on the compute server; manifest with sizes and SHA256 included."
+    },
+    "preserved_energy_application_assets": 32,
+    "figure_provenance_checked": [
+      "absolute",
+      "relative"
+    ],
+    "scope": "Existing data arithmetic, CSV, TeX tables, hashes and plot provenance. No FEM/MPI, field reintegration, job submission or remote data changes."
+  },
+  "new_cases": {
+    "count": 6,
+    "steps": 112,
+    "rows": 118,
+    "all_slurm_completed_zero": true,
+    "all_body_boundary_lifting_input_zero": true,
+    "maximum_initial_constraint": 1.1105877961462428e-14,
+    "max_cgroup_peak_gib": 12.116119384765625,
+    "checkpoint_files": 4158,
+    "checkpoint_bytes": 737938168
+  },
+  "pdf": {
+    "compiler": "Tectonic0.17.0",
+    "full_pages": 34,
+    "excerpt_pages": 14,
+    "excerpt_source_pages": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "excerpt_text_exact": true,
+    "pre_energy_23pages_text_identical": true,
+    "main_tex_sha256": "3ceb89532bac0e6f17cdac26c7ef9e12a335385a9fd48dc41bb149dea503030b",
+    "full_sha256": "ff00d3d01b7c1f4f9a92eab46a85c9a662514b41572a830066c5aa42d097e7ac",
+    "excerpt_sha256": "499d4173e06c3588a490725739d220db0cc126ab1ef7853009650f78ac86fa40"
+  },
+  "visual_review": {
+    "combined_four_order_chart": "PASS; clear common axes/legends, distinct markers/dashes",
+    "full_resolution_pages": [
+      24,
+      25
+    ],
+    "contact_sheet_pages": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "visible_clipping_overlap_missing_glyphs": false
+  },
+  "preservation": {
+    "previous_30_data_files_unchanged": true,
+    "original_32_energy_application_assets_unchanged": true,
+    "previous_high_order_figure_directory_byte_identical": true,
+    "order3_4_data_or_fields_recomputed": false,
+    "17_convergence_cases_recomputed": false,
+    "server_raw_data_deleted": false,
+    "main_outside_energy_section_unchanged": true
+  },
+  "diagnostic_scope": {
+    "initial_Maxwell_Poisson_constraints_passed": true,
+    "layerwise_exact_Maxwell_preservation_claimed": false,
+    "endpoint_initial_style_Maxwell_moments_by_case": {
+      "order1_dt1_16": 0.006835544380407172,
+      "order1_dt1_32": 0.007830459246560948,
+      "order1_dt1_64": 0.008800845893253246,
+      "order2_dt1_16": 0.007811121027292223,
+      "order2_dt1_32": 0.006602669010390796,
+      "order2_dt1_64": 0.006061840098343369
+    },
+    "stage_z_varpi_not_endpoint_constraint_checks": true
+  },
+  "preserved_warnings": {
+    "duplicate_bibliography": [
+      "LiuYin2022",
+      "ShinLeeLee2017",
+      "ShinLee2020"
+    ],
+    "overfull_hbox_pt": [
+      4.53241,
+      0.98376
+    ],
+    "new_undefined_references_or_missing_glyphs": false
+  }
+}

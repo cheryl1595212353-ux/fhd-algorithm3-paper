@@ -1,0 +1,46 @@
+{
+  "frozen_core_sources": {
+    "1": "high_order_1/experiments/common_mms_refinement_20261019/src",
+    "2": "high_order_2/experiments/common_mms_refinement_20261019/src"
+  },
+  "common_core_byte_identical_for_orders1and2": true,
+  "core_sha256": {
+    "c2_spec.py": "25bb47608f97837640b5be0b4f79348f2450f1defac530642be1145181dc6c37",
+    "initial_projection.py": "7409dcd17458321eb345d87ce1aaa193e8053bf760d650da135e3842c7ab0de2",
+    "boundary_closure.py": "f066060674ce1f9f8d7b534074b9b2d7d56fba43cd6cb9e9daa7a5c807b94d26",
+    "run.py": "ac95b7dab0edaa7548f917efb1fd02d89d739ea2577f0daae5431d39dcd9b5de",
+    "lifting_protocol.py": "d653a838bf984fb73b665828045770f8ddff04d855b1dc6c2f8fb5c96eff23d6",
+    "seven_norms.py": "1b087babe71fae4b1850a66886e959d1f47e63afc8c4ad842d3b696754798bf3",
+    "coherent_spaces.py": "3e9622dcd86809d0eaffa855588650ca16224f21da3cf079b3c7bfa88af97f95",
+    "linear.py": "71a30dc776aa124ba5d3689802135d9c67bb6645c8534d935373bc89fbe08abd",
+    "boundary_lifts.py": "aa2bd1ae4efdd30c9ebd6c5309ed592649e67a46935e22aeafd4289b6398f4a5",
+    "c1_spec.py": "79c56428d8a4f7648a8a5931860237f97e5d5010eade889a108cd3d052d63851",
+    "control_spec.py": "bafd118e1c16e81040809cb0de278a69ef1fa68471936e47540df14233ccfd9b",
+    "custom_abi.py": "c579618e61a80ea5e52e837f9a3c67c8856cf973018b4cde95eed1aeb896d547",
+    "mixed_lift_input.py": "078062e2191b42fc89794fecfaa8c9fb912b2ebcaa1cb48eb77c0ae2f44bee99",
+    "solver_contract.py": "34865ea12cef649c4adf2ea275fa9189eb4bef2ce04c900eb077ef8e155b4c09",
+    "k1_solver.py": "efd1544955dc00d941befb2f08efd631db9277f31d4ee4220cf8c4a7ca091c3e",
+    "spaces.py": "3b3bdd2a18d8681fa5aa635a79131c98ab98177f8a66d004182cda1b7ccba4b7",
+    "energy_balance.py": "b7b4e8745403ac0f10a28f039c2a8d8d5e1403aae411d0ab7c36084e7720a99d",
+    "transfer_contract.py": "5c0e832833e5a4ea8bf02156d9e6de1638c434ee188ca6db5304b18000b96bb9",
+    "physical_rk.py": "dcb181ecdb4bc64d20ed475af8134a8a94b6bbcc8b79553cf37da4a06c9d1d70",
+    "model.py": "846e8eeff51226722b7174ac88c973f633664d56c05d336e3636b593ffb5d9a9",
+    "c1_border.py": "ca8aa17a8cea006aadc922a59d54e18b08a797734565aa3966a20882f9f3f40e",
+    "engine.py": "bbd10a0189054aca4d2d549f2e908ba9c0424c372f71e2d938df108d5944ab69",
+    "solver_tools.py": "140e34e86c601a1efa77aeaf9d005d237e285880d7c1e6e2625c2756088196b2",
+    "c0_contract.py": "0e6287e9853af8716bbe75bea0f990b5d6dbe92026be34d584be5835eecbdee4",
+    "rk.py": "de73b921278542b3f556858f008063d4489e5a7e4cc855b60a1718cb822338b7",
+    "polynomial_model.py": "908d9829e8d451d086e54319de1dc2fdcd7cb9f0497e81bacbdb5b1345bc2c02",
+    "refinement_protocol.py": "8b5c8999cd1c7b8fd76e9e96d1f68798a82f84903499c41632d09e94ec300bcd",
+    "operators.py": "99d8d0ae9a75cc82525576c2e256186045188e069436a5f36b6a949f070809f9",
+    "strict_compilation.py": "940227ef74673e314a0eb538cb3b3c789accd38dd8cc4b24be9fda0202725347",
+    "initial_checkpoint.py": "a6378c0508c478362905f98d500a65b3fab1c4ed56ba185f232b7215ed2280c4",
+    "c0_reference.py": "b758d836c0e27115562b630eafa75a67203db4a13a27a9834fd42ed8d84c3c4d"
+  },
+  "original_source_manifest_sha256": {
+    "1": "4d623285ea2c252a6405ee2033d1093c7c75bd0d03ca83b48680db7ecf15d98d",
+    "2": "d00a72e70ba60db34dc7c0e399bbda9f388278b7cf579ffcab979ba553fb1fc8"
+  },
+  "reference_initial_field_module_sha256": "196d7d20481ff7e93b9ebc6ac0b3c0c0bec478ddc3e8fcd7c80336cdb7f59717",
+  "input_adapter": "polynomial_model is explicitly supplied by adapter before core_src; only loads/initial problem change; frozen copied original input binding remains in core_src for audit."
+}

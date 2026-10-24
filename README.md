@@ -1,14 +1,16 @@
 # FHD Algorithm 3: manuscript, 17 convergence cases and energy decay
 
-本仓库保存 Rosensweig 铁磁流体论文、可检查的数值表、插图及重绘工具。当前主稿在2026-10-22批准稿基础上补齐三、四阶能量耗散图；原17组收敛数据和主稿能量节以外内容保持不变。
+本仓库保存 Rosensweig 铁磁流体论文、可检查的数值表、插图及重绘工具。当前主稿在2026-10-22批准稿基础上补齐三、四阶能量图，并用最新一、二阶程序的六组零输入补算统一更新能量图；原17组收敛数据和主稿能量节以外内容保持不变。
 
 - [完整论文 PDF](previews/manuscript.pdf)
 - [数值实验及绝对误差附录 PDF](previews/numerical_experiments.pdf)
 - [全部17组绝对/相对误差与观测阶 CSV](data/convergence_17/ERRORS_AND_RATES_17_CASES.csv)
 - [全精度 JSON](data/convergence_17/CONVERGENCE_17_CASES.json)
 - [实验范围与解释](docs/NUMERICAL_SCOPE.md)
+- [最新一、二阶补算与统一能量图](docs/ENERGY_LATEST12.md)
 - [三、四阶能量补算、验收及恢复来源](docs/ENERGY_HIGH_ORDER.md)
-- [新增六组能量曲线 CSV](data/energy_high_order/curves.csv)
+- [最新一、二阶六组能量曲线 CSV](data/energy_latest_12/curves.csv)
+- [已验收三、四阶六组能量曲线 CSV](data/energy_high_order/curves.csv)
 - [迁移与核验记录](docs/MIGRATION.md)
 
 仓库为公开论文协作材料；公开访问不等于授予开源许可证，许可证状态沿用原仓库。
@@ -30,21 +32,23 @@
 
 [绝对误差图](figures/convergence_17/absolute_errors.png)
 
-新增三、四阶各三组能量耗散实验：K=8、T=0.5、dt=1/16、1/32、1/64，共112步，全部完成并通过残差、能量平衡和恢复核验。一、二阶沿用原有标量数据。四个面板使用相同坐标，各曲线按自己的初始能量归一化；各阶空间离散不同，此图不用于单独证明时间精度。
+最新一至四阶能量图均采用K=8、T=0.5、dt=1/16、1/32、1/64。一、二阶来自最新已验收程序的六组新补算，三、四阶沿用前一轮六组验收结果；共12条轨迹、224步、236条含初值记录，旧数据保留。四个面板使用相同坐标，各曲线按自己的初始能量归一化；各阶空间离散不同，此图不用于单独证明时间精度。
 
-![一至四阶能量耗散](figures/energy_high_order/energy_orders_1to4.png)
+![一至四阶能量耗散](figures/energy_all_orders/energy_orders_1to4.png)
 
 ## 目录与唯一正文入口
 
 ```text
 main.tex                       唯一正文；仅能量节相对批准稿更新
 figures/convergence_17/         一至四阶绝对/相对误差图及来源哈希
-figures/energy_high_order/      一至四阶统一坐标能量图及重绘来源
+figures/energy_all_orders/      最新一至四阶统一坐标能量图
+figures/energy_high_order/      保留前次三四阶补图时的组合图
 figures/applications/          保留的通道、台阶流图
 figures/*_energy.*              保留的能量图
 data/convergence_17/            冻结JSON、CSV、curl诊断、RK表与验收来源
 data/energy/                    原能量曲线和来源
-data/energy_high_order/         新增六组曲线、验收、恢复与检查点哈希
+data/energy_high_order/         已验收三四阶曲线、恢复与检查点哈希
+data/energy_latest_12/          最新一二阶六组曲线、验收与来源
 data/applications/              原通道、台阶流采样快照和来源
 scripts/                       检查、生成表格、重绘和编译工具
 previews/                      完整论文与数值章节摘录
@@ -94,7 +98,7 @@ make energy-figures PYTHON=.venv/bin/python
 make application-figures PYTHON=.venv/bin/python TEX_ENGINE=/path/to/tectonic
 ```
 
-新的 `make energy-figures` 使用Matplotlib，无需TeX，不执行有限元计算，生成PDF/PNG/SVG及哈希。旧能量图如需按原方式重绘，使用 `make legacy-energy-figures`，仍需LaTeX、dvipng及原字体环境；通道重绘额外需要SciPy。详情见 [新增能量说明](docs/ENERGY_HIGH_ORDER.md)、[原能量数据说明](data/energy/README.md) 和 [应用数据说明](data/applications/README.md)。
+新的 `make energy-figures` 使用Matplotlib，无需TeX，不执行有限元计算，生成PDF/PNG/SVG及哈希。旧能量图如需按原方式重绘，使用 `make legacy-energy-figures`，仍需LaTeX、dvipng及原字体环境；通道重绘额外需要SciPy。详情见 [最新能量说明](docs/ENERGY_LATEST12.md)、[原能量数据说明](data/energy/README.md) 和 [应用数据说明](data/applications/README.md)。
 
 ## 历史与原生数据
 
@@ -102,4 +106,4 @@ make application-figures PYTHON=.venv/bin/python TEX_ENGINE=/path/to/tectonic
 
 完整原生解、逐步检查点、失败现场、矩阵诊断及计算环境继续保存在外部科研归档。本仓库能复现表格与图形，不能单凭此仓库重新执行全部有限元计算。归档定位及验收字段的解释见 [原生数据说明](docs/RAW_DATA_ARCHIVE.md)。
 
-原稿的三处重复参考文献键和两处轻微Overfull提示已记录在迁移说明中；本次补图没有扩展为理论或参考文献修订。历史迁移验收见 `docs/VALIDATION.json`；本次验收见 `docs/ENERGY_VALIDATION.json`。
+原稿的三处重复参考文献键和两处轻微Overfull提示已记录在迁移说明中；本次补图没有扩展为理论或参考文献修订。历史迁移验收见 `docs/VALIDATION.json`；三四阶补图验收见 `docs/ENERGY_VALIDATION.json`；最新一二阶及统一图验收见 `docs/ENERGY_LATEST12_VALIDATION.json`。

@@ -1,0 +1,21 @@
+{
+  "status": "ALL_SIX_ACCEPTED",
+  "cases": 6,
+  "curve_rows": 118,
+  "steps": 112,
+  "raw_checkpoint_files": 4158,
+  "raw_checkpoint_bytes": 737938168,
+  "data_sha256": {
+    "cases.json.gz": "eeb26c24d32d3e20260d21afb72fbbe98d70328d65195b4a444660bcc21f011e",
+    "curves.csv": "d746d710cd00a4791c737b457c508626cca4ee142cc2538bc367f7f4ebd9d31d",
+    "driver_validation_history.json": "2d5106adb749b0bddba1c0d84a74f92fd7b3383fc29f9f35aee4a9a13bfc53da",
+    "energy_summary.json": "57fb8c0235bcdbe3af040a77879ab439426a7e51f42363d75a0a56de92680aec",
+    "experiment_contract.json": "76462f3730b6276762eac898679022c21407b6a84c4af8313303eb67ed128d7b",
+    "physical_rows_comparison.json": "390795c4d071e4013026de422dae7a8190e1378b5fecb1b15a35eab4c50b7518",
+    "raw_checkpoint_manifest.json": "d3c39605e0b6d0b1a26cf6e32581ae9dc7dc9854fcc483ddaef91c1e64a844e4",
+    "slurm_accounting.txt": "92806be17216431292012c94e5e1142c3fae972608dc772b97603bbe1155639c",
+    "small_grid_gates.json": "30a71cfa8eb33d79f4e799fb4e1ff228d0032aefd2d97b05486c47bd70992b24",
+    "solver_lineage.json": "bcdc882d916ee9eeba5636a24acae966da8b3008e4f9a3ca81c1b75c57f19e3a",
+    "source_manifest.json": "272a26e11d02601fc4a671a5872440a99370d704c6aa463473bfc4ebb8e38e28"
+  }
+}

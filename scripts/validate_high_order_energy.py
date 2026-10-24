@@ -28,7 +28,14 @@ def validate():
     section,suffix=rest.split(END,1)
     assert hashlib.sha256(prefix.encode()).hexdigest()==provenance['protected_manuscript_prefix_sha256']
     assert hashlib.sha256(suffix.encode()).hexdigest()==provenance['protected_manuscript_suffix_sha256']
-    assert sha(ROOT/'main.tex')==provenance['updated_manuscript_sha256']
+    latest_order12=None
+    extension=ROOT/'data/energy_latest_12/provenance.json'
+    if extension.exists():
+        assert read(extension)['previous_manuscript_sha256']==provenance['updated_manuscript_sha256']
+        from validate_energy_latest12 import validate as validate_latest12
+        latest_order12=validate_latest12()
+    else:
+        assert sha(ROOT/'main.tex')==provenance['updated_manuscript_sha256']
     baseline=read(ROOT/'data/convergence_17/provenance.json')
     assert baseline['approved_manuscript_sha256']==provenance['previous_manuscript_sha256']
     with (DATA/'curves.csv').open(newline='') as stream:
@@ -134,7 +141,7 @@ def validate():
     for name,digest in proof['input_sha256'].items():assert sha(ROOT/name)==digest,name
     for stem,outputs in proof['outputs_sha256'].items():
         for suffix,digest in outputs.items():assert sha(figure_dir/(stem+suffix))==digest
-    return {'cases':6,'strictly_recovered_cases':recovered,'curve_rows':118,'steps':112,'small_grid_gates':2,
+    return {'latest_order1_2':latest_order12,'cases':6,'strictly_recovered_cases':recovered,'curve_rows':118,'steps':112,'small_grid_gates':2,
         'maximum_true_relative_residual':max(residuals),'maximum_energy_relative_gap':max(balances),
         'monotonic_unforced_energy':True,'original_manuscript_outside_energy_section_unchanged':True,
         'raw_checkpoints':'Preserved on the compute server; manifest with sizes and SHA256 included.'}
