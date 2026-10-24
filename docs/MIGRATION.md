@@ -1,5 +1,7 @@
 # Repository refresh: 2026-10-23
 
+This file records the historical repository migration and its then-current 32-page PDF. The later [2026-10-24 energy update](ENERGY_HIGH_ORDER.md) changes only the manuscript's energy subsection and regenerates the PDFs. Statements below about byte identity, no new computations and page counts refer to the migration snapshot, not the later energy update. Historical validation JSON files are retained.
+
 The previous main commit is `92a574ed028bdeb5f3fdac866a413cf50b10ee1b` (2026-09-28). This update adopts the approved 2026-10-22 manuscript and frozen 17-case results. All Git history is preserved. The old convergence files and experimental TeX fragments are moved into `legacy/2026-09-28/`; the complete older repository remains available by its commit ID. An additional archive ref is part of the publication plan.
 
 ## Changes

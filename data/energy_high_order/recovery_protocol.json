@@ -1,0 +1,592 @@
+{
+  "admission": {
+    "status": "BOTH_ORDERS_NATIVE_REPLAY_QUALIFIED",
+    "resume_driver_sha256": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+    "orders": {
+      "3": {
+        "status": "PASS",
+        "job_id": "47289489",
+        "evidence": {
+          "status": "PASS",
+          "original_case": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+          "from_step": 1,
+          "original_files_verified_unchanged": 13,
+          "copied_prefix_files_verified": 13,
+          "native_restore_all_coefficients_bitwise_equal": true,
+          "checkpoint_energy_relative_differences": {
+            "previous": 0.0,
+            "current": 0.0,
+            "dissipation": 0.0
+          },
+          "resume_driver_sha256": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+          "small_grid_replay": {
+            "combined_relative_coefficient_difference": 3.44455536301283e-14,
+            "field_relative_differences": {
+              "u": 2.424862149300051e-14,
+              "p": 1.2509945274951892e-12,
+              "omega": 1.1142637655796536e-15,
+              "m": 1.5565469594007023e-15,
+              "z": 1.3399648402262524e-14,
+              "k": 2.2724728529057856e-14,
+              "phi": 1.748786314254413e-15,
+              "theta": 9.048818096949125e-16,
+              "varpi": 4.750949835814002e-14
+            },
+            "combined_limit": 1e-11,
+            "per_field_limit": 1e-09,
+            "reference": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179"
+          }
+        }
+      },
+      "4": {
+        "status": "PASS",
+        "job_id": "47290752",
+        "case_directory": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/diagnostic_replay_p4_job_47290752",
+        "evidence": {
+          "status": "PASS",
+          "original_case": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/restart_gate_p4_job_47289490",
+          "from_step": 2,
+          "original_files_verified_unchanged": 19,
+          "copied_prefix_files_verified": 19,
+          "native_restore_all_coefficients_bitwise_equal": true,
+          "checkpoint_energy_relative_differences": {
+            "previous": 0.0,
+            "current": 0.0,
+            "dissipation": 0.0
+          },
+          "resume_driver_sha256": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+          "small_grid_replay": {
+            "combined_relative_coefficient_difference": 1.643647676814619e-14,
+            "field_relative_differences": {
+              "u": 2.6647588046291467e-16,
+              "p": 4.792648141860008e-15,
+              "omega": 3.1339087650950446e-16,
+              "m": 2.756990677512888e-15,
+              "z": 5.989782753501803e-15,
+              "k": 9.764204821594816e-14,
+              "phi": 9.390628070552026e-16,
+              "theta": 8.549384487630679e-16,
+              "varpi": 3.949230395121535e-16
+            },
+            "combined_limit": 1e-11,
+            "per_field_limit": 1e-09,
+            "reference": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137"
+          }
+        },
+        "failure_observer_sha256": "bac59d572234b4467941c4009b8141d663b2b428adc9042904021459eef1ab72",
+        "qualification": "Exact native restore and final coefficients match uninterrupted reference; prior attempted replay47289490 failed during a linear solve. The error was not reproduced in this observed replay. Keep failure diagnostics active and do not accept any failed step."
+      }
+    },
+    "guard_control_job_id": "47289101"
+  },
+  "guard_controls": {
+    "status": "PASS",
+    "ranks_controlled": 64,
+    "controls": [
+      {
+        "control": "normal_64_ranks",
+        "result": {
+          "job_id": "47289101",
+          "exit_code": 0,
+          "reason": null,
+          "error": null,
+          "seconds": 19.035359444096684,
+          "job_cgroup_peak_bytes": 9618468864,
+          "guard_bytes": 55834574848.0,
+          "allocation_mib": 65536,
+          "command": [
+            "srun",
+            "--mpi=pmix",
+            "--cpu-bind=cores",
+            "--mem=0",
+            "-n",
+            "64",
+            "-c",
+            "1",
+            "<FHD_ARCHIVE>/env/stack/bin/python",
+            "-c",
+            "from mpi4py import MPI; import time; a=bytearray(2**20); MPI.COMM_WORLD.Barrier(); time.sleep(3)"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47289101/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47289101",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47289101",
+            "mountinfo_line": "36 25 0:32 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:17 - cgroup cgroup rw,memory",
+            "job_id": "47289101",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        }
+      },
+      {
+        "control": "payload_exit7",
+        "result": {
+          "job_id": "47289101",
+          "exit_code": 7,
+          "reason": null,
+          "error": null,
+          "seconds": 1.0082688650581986,
+          "job_cgroup_peak_bytes": 9618468864,
+          "guard_bytes": 55834574848.0,
+          "allocation_mib": 65536,
+          "command": [
+            "<FHD_ARCHIVE>/env/stack/bin/python",
+            "-c",
+            "raise SystemExit(7)"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47289101/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47289101",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47289101",
+            "mountinfo_line": "36 25 0:32 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:17 - cgroup cgroup rw,memory",
+            "job_id": "47289101",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        }
+      },
+      {
+        "control": "walltime",
+        "result": {
+          "job_id": "47289101",
+          "exit_code": -15,
+          "reason": "walltime_limit",
+          "error": null,
+          "seconds": 1.0089845198672265,
+          "job_cgroup_peak_bytes": 9618468864,
+          "guard_bytes": 55834574848.0,
+          "allocation_mib": 65536,
+          "command": [
+            "<FHD_ARCHIVE>/env/stack/bin/python",
+            "-c",
+            "import time; time.sleep(20)"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47289101/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47289101",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47289101",
+            "mountinfo_line": "36 25 0:32 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:17 - cgroup cgroup rw,memory",
+            "job_id": "47289101",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        }
+      },
+      {
+        "control": "memory",
+        "result": {
+          "job_id": "47289101",
+          "exit_code": -15,
+          "reason": "memory_limit",
+          "error": null,
+          "seconds": 1.0099317689891905,
+          "job_cgroup_peak_bytes": 9618468864,
+          "guard_bytes": 78635008.0,
+          "allocation_mib": 65536,
+          "command": [
+            "<FHD_ARCHIVE>/env/stack/bin/python",
+            "-c",
+            "import time; a=bytearray(512*2**20); time.sleep(20)"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47289101/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47289101",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47289101",
+            "mountinfo_line": "36 25 0:32 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:17 - cgroup cgroup rw,memory",
+            "job_id": "47289101",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        }
+      }
+    ],
+    "controller_queries": 0,
+    "guard_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5",
+    "identity_parser_sha256": "2a9e8fc5c54e072a79567e1f67992a242361c99a44ce31bb5e76b7f0051f986b"
+  },
+  "small_grid_replays": {
+    "3": {
+      "job_id": "47289489",
+      "slurm_state": "COMPLETED",
+      "slurm_exit_code": "0:0",
+      "elapsed": "00:01:34",
+      "nodes": "j10r3n29",
+      "allocated_cpus": "32",
+      "requested_memory": "64G",
+      "acceptance": {
+        "status": "PASS",
+        "original_case": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+        "from_step": 1,
+        "original_files_verified_unchanged": 13,
+        "copied_prefix_files_verified": 13,
+        "native_restore_all_coefficients_bitwise_equal": true,
+        "checkpoint_energy_relative_differences": {
+          "previous": 0.0,
+          "current": 0.0,
+          "dissipation": 0.0
+        },
+        "resume_driver_sha256": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+        "small_grid_replay": {
+          "combined_relative_coefficient_difference": 3.44455536301283e-14,
+          "field_relative_differences": {
+            "u": 2.424862149300051e-14,
+            "p": 1.2509945274951892e-12,
+            "omega": 1.1142637655796536e-15,
+            "m": 1.5565469594007023e-15,
+            "z": 1.3399648402262524e-14,
+            "k": 2.2724728529057856e-14,
+            "phi": 1.748786314254413e-15,
+            "theta": 9.048818096949125e-16,
+            "varpi": 4.750949835814002e-14
+          },
+          "combined_limit": 1e-11,
+          "per_field_limit": 1e-09,
+          "reference": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179"
+        }
+      },
+      "native_restore": {
+        "status": "PASS",
+        "source_case": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+        "step": 1,
+        "ranks": [
+          {
+            "rank": 0,
+            "native_sha256": "76399266d8b70b65e7314816bad101f1d0f77665b1385eef183e221b71fbc976",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 1,
+            "native_sha256": "6df91409aaea081cd4f70e5571204ab432386b6ee60dda37675c0d969efa3cda",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 2,
+            "native_sha256": "8d283849ef8ac52746b41ad056b1ca8bfa6e70045691acc2de58b4c57c0e206e",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 3,
+            "native_sha256": "e48b8b0a424e1217f06aebf02dc1d51316ff2f28d7fb81c86b8bbbcb645c2654",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          }
+        ],
+        "energy_relative_differences": {
+          "previous": 0.0,
+          "current": 0.0,
+          "dissipation": 0.0
+        },
+        "homogeneous_boundary_error": 0.0,
+        "prefix_copy_sha256": "022c6243a2b78a9a016b6cb6a2b0a19b9d4006d51a741c1bc96e68808b0446ff"
+      },
+      "numerical_acceptance": {
+        "status": "PASS",
+        "order": 3,
+        "K": 2,
+        "dt": 0.0625,
+        "T": 0.25,
+        "steps": 4,
+        "initial_energy": 0.042254966600986335,
+        "final_energy": 7.033536466102608e-05,
+        "final_over_initial": 0.0016645466869067238,
+        "maximum_true_relative_residual": 1.1158529555844646e-14,
+        "maximum_energy_relative_gap": 1.0428332063678441e-14,
+        "cumulative_relative_energy_gap": 2.4632230701178417e-15,
+        "monolithic_differences": [
+          3.949658419407053e-14,
+          7.662396039486173e-14
+        ],
+        "wall_seconds": 221.6988376940135,
+        "energy_csv_sha256": "18cf7757c9c7980a33447a9a3e7b497c1a9a1fc648747a383d1bd11de786886a",
+        "guard": {
+          "job_id": "47289489",
+          "exit_code": 0,
+          "reason": null,
+          "error": null,
+          "seconds": 90.12963923905045,
+          "job_cgroup_peak_bytes": 2319257600,
+          "guard_bytes": 55834574848.0,
+          "allocation_mib": 65536,
+          "command": [
+            "srun",
+            "--mpi=pmix",
+            "--cpu-bind=cores",
+            "--mem=0",
+            "-n",
+            "4",
+            "-c",
+            "1",
+            "python",
+            "<FHD_ARCHIVE>/energy_decay_34_20261023/recovery/resume_energy.py",
+            "--source-case",
+            "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+            "--from-step",
+            "1",
+            "--out",
+            "runs/restart_gate_p3_job_47289489",
+            "--compare-reference",
+            "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47289489/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47289489",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47289489",
+            "mountinfo_line": "30 25 0:26 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:11 - cgroup cgroup rw,memory",
+            "job_id": "47289489",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        },
+        "config_sha256": "809a78f5fac98d95b9b91d8a75327d60a2135b31e41e342a03b61ba905449dff"
+      }
+    },
+    "4": {
+      "job_id": "47290752",
+      "slurm_state": "COMPLETED",
+      "slurm_exit_code": "0:0",
+      "elapsed": "00:03:43",
+      "nodes": "j10r4n20",
+      "allocated_cpus": "32",
+      "requested_memory": "64G",
+      "acceptance": {
+        "status": "PASS",
+        "original_case": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/restart_gate_p4_job_47289490",
+        "from_step": 2,
+        "original_files_verified_unchanged": 19,
+        "copied_prefix_files_verified": 19,
+        "native_restore_all_coefficients_bitwise_equal": true,
+        "checkpoint_energy_relative_differences": {
+          "previous": 0.0,
+          "current": 0.0,
+          "dissipation": 0.0
+        },
+        "resume_driver_sha256": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+        "small_grid_replay": {
+          "combined_relative_coefficient_difference": 1.643647676814619e-14,
+          "field_relative_differences": {
+            "u": 2.6647588046291467e-16,
+            "p": 4.792648141860008e-15,
+            "omega": 3.1339087650950446e-16,
+            "m": 2.756990677512888e-15,
+            "z": 5.989782753501803e-15,
+            "k": 9.764204821594816e-14,
+            "phi": 9.390628070552026e-16,
+            "theta": 8.549384487630679e-16,
+            "varpi": 3.949230395121535e-16
+          },
+          "combined_limit": 1e-11,
+          "per_field_limit": 1e-09,
+          "reference": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137"
+        }
+      },
+      "native_restore": {
+        "status": "PASS",
+        "source_case": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/restart_gate_p4_job_47289490",
+        "step": 2,
+        "ranks": [
+          {
+            "rank": 0,
+            "native_sha256": "ebc80a032e60eb3444d5de81f68bbdb920e7e1393157b944afb781909a184a63",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 1,
+            "native_sha256": "5531099ae69f5ad862e2d3095a9bcff0a84eb5e5d91ec7aae58dd2b32f303ea3",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 2,
+            "native_sha256": "f6267ce1972ffa3ac162ef292108b9b66312f2b4d99abb2b0346d6da10b2b896",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          },
+          {
+            "rank": 3,
+            "native_sha256": "da1a1184e396c5a2648c00f22d4f9ac49e419acf291f89cb2333a727e8b46b2e",
+            "geometry_and_all_dof_maps_exact": true,
+            "all_history_and_stage_coefficients_bitwise_equal_after_ghost_exchange": true
+          }
+        ],
+        "energy_relative_differences": {
+          "previous": 0.0,
+          "current": 0.0,
+          "dissipation": 0.0
+        },
+        "homogeneous_boundary_error": 0.0,
+        "prefix_copy_sha256": "bec85bc91dad46308df1eb6d6bf337007715e933310aa4fcc9c2c815e8d96ccb"
+      },
+      "numerical_acceptance": {
+        "status": "PASS",
+        "order": 4,
+        "K": 2,
+        "dt": 0.0625,
+        "T": 0.25,
+        "steps": 4,
+        "initial_energy": 0.042831858234294924,
+        "final_energy": 6.59223312774161e-05,
+        "final_over_initial": 0.0015390957571070995,
+        "maximum_true_relative_residual": 2.2569955594426988e-15,
+        "maximum_energy_relative_gap": 2.0222037223298854e-12,
+        "cumulative_relative_energy_gap": 4.045379463264365e-12,
+        "monolithic_differences": [
+          2.9954456204524573e-15,
+          4.046343960352231e-14
+        ],
+        "wall_seconds": 398.6059685072396,
+        "energy_csv_sha256": "532e3d8648ea53170606d0fa2b69c26c3833625ac7bb62c9c22c1333349cd798",
+        "guard": {
+          "job_id": "47290752",
+          "exit_code": 0,
+          "reason": null,
+          "error": null,
+          "seconds": 219.28685271879658,
+          "job_cgroup_peak_bytes": 12349005824,
+          "guard_bytes": 55834574848.0,
+          "allocation_mib": 65536,
+          "command": [
+            "srun",
+            "--mpi=pmix",
+            "--cpu-bind=cores",
+            "--mem=0",
+            "-n",
+            "4",
+            "-c",
+            "1",
+            "python",
+            "<FHD_ARCHIVE>/energy_decay_34_20261023/recovery/diagnose_resume.py",
+            "--source-case",
+            "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/restart_gate_p4_job_47289490",
+            "--from-step",
+            "2",
+            "--out",
+            "runs/diagnostic_replay_p4_job_47290752",
+            "--compare-reference",
+            "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137"
+          ],
+          "sampling_seconds": 1,
+          "identity": {
+            "controller": "memory",
+            "version": 1,
+            "membership": "/slurm/uid_297606/job_47290752/step_batch/task_0",
+            "job_membership": "/slurm/uid_297606/job_47290752",
+            "mount_root": "/",
+            "mountpoint": "/sys/fs/cgroup/memory",
+            "job_root": "/sys/fs/cgroup/memory/slurm/uid_297606/job_47290752",
+            "mountinfo_line": "35 25 0:31 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:16 - cgroup cgroup rw,memory",
+            "job_id": "47290752",
+            "uid": 297606
+          },
+          "measurement": "Current exact job hierarchical cgroup-v1 memory usage, including cache; no controller query or PID enumeration.",
+          "guard_source_sha256": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5"
+        },
+        "config_sha256": "71ef7a5c668d94bf65b683ffd9a47aa4fecd416375f5bb6703289921e61be820"
+      }
+    }
+  },
+  "initial_replay_attempts": [
+    {
+      "order": 3,
+      "job_id": "47289489",
+      "exit_code": 0,
+      "stderr": "sbatch: error: cli_filter_p_pre_submit/lua: /opt/gridview/slurm-2.3.2/etc/cli_filter.lua: /opt/gridview/slurm-2.3.2/etc/cli_filter.lua:321: Is a directory\n",
+      "source_case": "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+      "experiment": "energy_decay_34_20261023",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:47289101",
+        "--export=ALL,ENERGY_RESTART_GATE=1",
+        "--job-name=Erestart_gate3",
+        "<FHD_ARCHIVE>/energy_decay_34_20261023/recovery/case.slurm",
+        "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179",
+        "1",
+        "restart_gate_p3",
+        "4",
+        "--compare-reference",
+        "<FHD_ARCHIVE>/energy_decay_34_20261023/runs/gate_p3_job_47284179"
+      ],
+      "slurm_state": "COMPLETED",
+      "slurm_exit_code": "0:0",
+      "elapsed": "00:01:34",
+      "nodes": "j10r3n29",
+      "allocated_cpus": "32",
+      "requested_memory": "64G"
+    },
+    {
+      "order": 4,
+      "job_id": "47289490",
+      "exit_code": 0,
+      "stderr": "sbatch: error: cli_filter_p_pre_submit/lua: /opt/gridview/slurm-2.3.2/etc/cli_filter.lua: /opt/gridview/slurm-2.3.2/etc/cli_filter.lua:321: Is a directory\n",
+      "source_case": "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137",
+      "experiment": "energy_decay_4_border_20261023",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:47289101",
+        "--export=ALL,ENERGY_RESTART_GATE=1",
+        "--job-name=Erestart_gate4",
+        "<FHD_ARCHIVE>/energy_decay_34_20261023/recovery/case.slurm",
+        "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137",
+        "1",
+        "restart_gate_p4",
+        "4",
+        "--compare-reference",
+        "<FHD_ARCHIVE>/energy_decay_4_border_20261023/runs/gate_p4_job_47285137"
+      ],
+      "slurm_state": "FAILED",
+      "slurm_exit_code": "1:0",
+      "elapsed": "00:04:41",
+      "nodes": "j11r1n33",
+      "allocated_cpus": "32",
+      "requested_memory": "64G"
+    }
+  ],
+  "implementation_sha256": {
+    "._cgroup_identity.py": "73cfa9fdfaaa59f46a4dd5acb22858e6e6626a4a68d0cb6d333bb8eafb6a447f",
+    "._guard_cgroup.py": "73cfa9fdfaaa59f46a4dd5acb22858e6e6626a4a68d0cb6d333bb8eafb6a447f",
+    "._guard_controls.py": "73cfa9fdfaaa59f46a4dd5acb22858e6e6626a4a68d0cb6d333bb8eafb6a447f",
+    "cgroup_identity.py": "2a9e8fc5c54e072a79567e1f67992a242361c99a44ce31bb5e76b7f0051f986b",
+    "diagnose_resume.py": "bac59d572234b4467941c4009b8141d663b2b428adc9042904021459eef1ab72",
+    "guard_cgroup.py": "31931703419d21a86bb141470e1a84ea0655e054b01211a25078fa31292484d5",
+    "guard_controls.py": "7c9e2207466bfc384b477fc384730c7d101e873f9b03dacf9ac21c2a0bf79869",
+    "resume_energy.py": "4b55a455d7ea49491759d51faa77ffa5c59ceb7e4bdeb066310eec9ed684d13c",
+    "validate_recovery.py": "00ed54a65d89aea699534d5daf9a4b33f3736a19c2f2f8f6729aabcdec6636c4",
+    "verify_admission.py": "108cce6c6bd1e3a423f3f6c5ecb72747ec5c1feb19de754c240dafd06371cdb6",
+    "verify_order_admission.py": "a5fd4e2d0a2935d2c0eae831f2c7f087e6e300a725fec2823365735f27979697"
+  }
+}

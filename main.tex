@@ -4873,7 +4873,7 @@ no time step was repeated for that endpoint measurement.
 \clearpage
 \subsection{Energy dissipation test}
 
-This subsection is to investigate the energy decaying phenomenon of the $k$th-order ($k=1,2,3,4$) temporal schemes \eqref{eq:first-order-eq}, \eqref{eq:second-order-eq}, \eqref{eq:ho:order-three-scheme}, and \eqref{eq:ho:Gauss-four-scheme}. The finite element spaces are choose same as in \cref{subsec:convergencetest}. We consider the FHD model \eqref{eq:FHD} with external magnetic field $\bs H_{e} = 0$ and homogeneous boundary conditions. The initial value functions are specified below.
+This subsection is to investigate the energy decaying phenomenon of the $k$th-order ($k=1,2,3,4$) temporal schemes \eqref{eq:first-order-eq}, \eqref{eq:second-order-eq}, \eqref{eq:ho:order-three-scheme}, and \eqref{eq:ho:Gauss-four-scheme}. The finite element families are chosen as in \cref{subsec:convergencetest}. We consider the FHD model \eqref{eq:FHD} with external magnetic field $\bs H_{e} = 0$ and homogeneous boundary conditions. The initial value functions are specified below.
 The symbols in these initial data are defined independently of the
 manufactured solution in \cref{subsec:convergencetest}. Specifically,
 \[
@@ -4895,14 +4895,44 @@ Thus the original initial fields used for the energy curves remain
 \bs\omega_0=C_{\omega,\rm E}^{-1}\Phi_{\rm E}\bs b_{\rm E},\qquad
 \bs m_0=C_{m,\rm E}^{-1}S_{\rm E}\bs c_{\rm E}.
 \]
-All the physical parameters remain one. We show in \cref{fig:energy-comparison} the discrete energy curve of $E_{h}$ at the spatial mesh with $K=8$ and $\dt = 1/16,~1/32,~1/64$.
+All physical parameters are one. The body sources and external magnetic
+field are zero, and the essential boundary traces are homogeneous. We use
+$K=8$, $T=0.5$, and $\dt=1/16,\,1/32,\,1/64$, giving 8, 16, and 32 time
+steps, respectively. The plotted quantity is $E_h^n/E_h^0$, where
+\[
+ E_h^n=\frac12\left(\rho\|\bs u_h^n\|_0^2
+ +\rho\kappa\|\bs\omega_h^n\|_0^2+\|\bs m_h^n\|_0^2
+ +\mu_0\|\nabla\varphi_h^n\|_0^2\right).
+\]
+The first- and second-order curves are retained from the original energy
+experiment. The six supplemental third- and fourth-order runs use exactly
+the continuous initial fields above. Their initial velocity is the
+constrained $L^2$ projection onto the discrete divergence-free subspace;
+$\bs\omega_0$ and $\bs m_0$ are projected in $L^2$, and the initial magnetic
+potential satisfies the discrete zero-field Maxwell--Poisson constraint.
+The third-order method uses two Gauss stages and three linear corrections
+on its first two steps; the fourth-order method uses three Gauss stages
+and four corrections on its first three steps. Thereafter, the prescribed
+history extrapolation is used.
+
+\Cref{fig:energy-comparison} shows nonincreasing normalized energy at all
+stored time levels. For the six supplemental runs, we also check the
+zero-load Gauss energy identity \eqref{eq:ho:FE-energy} at every step,
+including startup. With
+$D_h^n=\dt\sum_i b_i\|\bs x_{h,n,i}\|_{\Aform_h}^2$,
+the maximum scaled residual
+$|E_h^{n+1}-E_h^n+D_h^n|/(E_h^{n+1}+E_h^n+D_h^n)$ is
+$5.87\times10^{-12}$.
+These curves illustrate dissipation for the tested steps. Each temporal
+order uses its corresponding spatial finite-element spaces, so this
+comparison does not isolate temporal accuracy.
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/first_order_energy.pdf}
+        {figures/energy_high_order/first_order_energy.pdf}
         \caption{First-order scheme.}
         \label{fig:first-order-energy}
     \end{subfigure}
@@ -4910,30 +4940,32 @@ All the physical parameters remain one. We show in \cref{fig:energy-comparison} 
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]
-        {figures/second_order_energy.pdf}
+        {figures/energy_high_order/second_order_energy.pdf}
         \caption{Second-order scheme.}
         \label{fig:second-order-energy}
     \end{subfigure}
-    \caption{Discrete energy evolution for the first- and second-order schemes.}
+    \par\medskip
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/energy_high_order/third_order_energy.pdf}
+        \caption{Third-order scheme.}
+        \label{fig:third-order-energy}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/energy_high_order/fourth_order_energy.pdf}
+        \caption{Fourth-order scheme.}
+        \label{fig:fourth-order-energy}
+    \end{subfigure}
+    \caption{Normalized discrete energy for the first- through fourth-order
+    schemes, with $K=8$, $T=0.5$, zero forcing and homogeneous boundary
+    traces. All panels use the same axes; each curve is normalized by its
+    own discrete initial energy.}
     \label{fig:energy-comparison}
 \end{figure}
-
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics[width=0.50\textwidth]{figures/first_order_energy.pdf}
-%\caption{Discrete energy for the first-order scheme.}
-%\label{fig:first-order-energy}
-%\end{figure}
-%
-%
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics[width=0.50\textwidth]{figures/second_order_energy.pdf}
-%\caption{Discrete energy for the second-order scheme.}
-%\label{fig:second-order-energy}
-%\end{figure}
-
-
 
 \subsection{Magnetically forced flows
 }

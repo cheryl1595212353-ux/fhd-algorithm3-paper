@@ -1,0 +1,21 @@
+{
+  "status": "ALL_SIX_ACCEPTED",
+  "cases": 6,
+  "recovered_cases": 4,
+  "publication_path_policy": "Absolute research-archive root replaced by <FHD_ARCHIVE> in metadata; numeric values unchanged. Recorded source file hashes refer to raw external originals.",
+  "curve_rows": 118,
+  "raw_checkpoint_files": 7770,
+  "raw_checkpoint_bytes": 8742705728,
+  "data_sha256": {
+    "cases.json.gz": "597647336ec66dc01c82ae0bd9a7e94c75263a3bdf9e980c5ca3f4655edab9eb",
+    "curves.csv": "19701443b5272d85abdcec4d5147c978637c47ae6cfe6481fd6a7b17c5192021",
+    "energy_summary.json": "c07b7ddfd326155e50dbe873014fe44961500f6374dcc0b72f3837b1ad989a57",
+    "experiment_contract.json": "cb660f90f4f8a8c8b243fc1968354820c65221002dc7f924de19e154eaa435e8",
+    "fourth_order_algebra_lineage.json": "ecd22ab1f4ad49cb29063541b7237403004ee29a95f290da61666aa38ab71984",
+    "raw_checkpoint_manifest.json": "2332f46bd59007dc1f1aaddec3159608abff63e76a26cb686c52a3172bc32e9f",
+    "recovery_protocol.json": "6ea662d4cd6e4b9af6457f646c629875342e72587fd3ecba8e8f78cf14228ac0",
+    "slurm_accounting.txt": "cbe827ee00b1ebdc1b34fde83ea4168937b7e5a6cebb94f16ae3c308efaac9d4",
+    "small_grid_gates.json": "a4140faaa8ed94d50b069de7931b2238a67b6a3a7308abe33111da0e69ce0b24",
+    "solver_source_manifest.json": "1f166e4e057b35f8449da585cd3f4094d7ead7e18e883037bc926f3a13798bc2"
+  }
+}

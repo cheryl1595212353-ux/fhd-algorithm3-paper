@@ -1,6 +1,6 @@
 {
-  "full_pages": 32,
-  "excerpt_pages": 12,
+  "full_pages": 33,
+  "excerpt_pages": 13,
   "source_pages_one_based": [
     19,
     20,
@@ -13,10 +13,11 @@
     27,
     28,
     29,
-    30
+    30,
+    31
   ],
   "method": "Extract unchanged pages from the compiled full manuscript; no second TeX source",
   "note": "Bounds use the numerical-section bookmark and declaration heading; original numbering and cross-references are retained.",
-  "main_tex_sha256": "e0de8edd59bba5b4d100eec9533228034259904b043eb38073287205f3f55550",
-  "manuscript_sha256": "627e264cb5d8358f998d6784dc55f08e2835c1cbbe24b4fdc8bdcf459738e32a"
+  "main_tex_sha256": "a506a96ccaa55a29a9689e5b110f38ee28b1e3da858f39f3b4f063089552571a",
+  "manuscript_sha256": "3869f2fe0593f727b6f4703010e081cb1358e2b5f925805463f1c0a23dadcc8a"
 }

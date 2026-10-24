@@ -1,0 +1,57 @@
+{
+  "input_sha256": {
+    "data/energy/curves.csv": "d83013f6df745c9a4377dbeca25c298b32a44dd8724d03032052bfe4cf0e0533",
+    "data/energy_high_order/curves.csv": "19701443b5272d85abdcec4d5147c978637c47ae6cfe6481fd6a7b17c5192021"
+  },
+  "script_sha256": "084211c8df9fa0be7bb4271792d2da02e8ca1323fe2116b99e16b7f308ee5538",
+  "outputs_sha256": {
+    "first_order_energy": {
+      ".pdf": "0f32d05dfe61ec4238640053c8a625ae84db89d1e52fe940e45c498d864a3225",
+      ".png": "d02cfdd13c157eea718ed1332eaf183ae56ca7547ef0b6dd881ebe4197ed4d4c",
+      ".svg": "34835c463bf1be0a81c9166ffd6085572903f6d149064ecd86de404d6089379b"
+    },
+    "second_order_energy": {
+      ".pdf": "1fcbc98f56ab9a09bf23597a0081888167bef88bedd4844dcf473ad1f0096a76",
+      ".png": "d9963c6bc25abc80b03ae486ef51730e7f34c13c3852c4324f806ecf8f452e87",
+      ".svg": "af8f3c0f0cebae65082460ff4cb477da8711daf46e7da54a096f52d00dee2013"
+    },
+    "third_order_energy": {
+      ".pdf": "6490ae960160dd3561bfe2fdb829c1a58d01851bb75728f69dd2e6870c72c141",
+      ".png": "a2d788a4ceb0cf4b2d957ad861e5c9bb151da875b0aacecdab37bb43172b6631",
+      ".svg": "8e682cab235c8d53b8437cc8a592b0ae54db9e3c81bff74c65867cd50f9fc1d3"
+    },
+    "fourth_order_energy": {
+      ".pdf": "dacf7e6c4f6ac4bbb2ee71d8a484c862943f07a16f0477f2dba111ab535e81e3",
+      ".png": "5568473cc641f871aa25a8aec2276ae025134885baaca30fe1ed90494ed3ac4a",
+      ".svg": "f6007862e1ed04a2016d565a4528b00f25ad84cda934ae632ec754bdda7af245"
+    },
+    "energy_orders_1to4": {
+      ".pdf": "3ca404f73faaef49467f048aa31015ea935e440cd5a171fc8e2dc61e0bf3debd",
+      ".png": "10722cf8c1736728d701449129b8f946dd9ec963213d3e4a50c4d031647143d3",
+      ".svg": "e3d6c6c8e113de574f22129bb5f07c61c9447df23676133fbe75c2090754ef9a"
+    }
+  },
+  "orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "K": 8,
+  "T": 0.5,
+  "time_steps": [
+    0.0625,
+    0.03125,
+    0.015625
+  ],
+  "common_ylim": [
+    5e-07,
+    1.5
+  ],
+  "normalization": "each curve divided by its own discrete initial energy",
+  "interpretation": "Each order uses its matching spatial spaces; not an isolated temporal accuracy comparison.",
+  "python": "3.12.14",
+  "matplotlib": "3.10.9",
+  "numpy": "2.5.4",
+  "plotting_recomputes_solver": false
+}

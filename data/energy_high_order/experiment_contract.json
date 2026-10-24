@@ -1,0 +1,86 @@
+{
+  "authorization": "Only six new unforced energy cases; existing 17 convergence cases and all original data unchanged.",
+  "cases": [
+    {
+      "order": 3,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.0625,
+      "dt_denominator": 16,
+      "steps": 8
+    },
+    {
+      "order": 3,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.03125,
+      "dt_denominator": 32,
+      "steps": 16
+    },
+    {
+      "order": 3,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.015625,
+      "dt_denominator": 64,
+      "steps": 32
+    },
+    {
+      "order": 4,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.0625,
+      "dt_denominator": 16,
+      "steps": 8
+    },
+    {
+      "order": 4,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.03125,
+      "dt_denominator": 32,
+      "steps": 16
+    },
+    {
+      "order": 4,
+      "K": 8,
+      "T": 0.5,
+      "dt": 0.015625,
+      "dt_denominator": 64,
+      "steps": 32
+    }
+  ],
+  "parameters": {
+    "rho": 1.0,
+    "kappa": 1.0,
+    "eta": 1.0,
+    "etap": 1.0,
+    "mu0": 1.0,
+    "tau": 1.0,
+    "zeta": 1.0,
+    "chi0": 1.0,
+    "sigma": 1.0,
+    "lambdap": 1.0
+  },
+  "initial_shapes": "exact_fields(mesh,0) u,omega,m; zero-field discrete Maxwell-Poisson phi; constrained L2 velocity projection",
+  "boundary": "homogeneous original finite-element essential traces",
+  "loads": "f=g=r=Ge=He=0",
+  "startup": "order corrections for first order-1 steps; original Gauss tableau and history extrapolation",
+  "quadrature": {
+    "matrix": {
+      "3": 12,
+      "4": 14
+    },
+    "energy": 24,
+    "initialization": 28
+  },
+  "acceptance": {
+    "true_relative_residual": 1e-08,
+    "energy_relative_gap": 5e-08,
+    "monolithic_coefficient_difference": 1e-08,
+    "initial_constraint_absolute": 1e-08,
+    "monotonic_relative_slack": 1e-10
+  },
+  "raw_data": "Retain all per-step JSON and per-step native history/stage checkpoints, including time zero, in this new experiment only.",
+  "gate": "K2, dt=1/16, T=1/4, orders3/4; includes first regular step; monolithic comparison first and first regular steps; energy quadrature24 versus28."
+}
