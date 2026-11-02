@@ -5639,6 +5639,12 @@ the left panels show sparse instantaneous three-dimensional vectors,
 and the right panels show the full three-component magnitude on a
 center section. The sections are $z=0.1$ for the channel and $y=0.1$
 for the step geometry. The step's solid region is excluded.
+For angular velocity, the glyphs are grouped on four transverse sections
+$x=0.125,0.375,0.625,0.875$, with two concentric geometric seed curves
+on each section. These curves specify sampling locations only: every
+arrow uses the saved finite-element vector without imposing a circular
+direction. The spacing separates the groups visually and does not
+represent gaps or isolated vortices in the physical field.
 Arrows are vector glyphs, not integrated streamlines or particle paths;
 $\bs\omega$ denotes particle angular velocity, not $\curl\bs u$.
 The paired panels share a linear color scale fixed over the saved
@@ -5671,7 +5677,7 @@ convergence rate, mesh independence, or a steady or periodic limiting state.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_omega.pdf}
-\caption{Straight-channel flow, third order in time and space, $K=8$, $t=0.640$: particle angular velocity vectors (left) and their magnitude on $z=0.1$ (right).}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=0.640$: particle angular velocity vectors on four spaced cross-sections (left) and their magnitude on $z=0.1$ (right).}
 \label{fig:p3-channel-omega}
 \end{figure}
 
@@ -5694,7 +5700,7 @@ convergence rate, mesh independence, or a steady or periodic limiting state.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_omega.pdf}
-\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=0.585$: particle angular velocity vectors (left) and their magnitude on $y=0.1$ (right).}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=0.585$: particle angular velocity vectors on four spaced cross-sections (left) and their magnitude on $y=0.1$ (right).}
 \label{fig:p3-step-channel-omega}
 \end{figure}
 

@@ -26,9 +26,9 @@
   "original_production_data_modified": false,
   "PR4_merged_or_changed": false,
   "outputs_sha256": {
-    "main.tex": "08fd2e0b0ced9f8d42bd3d77920051b516252140456a80c92600defebe309938",
-    "previews/manuscript.pdf": "9e71795410119ce25e888ebc4ba113c3ca9589c3ef4bce3a4e34dc8bf0502f8f",
-    "previews/numerical_experiments.pdf": "069a0871cc98e6965e515a62eee98475f2998fcb6388e1f85f32486b8e3cdf96"
+    "main.tex": "c6062706379ec1412159bccf23b10cb69fd3663882d223532d4201e4072aa479",
+    "previews/manuscript.pdf": "e0e06dab728465d454f76ee8d3eaf29eb39cbc1e89744af8967c0439484bedc5",
+    "previews/numerical_experiments.pdf": "fd1324621bb304af2e6c9d3df8b284a97b15732c27780f4fc793d1bd652593d6"
   },
   "selected_times": {
     "channel": {
@@ -42,5 +42,19 @@
   },
   "snapshot_selection": "Explicit user screenshots; actual saved states, no temporal interpolation",
   "previous_T2_figures_preserved_in_commit": "a870b07da0ee7018df41e0fbc84de363d8f400b9",
-  "no_new_layout_defects": true
+  "no_new_layout_defects": true,
+  "angular_velocity_native_control_max_absolute_difference": 0.0,
+  "angular_velocity_planes_x": [
+    0.125,
+    0.375,
+    0.625,
+    0.875
+  ],
+  "angular_velocity_right_panel_pixels_identical": true,
+  "other_four_application_figures_unchanged": true,
+  "previous_dense_omega_version_commit": "15294331bda19d61d4dafa97d376248425909ad2",
+  "angular_velocity_sampling_job": "48064992",
+  "angular_velocity_final_render_job": "48066714",
+  "angular_velocity_arrow_width": 0.0018,
+  "angular_velocity_arrow_headwidth": 3.8
 }

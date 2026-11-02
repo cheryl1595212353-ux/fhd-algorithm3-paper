@@ -26,6 +26,14 @@ def validate():
         assert (entry['step'],entry['time'])==expected and not entry['temporal_interpolation']
         assert entry['section']==('y=0.1' if name.startswith('step_') else 'z=0.1')
         assert max(entry['section_sample_maximum'],entry['volume_sample_maximum'])<=entry['color_limits'][1]
+        if name.endswith('_omega'):
+            assert entry['planes_x']==[.125,.375,.625,.875]
+            assert entry['arrow_points']==192 and entry['rings_per_section']==2 and entry['angles_per_ring']==24
+            assert entry['center_section_data_unchanged'] and entry['right_panel_pixels_identical_to_previous']
+            a=entry['sampling_audit'];assert a['passed'] and a['no_PDE_solve']
+            assert a['source_files_verified']==52 and a['native_files_verified']==32
+            assert a['native_layout_exact'] and a['native_ghosts_exact'] and a['native_files_unchanged_after_read']
+            assert a['control_max_absolute_difference']<1e-12
         for suffix,digest in entry['outputs_sha256'].items():assert sha(FIG/(name+suffix))==digest
     proof=json.loads((DATA/'PUBLICATION_VALIDATION.json').read_text());assert proof['passed']
     for name,digest in proof['outputs_sha256'].items():assert sha(ROOT/name)==digest

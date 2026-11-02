@@ -22,6 +22,6 @@
   ],
   "method": "Extract unchanged pages from the compiled full manuscript; no second TeX source",
   "note": "Bounds use the numerical-section bookmark and declaration heading; original numbering and cross-references are retained.",
-  "main_tex_sha256": "08fd2e0b0ced9f8d42bd3d77920051b516252140456a80c92600defebe309938",
-  "manuscript_sha256": "9e71795410119ce25e888ebc4ba113c3ca9589c3ef4bce3a4e34dc8bf0502f8f"
+  "main_tex_sha256": "c6062706379ec1412159bccf23b10cb69fd3663882d223532d4201e4072aa479",
+  "manuscript_sha256": "e0e06dab728465d454f76ee8d3eaf29eb39cbc1e89744af8967c0439484bedc5"
 }
