@@ -4871,6 +4871,28 @@ remeasured from archived terminal fields after a monitoring failure;
 no time step was repeated for that endpoint measurement.
 
 \clearpage
+% BEGIN PUBLICATION_CONVERGENCE
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/convergence_17/relative_errors.pdf}
+\caption{Relative errors for the first- through fourth-order schemes on
+the common manufactured solution, $T=2$ and $\Delta t=1/(2K)$.
+Each panel uses its stated norm. The numerical labels are the observed
+rates on the finest adjacent meshes, not prescribed integer slopes.}
+\label{fig:convergence-relative}
+\end{figure}
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/convergence_17/absolute_errors.pdf}
+\caption{Absolute errors for the same seventeen accepted cases.
+Pressure uses the actual last-step Runge--Kutta stage-weighted norm;
+the other fields use terminal norms. Spatial and temporal refinement
+are coupled in this experiment.}
+\label{fig:convergence-absolute}
+\end{figure}
+\clearpage
+% END PUBLICATION_CONVERGENCE
 \subsection{Energy dissipation test}
 
 This subsection is to investigate the energy decaying phenomenon of the $k$th-order ($k=1,2,3,4$) temporal schemes \eqref{eq:first-order-eq}, \eqref{eq:second-order-eq}, \eqref{eq:ho:order-three-scheme}, and \eqref{eq:ho:Gauss-four-scheme}. The finite element families are chosen as in \cref{subsec:convergencetest}. We consider the FHD model \eqref{eq:FHD} with external magnetic field $\bs H_{e} = 0$ and homogeneous boundary conditions. The initial value functions are specified below.
@@ -5595,6 +5617,87 @@ the homogeneous convex-domain setting of the analysis.
 
 
 
+% BEGIN PUBLICATION_APPLICATIONS_P3
+
+\clearpage
+\subsection{Third-order K8 application snapshots}
+\label{subsec:p3-k8-applications}
+We additionally display the completed third-order trajectories for the
+two geometries and physical conditions specified above. Both use
+$K=8$, third-order time discretization and the corresponding third-order
+compatible finite-element spaces, $\Delta t=0.005$, and $T=2$.
+The velocity--pressure pair is $\mathbb P_3/\mathbb P_2$.
+The first two time steps use three startup corrections each; the
+subsequent steps use the retained three-level history. Each case has
+400 accepted time steps and 401 saved states, including the zero initial
+state. All six figures below use the actual endpoint at $t=2$.
+
+Following the paired-panel presentation of Dong et al.\ \cite{DongHuangHuangYang2026},
+the left panels show sparse instantaneous three-dimensional vectors,
+and the right panels show the full three-component magnitude on a
+center section. The sections are $z=0.1$ for the channel and $y=0.1$
+for the step geometry. The step's solid region is excluded.
+Arrows are vector glyphs, not integrated streamlines or particle paths;
+$\bs\omega$ denotes particle angular velocity, not $\curl\bs u$.
+The paired panels share a linear color scale fixed over the saved
+trajectory. Colors between section samples are interpolated only for
+display; the data are not temporally interpolated or polynomially recovered.
+
+The original magnetic diffusion, forcing, and boundary conditions are
+retained. Thus the common visual presentation does not imply a
+reproduction of Dong et al.'s different physical model or parameter set.
+The preceding second-order mesh comparisons remain historical benchmark
+results. These single-mesh third-order snapshots do not establish a new
+convergence rate, mesh independence, or a steady or periodic limiting state.
+
+\clearpage
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_u.pdf}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: velocity vectors (left) and their magnitude on $z=0.1$ (right).}
+\label{fig:p3-channel-u}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_m.pdf}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: magnetization vectors (left) and their magnitude on $z=0.1$ (right).}
+\label{fig:p3-channel-m}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_omega.pdf}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: particle angular velocity vectors (left) and their magnitude on $z=0.1$ (right).}
+\label{fig:p3-channel-omega}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_u.pdf}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: velocity vectors (left) and their magnitude on $y=0.1$ (right).}
+\label{fig:p3-step-channel-u}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_m.pdf}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: magnetization vectors (left) and their magnitude on $y=0.1$ (right).}
+\label{fig:p3-step-channel-m}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_omega.pdf}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: particle angular velocity vectors (left) and their magnitude on $y=0.1$ (right).}
+\label{fig:p3-step-channel-omega}
+\end{figure}
+
+\clearpage
+% END PUBLICATION_APPLICATIONS_P3
 \clearpage
 \appendix
 \section{Absolute errors for the common manufactured-solution test}

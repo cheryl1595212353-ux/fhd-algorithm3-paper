@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "base_commit": "f3f187421621170cd9431b9e95a17b67711da492",
+  "manuscript_pages": 37,
+  "numerical_excerpt_pages": 17,
+  "new_convergence_figures_on_page": 24,
+  "P3_channel_figures_on_page": 31,
+  "P3_step_figures_on_page": 32,
+  "visual_review_pages": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "six_application_figures_visually_reviewed": true,
+  "new_clipping_or_overlap": false,
+  "final_pass_undefined_references": false,
+  "missing_glyphs": false,
+  "preexisting_warnings": [
+    "3 duplicate bibliography labels",
+    "2 small overfull boxes in unchanged text"
+  ],
+  "previous_data_and_figures_files_byte_identical": 68,
+  "plot_job": "48051290",
+  "plot_job_state": "COMPLETED/0:0",
+  "PDE_recomputed": false,
+  "original_production_data_modified": false,
+  "PR4_merged_or_changed": false,
+  "outputs_sha256": {
+    "main.tex": "83e7896cf51219a46d3daf52115daf74c5ecf4769328c2b6f114c47b8f90d772",
+    "previews/manuscript.pdf": "76057cd79354e84b3d20bc0420b0b1e3ba95f802e7f501968e6922a4dc1f4ea5",
+    "previews/numerical_experiments.pdf": "ce95b0bac7c8ef269d288fd90536138cf7d8b5212c7ceba101c576e12866b4cd"
+  }
+}
