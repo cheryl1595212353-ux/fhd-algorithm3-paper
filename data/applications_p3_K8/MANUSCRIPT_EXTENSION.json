@@ -3,7 +3,7 @@
   "base_main_sha256": "a506a96ccaa55a29a9689e5b110f38ee28b1e3da858f39f3b4f063089552571a",
   "inserted_blocks_sha256": {
     "CONVERGENCE": "1458b10ce09311c657c4ad0ddeda3c1629aafdde9fd04c292663fdd51ec4cff5",
-    "APPLICATIONS_P3": "48ff416204de1ff552ae68287cd8b7f59c4e61e9899460a8f517e3f6b6518ebd"
+    "APPLICATIONS_P3": "bee6106ff0b0560dcb4a3a4ab064492aa0257ce4cb88d5192292bf52243def2e"
   },
   "change_scope": "Insert convergence figures and a clearly labeled new P3/K8 application subsection; preserve all previous manuscript bytes after removal of these blocks."
 }

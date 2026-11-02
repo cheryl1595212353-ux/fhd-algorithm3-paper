@@ -7,13 +7,6 @@
   "P3_channel_figures_on_page": 31,
   "P3_step_figures_on_page": 32,
   "visual_review_pages": [
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
     30,
     31,
     32
@@ -27,14 +20,27 @@
     "2 small overfull boxes in unchanged text"
   ],
   "previous_data_and_figures_files_byte_identical": 68,
-  "plot_job": "48051290",
+  "plot_job": "48061642",
   "plot_job_state": "COMPLETED/0:0",
   "PDE_recomputed": false,
   "original_production_data_modified": false,
   "PR4_merged_or_changed": false,
   "outputs_sha256": {
-    "main.tex": "83e7896cf51219a46d3daf52115daf74c5ecf4769328c2b6f114c47b8f90d772",
-    "previews/manuscript.pdf": "76057cd79354e84b3d20bc0420b0b1e3ba95f802e7f501968e6922a4dc1f4ea5",
-    "previews/numerical_experiments.pdf": "ce95b0bac7c8ef269d288fd90536138cf7d8b5212c7ceba101c576e12866b4cd"
-  }
+    "main.tex": "08fd2e0b0ced9f8d42bd3d77920051b516252140456a80c92600defebe309938",
+    "previews/manuscript.pdf": "9e71795410119ce25e888ebc4ba113c3ca9589c3ef4bce3a4e34dc8bf0502f8f",
+    "previews/numerical_experiments.pdf": "069a0871cc98e6965e515a62eee98475f2998fcb6388e1f85f32486b8e3cdf96"
+  },
+  "selected_times": {
+    "channel": {
+      "time": 0.64,
+      "step": 128
+    },
+    "step_channel": {
+      "time": 0.585,
+      "step": 117
+    }
+  },
+  "snapshot_selection": "Explicit user screenshots; actual saved states, no temporal interpolation",
+  "previous_T2_figures_preserved_in_commit": "a870b07da0ee7018df41e0fbc84de363d8f400b9",
+  "no_new_layout_defects": true
 }

@@ -1,6 +1,6 @@
 # FHD Algorithm 3: manuscript, 17 convergence cases and energy decay
 
-本仓库保存 Rosensweig 铁磁流体论文、可检查的数值表、插图及重绘工具。当前主稿在已合并的高阶能量版本基础上插入一至四阶收敛曲线，并新增三阶 K8 通道流与台阶流的 T=2 图件。原17组数据、原能量结果、旧应用图以及理论与算法正文均保留。
+本仓库保存 Rosensweig 铁磁流体论文、可检查的数值表、插图及重绘工具。当前主稿在已合并的高阶能量版本基础上插入一至四阶收敛曲线，并展示三阶 K8 通道流 t=0.640 与台阶流 t=0.585 的图件。原17组数据、原能量结果、旧应用图以及理论与算法正文均保留。
 
 - [完整论文 PDF](previews/manuscript.pdf)
 - [数值实验及绝对误差附录 PDF](previews/numerical_experiments.pdf)
@@ -36,9 +36,9 @@
 
 ## 三阶 K8 通道流与台阶流
 
-两组均为时间三阶、空间三阶，K=8、Δt=0.005，完整计算至 T=2。沿用 Dong 等论文的白底线框与左右双面板布局，左侧展示真实瞬时三维矢量，右侧展示中心切面的三分量模长。每组分别显示速度 u、磁化 m 和粒子角速度 ω；不将箭头称作流线。
+两组均为时间三阶、空间三阶，K=8、Δt=0.005，完整计算至 T=2；本次按用户选定时刻展示通道流 t=0.640（第128步）和台阶流 t=0.585（第117步）。沿用 Dong 等论文的白底线框与左右双面板布局，左侧展示真实瞬时三维矢量，右侧展示中心切面的三分量模长。每组分别显示速度 u、磁化 m 和粒子角速度 ω；不将箭头称作流线。
 
-| 场量 | 通道流（z=0.1） | 台阶流（y=0.1） |
+| 场量 | 通道流（t=0.640，z=0.1） | 台阶流（t=0.585，y=0.1） |
 |---|---|---|
 | 速度 u | [PDF](figures/applications_p3_K8/channel_u.pdf) | [PDF](figures/applications_p3_K8/step_channel_u.pdf) |
 | 磁化 m | [PDF](figures/applications_p3_K8/channel_m.pdf) | [PDF](figures/applications_p3_K8/step_channel_m.pdf) |
@@ -48,7 +48,7 @@
 
 ![三阶 K8 台阶流磁化](figures/applications_p3_K8/step_channel_m.png)
 
-[数据来源、绘图方式及适用范围](docs/APPLICATIONS_P3_K8.md)。这些是本项目保留扩散项的工况；借鉴图形呈现，不宣称复现 Dong 的物理模型。T=2 是真实保存终点，不作为稳态或周期收敛证明。
+[数据来源、绘图方式及适用范围](docs/APPLICATIONS_P3_K8.md)。这些是本项目保留扩散项的工况；借鉴图形呈现，不宣称复现 Dong 的物理模型。图件使用真实保存状态，不做时间插值，也不作为稳态或周期收敛证明。
 
 ## 目录与唯一正文入口
 

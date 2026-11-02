@@ -5630,7 +5630,9 @@ The velocity--pressure pair is $\mathbb P_3/\mathbb P_2$.
 The first two time steps use three startup corrections each; the
 subsequent steps use the retained three-level history. Each case has
 400 accepted time steps and 401 saved states, including the zero initial
-state. All six figures below use the actual endpoint at $t=2$.
+state. The channel figures below use the actual saved state at
+$t=0.640$ (step 128), and the step-flow figures use $t=0.585$
+(step 117), as selected for visualization.
 
 Following the paired-panel presentation of Dong et al.\ \cite{DongHuangHuangYang2026},
 the left panels show sparse instantaneous three-dimensional vectors,
@@ -5655,21 +5657,21 @@ convergence rate, mesh independence, or a steady or periodic limiting state.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_u.pdf}
-\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: velocity vectors (left) and their magnitude on $z=0.1$ (right).}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=0.640$: velocity vectors (left) and their magnitude on $z=0.1$ (right).}
 \label{fig:p3-channel-u}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_m.pdf}
-\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: magnetization vectors (left) and their magnitude on $z=0.1$ (right).}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=0.640$: magnetization vectors (left) and their magnitude on $z=0.1$ (right).}
 \label{fig:p3-channel-m}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/channel_omega.pdf}
-\caption{Straight-channel flow, third order in time and space, $K=8$, $t=2$: particle angular velocity vectors (left) and their magnitude on $z=0.1$ (right).}
+\caption{Straight-channel flow, third order in time and space, $K=8$, $t=0.640$: particle angular velocity vectors (left) and their magnitude on $z=0.1$ (right).}
 \label{fig:p3-channel-omega}
 \end{figure}
 
@@ -5678,21 +5680,21 @@ convergence rate, mesh independence, or a steady or periodic limiting state.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_u.pdf}
-\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: velocity vectors (left) and their magnitude on $y=0.1$ (right).}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=0.585$: velocity vectors (left) and their magnitude on $y=0.1$ (right).}
 \label{fig:p3-step-channel-u}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_m.pdf}
-\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: magnetization vectors (left) and their magnitude on $y=0.1$ (right).}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=0.585$: magnetization vectors (left) and their magnitude on $y=0.1$ (right).}
 \label{fig:p3-step-channel-m}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/applications_p3_K8/step_channel_omega.pdf}
-\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=2$: particle angular velocity vectors (left) and their magnitude on $y=0.1$ (right).}
+\caption{Backward-facing-step flow, third order in time and space, $K=8$, $t=0.585$: particle angular velocity vectors (left) and their magnitude on $y=0.1$ (right).}
 \label{fig:p3-step-channel-omega}
 \end{figure}
 

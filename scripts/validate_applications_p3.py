@@ -22,7 +22,8 @@ def validate():
     assert manifest['passed'] and manifest['no_pde_solve'] and len(manifest['figures'])==6
     assert set(manifest['figures'])=={c+'_'+f for c in ('channel','step_channel') for f in ('u','m','omega')}
     for name,entry in manifest['figures'].items():
-        assert entry['time']==2 and entry['step']==400 and not entry['temporal_interpolation']
+        expected=(117,0.585) if name.startswith('step_') else (128,0.640)
+        assert (entry['step'],entry['time'])==expected and not entry['temporal_interpolation']
         assert entry['section']==('y=0.1' if name.startswith('step_') else 'z=0.1')
         assert max(entry['section_sample_maximum'],entry['volume_sample_maximum'])<=entry['color_limits'][1]
         for suffix,digest in entry['outputs_sha256'].items():assert sha(FIG/(name+suffix))==digest
