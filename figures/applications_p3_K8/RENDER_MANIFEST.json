@@ -60,7 +60,7 @@
       "step": 128,
       "field": "omega",
       "section": "z=0.1",
-      "arrow_points": 192,
+      "arrow_points": 300,
       "camera": [
         -0.7238683027665548,
         0.20728955942860433,
@@ -70,66 +70,16 @@
         0,
         0.048
       ],
-      "volume_sample_maximum": 0.0415780838215032,
+      "volume_sample_maximum": 0.047687984228942625,
       "section_sample_maximum": 0.04770106151010281,
       "scalar": "Euclidean norm of all three components",
       "glyph": "instantaneous vector, not streamline or pathline",
       "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
       "temporal_interpolation": false,
       "outputs_sha256": {
-        ".pdf": "c20745dd33af4243bdc14303c0b14e0ea523de787469e136cdd9bd5328fe95f6",
-        ".png": "3c901a786db895553b6e8e83663f7050834fc8f05126a7b2ba8c644d74c90e8a"
-      },
-      "glyph_sampling": "four spaced transverse sections, two concentric geometric seed curves per section",
-      "planes_x": [
-        0.125,
-        0.375,
-        0.625,
-        0.875
-      ],
-      "rings_per_section": 2,
-      "angles_per_ring": 24,
-      "vector_values": "Native FE angular velocity; no projection onto ideal circular tangent",
-      "arrow_length_scale": 0.03,
-      "original_arrow_length_scale": 0.075,
-      "arrow_width": 0.0018,
-      "arrow_headwidth": 3.8,
-      "center_section_data_unchanged": true,
-      "original_selected_sample_sha256": "d922e557928639eca75d9b4fc84f130ab35f6c2195defc1b70c37eea703f027c",
-      "section_sample_sha256": "41ee52dd5f4fef198ffad0960a4c1e9ba037fb5c4d4dee89484850ad915e28a6",
-      "sampling_audit": {
-        "passed": true,
-        "case": "channel",
-        "job_id": "48064992",
-        "step": 128,
-        "time": 0.64,
-        "source_digest": "f590f6268fae3e3551b49aa8f8c9a927cde3daacc5c943f0d32728a6d44ee49d",
-        "native_frame_metadata_sha256": "bae6744989b3e3942794184ef5d4c55250a83f6862324cd733dc9f34729864b9",
-        "source_files_verified": 52,
-        "native_files_verified": 32,
-        "native_layout_exact": true,
-        "native_ghosts_exact": true,
-        "native_files_unchanged_after_read": true,
-        "control_points": 300,
-        "control_max_absolute_difference": 0.0,
-        "prior_volume_npz_sha256": "0c54565e59892ba86f3561ae244e17d8919d62c30dcbf3dc05cf73e31c1f0a89",
-        "ring_points": 192,
-        "planes_x": [
-          0.125,
-          0.375,
-          0.625,
-          0.875
-        ],
-        "data_sha256": "41ee52dd5f4fef198ffad0960a4c1e9ba037fb5c4d4dee89484850ad915e28a6",
-        "script_sha256": "ea5abb128c97d0cf0a8cb48d94e4e575402f52e4145a71ece2042f70240e9b74",
-        "no_PDE_solve": true,
-        "total_seconds": 21.842674359679222
-      },
-      "render_script_sha256": "1b0dbb154604480e836ff6cf26a9b9dbd4472e2280b48569a1f895a013a097b1",
-      "base_renderer_sha256": "e71c8a5787848d89fb656e0b08a148c20598a73e2e1a39fe789ca17a9035e3b0",
-      "render_job_id": "48066714",
-      "right_panel_pixels_identical_to_previous": true,
-      "right_panel_pixels_sha256": "df4f60b1870e7c6e2c89628749e02436eb01ae3ae8842f61221862de2d0b0111"
+        ".pdf": "149d651c4a7e3be5b900495f63f93d503911b84b86d3be5c940a9edbf5b3f98e",
+        ".png": "0448a2947825a1efb3c58b86feec2d836449b1d62ba1dc5ef98f6598b944f475"
+      }
     },
     "step_channel_u": {
       "time": 0.585,
@@ -188,7 +138,7 @@
       "step": 117,
       "field": "omega",
       "section": "y=0.1",
-      "arrow_points": 192,
+      "arrow_points": 264,
       "camera": [
         -0.6529286250990104,
         -0.7254762501100116,
@@ -198,66 +148,16 @@
         0,
         0.038
       ],
-      "volume_sample_maximum": 0.02758727024768091,
+      "volume_sample_maximum": 0.0349268699272224,
       "section_sample_maximum": 0.03752580074596089,
       "scalar": "Euclidean norm of all three components",
       "glyph": "instantaneous vector, not streamline or pathline",
       "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
       "temporal_interpolation": false,
       "outputs_sha256": {
-        ".pdf": "bf4e798bdfd8bd2d75526cac2ed113005c159259eb2c7cdbe22a558f92292005",
-        ".png": "bc9b0f1d58f98d248b906d274db1f9c2e5247b5d0107068fc31647d19a65d342"
-      },
-      "glyph_sampling": "four spaced transverse sections, two concentric geometric seed curves per section",
-      "planes_x": [
-        0.125,
-        0.375,
-        0.625,
-        0.875
-      ],
-      "rings_per_section": 2,
-      "angles_per_ring": 24,
-      "vector_values": "Native FE angular velocity; no projection onto ideal circular tangent",
-      "arrow_length_scale": 0.03,
-      "original_arrow_length_scale": 0.075,
-      "arrow_width": 0.0018,
-      "arrow_headwidth": 3.8,
-      "center_section_data_unchanged": true,
-      "original_selected_sample_sha256": "ea80af09fd5ca52be27a4cc7dabc98b4bdd9c4773609f223a94dc9e02be81789",
-      "section_sample_sha256": "b7b6cd695ecffbee8ba79782379b23df4c7213270381b03eba99ecec90e29bde",
-      "sampling_audit": {
-        "passed": true,
-        "case": "step_channel",
-        "job_id": "48064992",
-        "step": 117,
-        "time": 0.585,
-        "source_digest": "f590f6268fae3e3551b49aa8f8c9a927cde3daacc5c943f0d32728a6d44ee49d",
-        "native_frame_metadata_sha256": "c1cd0a0768d16b27376bb871c029725cfc4a6233382adf1d22a82aac59c722af",
-        "source_files_verified": 52,
-        "native_files_verified": 32,
-        "native_layout_exact": true,
-        "native_ghosts_exact": true,
-        "native_files_unchanged_after_read": true,
-        "control_points": 264,
-        "control_max_absolute_difference": 0.0,
-        "prior_volume_npz_sha256": "e184b3fc3af454f3a53a1df7f9b955579347a17ae2d4b21bb5b37d26e8c9e76c",
-        "ring_points": 192,
-        "planes_x": [
-          0.125,
-          0.375,
-          0.625,
-          0.875
-        ],
-        "data_sha256": "b7b6cd695ecffbee8ba79782379b23df4c7213270381b03eba99ecec90e29bde",
-        "script_sha256": "ea5abb128c97d0cf0a8cb48d94e4e575402f52e4145a71ece2042f70240e9b74",
-        "no_PDE_solve": true,
-        "total_seconds": 10.718829311430454
-      },
-      "render_script_sha256": "1b0dbb154604480e836ff6cf26a9b9dbd4472e2280b48569a1f895a013a097b1",
-      "base_renderer_sha256": "e71c8a5787848d89fb656e0b08a148c20598a73e2e1a39fe789ca17a9035e3b0",
-      "render_job_id": "48066714",
-      "right_panel_pixels_identical_to_previous": true,
-      "right_panel_pixels_sha256": "c58fbf1e90655e7abb8d1723ec54907f794e2cca03ab90f8cfe38d59d39d855d"
+        ".pdf": "47e89ac35bafc774b8a64071095b2df7ac247ca617c853a5fb15481c51241e9d",
+        ".png": "8de57e67fcc8af1b34a9da76b45829b5ed19f856e490b0aaf4e6847f6d230d00"
+      }
     }
   },
   "samples": {
@@ -300,22 +200,5 @@
       }
     }
   },
-  "plot_script_sha256": "5b1df71aa59fd75339c0777ea058e081c634a90e76e1750f29980fdb848bbf67",
-  "omega_section_update": {
-    "planes_x": [
-      0.125,
-      0.375,
-      0.625,
-      0.875
-    ],
-    "vectors_per_case": 192,
-    "native_control_max_absolute_difference": 0.0,
-    "right_panel_pixels_identical": true,
-    "only_omega_figures_changed": true,
-    "no_PDE_solve": true,
-    "sampling_job_id": "48064992",
-    "render_job_id": "48066714",
-    "arrow_width": 0.0018,
-    "arrow_headwidth": 3.8
-  }
+  "plot_script_sha256": "5b1df71aa59fd75339c0777ea058e081c634a90e76e1750f29980fdb848bbf67"
 }
