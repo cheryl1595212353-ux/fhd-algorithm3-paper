@@ -46,6 +46,9 @@ def main():
               "preserved_energy_application_assets": len(provenance["preserved_energy_and_application_files_sha256"]),
               "figure_provenance_checked": plot_proofs,
               "scope": "Existing data arithmetic, CSV, TeX tables, hashes and plot provenance. No FEM/MPI, field reintegration, job submission or remote data changes."}
+    if (ROOT / 'data/applications_p3_K8/MANUSCRIPT_EXTENSION.json').exists():
+        from validate_applications_p3 import validate
+        result['p3_K8_publication']=validate()
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, indent=2) + "\n")

@@ -24,11 +24,14 @@ def validate():
     for name in ['engine.py','model.py','linear.py','rk.py','spaces.py','rk_diagnostics.py','hardware.py','diagnostics.py']:
         assert provenance['solver_source_sha256_by_order']['3'][name]==provenance['solver_source_sha256_by_order']['4'][name],name
     manuscript=(ROOT/'main.tex').read_text()
+    if (ROOT/'data/applications_p3_K8/MANUSCRIPT_EXTENSION.json').exists():
+        from validate_applications_p3 import validate_manuscript_extension
+        manuscript=validate_manuscript_extension(manuscript)
     prefix,rest=manuscript.split(START,1)
     section,suffix=rest.split(END,1)
     assert hashlib.sha256(prefix.encode()).hexdigest()==provenance['protected_manuscript_prefix_sha256']
     assert hashlib.sha256(suffix.encode()).hexdigest()==provenance['protected_manuscript_suffix_sha256']
-    assert sha(ROOT/'main.tex')==provenance['updated_manuscript_sha256']
+    assert hashlib.sha256(manuscript.encode()).hexdigest()==provenance['updated_manuscript_sha256']
     baseline=read(ROOT/'data/convergence_17/provenance.json')
     assert baseline['approved_manuscript_sha256']==provenance['previous_manuscript_sha256']
     with (DATA/'curves.csv').open(newline='') as stream:

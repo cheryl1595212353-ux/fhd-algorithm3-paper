@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "job_id": "48061642",
+  "no_pde_solve": true,
+  "figures": {
+    "channel_u": {
+      "time": 0.64,
+      "step": 128,
+      "field": "u",
+      "section": "z=0.1",
+      "arrow_points": 300,
+      "camera": [
+        -0.7238683027665548,
+        0.20728955942860433,
+        0.6580620934241407
+      ],
+      "color_limits": [
+        0,
+        0.25
+      ],
+      "volume_sample_maximum": 0.24625104811805465,
+      "section_sample_maximum": 0.24999937229706726,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "ba4fb26205eadff46ceda9f807407b908bd559a57306408ebc2a648caa564c5f",
+        ".png": "bfe37cd9e3b32c4343bf2820576e4cb5c9b90a2168023df10bee0915549c761c"
+      }
+    },
+    "channel_m": {
+      "time": 0.64,
+      "step": 128,
+      "field": "m",
+      "section": "z=0.1",
+      "arrow_points": 300,
+      "camera": [
+        -0.7238683027665548,
+        0.20728955942860433,
+        0.6580620934241407
+      ],
+      "color_limits": [
+        0,
+        0.038
+      ],
+      "volume_sample_maximum": 0.028272551067024695,
+      "section_sample_maximum": 0.02988602956619083,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "7b62df8132572d97a6b5bc07fe58f714d4cb939d2d40dc87a9a006911232cb81",
+        ".png": "fa53515e74626bcd10170ce057f4b9465317adf2d2c7a566f1889f9a43157a8d"
+      }
+    },
+    "channel_omega": {
+      "time": 0.64,
+      "step": 128,
+      "field": "omega",
+      "section": "z=0.1",
+      "arrow_points": 300,
+      "camera": [
+        -0.7238683027665548,
+        0.20728955942860433,
+        0.6580620934241407
+      ],
+      "color_limits": [
+        0,
+        0.048
+      ],
+      "volume_sample_maximum": 0.047687984228942625,
+      "section_sample_maximum": 0.04770106151010281,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "149d651c4a7e3be5b900495f63f93d503911b84b86d3be5c940a9edbf5b3f98e",
+        ".png": "0448a2947825a1efb3c58b86feec2d836449b1d62ba1dc5ef98f6598b944f475"
+      }
+    },
+    "step_channel_u": {
+      "time": 0.585,
+      "step": 117,
+      "field": "u",
+      "section": "y=0.1",
+      "arrow_points": 264,
+      "camera": [
+        -0.6529286250990104,
+        -0.7254762501100116,
+        0.21764287503300347
+      ],
+      "color_limits": [
+        0,
+        0.25
+      ],
+      "volume_sample_maximum": 0.22695940193037084,
+      "section_sample_maximum": 0.2499926807559487,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "78590deafed548cfe413c0d1d8c8ff6a85d32c063a9d25e231450c532cd58ea5",
+        ".png": "4146991be40cc34017511e9df525ed18f96660937db907010088a99ea2ed0806"
+      }
+    },
+    "step_channel_m": {
+      "time": 0.585,
+      "step": 117,
+      "field": "m",
+      "section": "y=0.1",
+      "arrow_points": 264,
+      "camera": [
+        -0.6529286250990104,
+        -0.7254762501100116,
+        0.21764287503300347
+      ],
+      "color_limits": [
+        0,
+        0.044000000000000004
+      ],
+      "volume_sample_maximum": 0.03505385464639798,
+      "section_sample_maximum": 0.032982889891312955,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "cabdb4ebf6aa5295b05e6b43c11a20cb16b8331866e3ec0a0814681665bba848",
+        ".png": "63137a2b19acff4562e430812b43579b76f587efaf1569edf0371b9e68689a4d"
+      }
+    },
+    "step_channel_omega": {
+      "time": 0.585,
+      "step": 117,
+      "field": "omega",
+      "section": "y=0.1",
+      "arrow_points": 264,
+      "camera": [
+        -0.6529286250990104,
+        -0.7254762501100116,
+        0.21764287503300347
+      ],
+      "color_limits": [
+        0,
+        0.038
+      ],
+      "volume_sample_maximum": 0.0349268699272224,
+      "section_sample_maximum": 0.03752580074596089,
+      "scalar": "Euclidean norm of all three components",
+      "glyph": "instantaneous vector, not streamline or pathline",
+      "spatial_display": "Gouraud color interpolation between accepted section samples; no field recovery",
+      "temporal_interpolation": false,
+      "outputs_sha256": {
+        ".pdf": "47e89ac35bafc774b8a64071095b2df7ac247ca617c853a5fb15481c51241e9d",
+        ".png": "8de57e67fcc8af1b34a9da76b45829b5ed19f856e490b0aaf4e6847f6d230d00"
+      }
+    }
+  },
+  "samples": {
+    "channel": {
+      "sample_time": 0.64,
+      "step": 128,
+      "source_sample_sha256": "d922e557928639eca75d9b4fc84f130ab35f6c2195defc1b70c37eea703f027c",
+      "sampling_exports": {
+        "plane": {
+          "file": "channel_p3_planes.npz",
+          "sha256": "8313359641cdabfa5f86a273f2b7695735f2561d5b37ec47f136c066a595b74f",
+          "export_job": "47925166",
+          "native_frame_metadata_sha256": "bae6744989b3e3942794184ef5d4c55250a83f6862324cd733dc9f34729864b9"
+        },
+        "volume": {
+          "file": "channel_p3_volume_samples.npz",
+          "sha256": "0c54565e59892ba86f3561ae244e17d8919d62c30dcbf3dc05cf73e31c1f0a89",
+          "export_job": "47928194",
+          "native_frame_metadata_sha256": "bae6744989b3e3942794184ef5d4c55250a83f6862324cd733dc9f34729864b9"
+        }
+      }
+    },
+    "step_channel": {
+      "sample_time": 0.585,
+      "step": 117,
+      "source_sample_sha256": "ea80af09fd5ca52be27a4cc7dabc98b4bdd9c4773609f223a94dc9e02be81789",
+      "sampling_exports": {
+        "plane": {
+          "file": "step_channel_p3_planes.npz",
+          "sha256": "979ce6c786324c4ccf96f5150e4a423d09bb2e2a29fa673cbf4d6971525056d1",
+          "export_job": "47925166",
+          "native_frame_metadata_sha256": "c1cd0a0768d16b27376bb871c029725cfc4a6233382adf1d22a82aac59c722af"
+        },
+        "volume": {
+          "file": "step_channel_p3_volume_samples.npz",
+          "sha256": "e184b3fc3af454f3a53a1df7f9b955579347a17ae2d4b21bb5b37d26e8c9e76c",
+          "export_job": "47928194",
+          "native_frame_metadata_sha256": "c1cd0a0768d16b27376bb871c029725cfc4a6233382adf1d22a82aac59c722af"
+        }
+      }
+    }
+  },
+  "plot_script_sha256": "5b1df71aa59fd75339c0777ea058e081c634a90e76e1750f29980fdb848bbf67"
+}
